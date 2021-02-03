@@ -15,7 +15,7 @@ author:
 
 *These reports were written as part of the requirements for the Data Analytics Lab module for [MITB](https://scis.smu.edu.sg/master-it-business).*
 
-For executive report, please view :
+For executive report, please view : "/posts/projects/exploratory/images/exploratory.pdf"
 
 ## 1. Overview
 **Changing Landscape of the Hotel Industry**
