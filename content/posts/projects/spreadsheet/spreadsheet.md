@@ -62,10 +62,10 @@ Based on the current number of [COVID cases per capita](https://ourworldindata.o
   
 There are two sets of opening dates: **partial** (business travel only) and **full** [(365 days after vaccine is available)](https://www.bmj.com/content/371/bmj.m3846). Each country in the green and yellow category will be assigned two opening dates based on the traffic light profile. Countries in the red category will only have one reopening date – fully reopening date.  
 
-{{< img src="/posts/projects/spreadsheet/images/fig5.png" align="left" >}}
+fig5
 *Figure 5*  
 
-{{< img src="/posts/projects/spreadsheet/images/fig6.png" align="left" >}}
+fig6
 *Figure 6*
 
 {{< img src="/posts/projects/spreadsheet/images/fig7.png" align="left" >}}
@@ -73,7 +73,7 @@ There are two sets of opening dates: **partial** (business travel only) and **fu
 
 Using Solver, the curve-fitting approach minimizes the error from the fitted value and the observed daily COVID case per million by changing the parameters peak height a, peak position b, and width c. (Fig. 7). Then, an estimated partial reopening date for a yellow bucket country is forecasted when the daily new case per million is down to one case. For Maldives, the partial reopening date is 1 January 2021. This approach is done for all yellow bucket countries.  
 
-{{< img src="/posts/projects/spreadsheet/images/fig8.png" align="left" >}}
+fig8
 *Figure 8*  
 
 After assigning each country with a traffic light profile and estimated reopening dates, recovery rates will be based on the country’s opening status.  SIA recovery rate is currently at [1.5%](https://sg.news.yahoo.com/changi-airport-now-worlds-58th-busiest-serving-15-of-usual-passenger-volume-ong-ye-kung-075644907.html) based on current rate of passenger volume in Changi Airport. Partial reopening dates are matched with a 16.5% recovery rate based on [Singapore Airlines optimistic forecast](https://www.singaporeair.com/en_UK/sg/media-centre/news-alert/?id=k88gnin9) on returning to approximately 15% of its passenger capacity from pre-COVID levels.   
@@ -88,10 +88,10 @@ For each country, forecasted recovery rate by end of year is calculated by takin
 *Figure 10*   
 
 Overall forecasted recovery rate and recovery rates per traffic light profile are summarized in Table 2 with visual representation in Fig. 11.  
-{{< img src="/posts/projects/spreadsheet/images/fig11.png" align="left" >}}
+fig11
 *Figure 11*   
 
-{{< img src="/posts/projects/spreadsheet/images/fig12.png" align="left" >}}
+fig12
 *Figure 12*  
   
 ## 4.2	Forecasting cargo demand  
@@ -117,7 +117,7 @@ Another pivotal statistic that was retrieved from FRFY19 is [Load Factor (LF)](h
   
 Using this and previous calculations, a revenue maximizing model is developed and is solved using Solver.  
 
-{{< img src="/posts/projects/spreadsheet/images/fig13.png" align="left" >}}
+fig13
 *Figure 13*  
 
 {{< img src="/posts/projects/spreadsheet/images/fig15.png" align="left" >}}
@@ -143,29 +143,29 @@ The last year of useful life’s cashflow is the sum of expected book value at r
 
 # 4.	Results  
 Overall, SIA’s profit is highly dependent on passenger demand recovery rate.  
-{{< img src="/posts/projects/spreadsheet/images/fig18.png" align="left" >}}
+fig18
 *Figure 17*    
 
 Given that all countries are only forecasted to reopen in Dec-2022, a large proportion – 93% (125/133) of aircrafts are allocation to storage initially, and gradually allocation to passenger services as passenger demand recovers.  
-{{< img src="/posts/projects/spreadsheet/images/fig19.png" align="left" >}}
+fig19
 *Figure 18*   
 
 # 5.	Trade-offs and sensitivity
 ## 5.1	Sensitivity of fuel cost on total profit  
-{{< img src="/posts/projects/spreadsheet/images/fig20.png" align="left" >}}
+fig20
 *Figure 19*    
 
 Total profit is more sensitive to changes in fuel cost in the later years due to more aircrafts being in service. Based on figure 16, a 2.5% increase in fuel cost would result in losses, hence proper risk mitigation strategies, for example hedging fuel cost and dynamic seat pricing, must be in place to preserve profits.  
   
 ## 5.2 	Sensitivity of passenger demand recovery rate on total profit  
-{{< img src="/posts/projects/spreadsheet/images/fig23.png" align="left" >}}
+fig21
 *Figure 20*    
 
 The sensitivity analysis of passenger demand recovery reveals that total profit highly sensitive to the vaccine availability date.  
 Given that the vaccine release date is uncontrollable and uncertain at the date of this report, SIA should take the necessary steps to manage cash flow.  
 
 ## 5.3	Trade off analysis   
-{{< img src="/posts/projects/spreadsheet/images/fig22.png" align="left" >}}
+fig22
 *Figure 21*
 
 Profits would turn negative beyond a certain level of over allocation to passenger services due to supply outstripping demand for seats. As demand is the limiting factor, every additional plane allocated reduces profit. That being said, SIA may decide to allocate more aircrafts to passenger services to increase route offering for other business or technical reasons.  
