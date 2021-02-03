@@ -1,16 +1,12 @@
 ---
 title: "Market segmentation of Philippines’ market"
-date: 2020-10-18
+date: 2020-10-18T08:06:25+06:00
 description: Market segmentation of Philippines’ market based on expenditure patterns of households.
 menu:
   sidebar:
     name: 02 Cluster analysis
     identifier: segmentation
-    weight: 30
-author:
-  name: Su Yiin Ang
-  image: /images/author/profile.jpg
-
+    weight: 10
 ---
 
 Market segmentation of Philippines’ market based on expenditure patterns of households.

@@ -1,16 +1,12 @@
 ---
 title: "Understanding the Stars"
-date: 2020-12-01
+date: 2020-12-01T08:06:25+06:00
 description: Augmenting Numerical Data with Textual Analysis to Identify Key Determinants of Airbnb Review Scores
 menu:
   sidebar:
     name: 06 Text Analysis
     identifier: text
-    weight: 30
-author:
-  name: Su Yiin Ang
-  image: /images/author/profile.jpg
-
+    weight: 10
 ---
 
 Augmenting Numerical Data with Textual Analysis to Identify Key Determinants of Airbnb Review Scores

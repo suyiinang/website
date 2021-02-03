@@ -1,15 +1,12 @@
 ---
 title: "Post-COVID Recovery for Singapore Airlines: Optimizing Passenger-Cargo Fleet Allocation"
-date: 2020-11-18
+date: 2020-11-18T08:06:25+06:00
 description: Spreadsheet modeling
 menu:
   sidebar:
     name: 04 Spreadsheet modeling
     identifier: modeling
-    weight: 30
-author:
-  name: Su Yiin Ang
-  image: /images/author/profile.jpg
+    weight: 10
 
 ---
 *By: Ang Su Yiin, Gabriella Pauline Djojosaputro, Gordy Adiprasetyo, Kendra Luisa Baylon Gadong, Nguyen Nhi Thai An, Ulysses Chong Min Zhen*  

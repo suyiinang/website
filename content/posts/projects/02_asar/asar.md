@@ -1,15 +1,12 @@
 ---
 title: "The Math of Happiness"
-date: 2020-11-10
+date: 2020-11-10T08:06:25+06:00
 description: An analysis of factors that influence happiness. 
 menu:
   sidebar:
     name: 03 Statistical Analysis
     identifier: statistics
-    weight: 30
-author:
-  name: Su Yiin Ang
-  image: /images/author/profile.jpg
+    weight: 10
 
 ---
 

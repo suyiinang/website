@@ -1,15 +1,12 @@
 ---
 title: "Predicting H1N1 Vaccination"
-date: 2020-11-15
+date: 2021-11-15T08:06:25+06:00
 description: Predicting H1N1 Vaccination based on Flu Survey Data
 menu:
   sidebar:
     name: 05 Predictive analytics
     identifier: predictive
-    weight: 30
-author:
-  name: Su Yiin Ang
-  image: /images/author/profile.jpg
+    weight: 10
 
 ---
 

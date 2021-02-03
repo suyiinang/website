@@ -1,15 +1,12 @@
 ---
 title: "DataViz Makeover #1"
-date: 2021-01-26
+date: 2021-01-26T08:06:25+06:00
 description: Making over a chart from the Singapore Labour Force (2019) report.
 menu:
   sidebar:
     name: 07 Makeover 1
     identifier: Dataviz makeover
-    weight: 30
-author:
-  name: Su Yiin Ang
-  image: /images/author/profile.jpg
+    weight: 10
 
 ---
 
