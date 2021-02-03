@@ -89,10 +89,10 @@ For each country, forecasted recovery rate by end of year is calculated by takin
 *Figure 10*   
 
 Overall forecasted recovery rate and recovery rates per traffic light profile are summarized in Table 2 with visual representation in Fig. 11.  
-fig11
+{{< img src="/posts/projects/spreadsheet/images/fig11.png" align="left" >}}
 *Figure 11*   
 
-fig12
+{{< img src="/posts/projects/spreadsheet/images/fig12.png" align="left" >}}
 *Figure 12*  
   
 ### 4.2	Forecasting cargo demand  
@@ -118,14 +118,14 @@ Another pivotal statistic that was retrieved from FRFY19 is [Load Factor (LF)](h
   
 Using this and previous calculations, a revenue maximizing model is developed and is solved using Solver.  
 
-fig13
+{{< img src="/posts/projects/spreadsheet/images/fig13.png" align="left" >}}
 *Figure 13*  
 
-
+{{< img src="/posts/projects/spreadsheet/images/fig15.png" align="left" >}}
 *Figure 14*  
    
 GRG Non-linear solver method was first used but resulted in local optimum solutions. Given the complexity of the model and to be able to arrive at global optimum solution, Evolutionary solving method was chosen and used with the below specifications:  
-
+{{< img src="/posts/projects/spreadsheet/images/fig16.png" align="left" >}}
 *Figure 15*
 
 
@@ -137,36 +137,36 @@ Scrap price is computed from the net present value of projected yearly cashflow 
 1.	Storage cost: Computed using Alice Spring’s storage fee based on the aircraft’s [MTOW](https://www.alicespringsairport.com.au/airport-charges)   
 2.	Expected yearly profit if not stored: Obtained from the base model  
 
-
+{{< img src="/posts/projects/spreadsheet/images/fig17.png" align="left" >}}
 *Figure 16*   
 
 The last year of useful life’s cashflow is the sum of expected book value at retirement and storage cost or expected profit, depending on the storage allocation. The expected book value is calculated from the purchase cost minus the depreciation along the course of its useful life. The depreciation value is estimated from [SIA’s financial report](https://www.singaporeair.com/saar5/pdf/Investor-Relations/Annual-Report/annualreport1920.pdf).  
 
 ## 4.	Results  
 Overall, SIA’s profit is highly dependent on passenger demand recovery rate.  
-fig18
+{{< img src="/posts/projects/spreadsheet/images/fig18.png" align="left" >}}
 *Figure 17*    
 
 Given that all countries are only forecasted to reopen in Dec-2022, a large proportion – 93% (125/133) of aircrafts are allocation to storage initially, and gradually allocation to passenger services as passenger demand recovers.  
-fig19
+{{< img src="/posts/projects/spreadsheet/images/fig19.png" align="left" >}}
 *Figure 18*   
 
 ## 5.	Trade-offs and sensitivity
 ### 5.1	Sensitivity of fuel cost on total profit  
-fig20
+{{< img src="/posts/projects/spreadsheet/images/fig20.png" align="left" >}}
 *Figure 19*    
 
 Total profit is more sensitive to changes in fuel cost in the later years due to more aircrafts being in service. Based on figure 16, a 2.5% increase in fuel cost would result in losses, hence proper risk mitigation strategies, for example hedging fuel cost and dynamic seat pricing, must be in place to preserve profits.  
   
 ### 5.2 	Sensitivity of passenger demand recovery rate on total profit  
-fig21
+{{< img src="/posts/projects/spreadsheet/images/fig21.png" align="left" >}}
 *Figure 20*    
 
 The sensitivity analysis of passenger demand recovery reveals that total profit highly sensitive to the vaccine availability date.  
 Given that the vaccine release date is uncontrollable and uncertain at the date of this report, SIA should take the necessary steps to manage cash flow.  
 
 ### 5.3	Trade off analysis   
-fig22
+{{< img src="/posts/projects/spreadsheet/images/fig22.png" align="left" >}}
 *Figure 21*
 
 Profits would turn negative beyond a certain level of over allocation to passenger services due to supply outstripping demand for seats. As demand is the limiting factor, every additional plane allocated reduces profit. That being said, SIA may decide to allocate more aircrafts to passenger services to increase route offering for other business or technical reasons.  
