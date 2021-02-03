@@ -19,7 +19,7 @@ Augmenting Numerical Data with Textual Analysis to Identify Key Determinants of 
 
 For post, please view : [Poster](https://drive.google.com/file/d/1BIwU2oUqKrYxyTnZSbpzDUyPL4Gsan7n/view?usp=sharing)
 
-## Abstract
+## Abstract 
 Text analytics provides powerful tools for transforming large amounts of unstructured data into quantitative variables, allowing researchers to contribute unique insights to business decision-making. In this study, we use textual data from reviews provided by Airbnb guests and descriptions of listings by Airbnb hosts to augment existing analyses of structured variables associated with Airbnb listings. Utilizing text mining techniques, we procure top terms by relevance from reviews and listing descriptions. These unstructured variables are combined with other structured variables describing various host and listing characteristics. We then employ an array of multiple linear regression and regression tree models with Binary Document Term Matrix and Term Frequency Inverse Document Frequency variants to identify the key determinants of review scores. Evaluating these models in accordance with their lowest average square error, the optimal model is determined to be a regression tree, parametrized by 2 branches, 6 depth, 100 leaf size, 100 rules and 100 split size. The key determinants obtained from the optimal model are predominately host related – superhost status, number of host listings, host tenure, host response time, pricing, and smooth check-in. Following our analysis, we suggest several insights and recommendations specific to the Airbnb sharing-economy of Singapore.
 
 ## Introduction
