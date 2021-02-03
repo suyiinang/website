@@ -6,6 +6,4 @@ description: Portfolio and personal blog of Su Yiin.
 
 # specify the list of custom menus that you want to show in the top navbar.
 # they will be separated by a divider from the main menus.
-customMenus:
-- name: Docs
-  url: https://angsuyiin.netlify.app/posts/
+customMenus: false
