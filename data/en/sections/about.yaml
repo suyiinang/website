@@ -15,7 +15,7 @@ company:
   url: "https://scis.smu.edu.sg/master-it-business"
 
 # your resume. this file path should be relative to you "static" directory
-resume: false
+resume: "files/resume.pdf"
 
 # a summary about you
 summary: 'Before venturing into the world of analytics, I spent 6 years in the auditing and financial due diligence department at PwC Singapore. As an aspiring data scientist with experience in the accounting field, my strength lies particularly in analysing and transforming complex data into powerful visuals with actionable insights based on business knowledge.'
