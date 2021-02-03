@@ -8,66 +8,54 @@ section:
   template: sections/about.html
 
 # your designation
-designation: Software Engineer
+designation: Master of IT in Business (Analytics) student
 # your company information
 company:
-  name: Example Co.
-  url: "https://www.example.com"
+  name: SMU
+  url: "https://scis.smu.edu.sg/master-it-business"
 
 # your resume. this file path should be relative to you "static" directory
-resume: "files/resume.pdf"
+resume: false
 
 # a summary about you
-summary: 'I am a passionate software engineer with x years of working experience. I built OSS tools for [Kubernetes](https://kubernetes.io/) using GO. My tools help people to deploy their workloads in Kubernetes. Sometimes, I work on some fun projects such as writing a theme, etc.'
+summary: 'Before venturing into the world of analytics, I spent 6 years in the auditing and financial due diligence department at PwC Singapore. As an aspiring data scientist with experience in the accounting field, my strength lies particularly in analysing and transforming complex data into powerful visuals with actionable insights based on business knowledge.'
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
 socialLinks:
 - name: Email
   icon: "fas fa-envelope"
-  url: "example@gmail.com"
-
-- name: Github
-  icon: "fab fa-github"
-  url: "https://www.github.com/example"
-
-- name: Stackoverflow
-  icon: "fab fa-stack-overflow"
-  url: "#"
+  url: "suyiinang@gmail.com"
 
 - name: LinkedIn
   icon: "fab fa-linkedin"
-  url: "#"
+  url: "https://www.linkedin.com/in/suyiinang/"
 
-- name: Twitter
-  icon: "fab fa-twitter"
-  url: "#"
-
-- name: Facebook
-  icon: "fab fa-facebook"
-  url: "#"
+- name: Tableau
+  icon: "fas fa-chart-line"
+  url: "https://public.tableau.com/profile/suyiinang#!/"
 
 # your soft skills
 # give the percentage between 50 to 100 with 5 intervals.
 # currently supported colors: blue, yellow, pink, green, sky, orange
 softSkills:
 - name: Leadership
-  percentage: 85
+  percentage: 80
   color: blue
 - name: Team Work
   percentage: 90
   color: yellow
 - name: Communication
-  percentage: 85
+  percentage: 70
   color: pink
 - name: Hard Working
-  percentage: 85
+  percentage: 95
   color: green
 - name: Fast Learner
   percentage: 85
   color: sky
 - name: Problem Solving
-  percentage: 85
+  percentage: 90
   color: orange
 # you can also provide color code instead of pre-defined color name
 # - name: Example 1
