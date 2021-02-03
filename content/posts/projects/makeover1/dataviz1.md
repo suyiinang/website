@@ -13,6 +13,12 @@ author:
 
 ---
 
+Making over a chart from the Singapore Labour Force (2019) report.
+
+---
+
+*This was written as part of the requirements for the Data Analytics Lab module for [MITB](https://scis.smu.edu.sg/master-it-business).*
+
 For my first DataViz makeover, I have used data from the [Ministry of Manpower of Singapore](https://stats.mom.gov.sg/Pages/Labour-Force-In-Singapore-2019.aspx), which analyses Singapore’s labour force to understand shifts in the labour market to facilitate better decision making.  
 
 ## 1) The original visualisation

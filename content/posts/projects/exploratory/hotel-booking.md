@@ -13,6 +13,10 @@ author:
 
 ---
 
+An analysis of guests’ booking and cancellation trends for two Portuguese hotels.
+
+---
+
 *These reports were written as part of the requirements for the Data Analytics Lab module for [MITB](https://scis.smu.edu.sg/master-it-business).*
 
 For executive report, please view : [Executive report - hotel booking](https://drive.google.com/file/d/1PF6ZHf-r5Fm_WzqlCgfGxuBDRdVKsV4A/view?usp=sharing)
