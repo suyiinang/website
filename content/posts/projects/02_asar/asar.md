@@ -4,7 +4,7 @@ date: 2020-11-10
 description: An analysis of factors that influence happiness. 
 menu:
   sidebar:
-    name: 04 Statistical Analysis
+    name: 03 Statistical Analysis
     identifier: statistics
     weight: 30
 author:

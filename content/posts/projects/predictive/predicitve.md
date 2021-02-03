@@ -4,7 +4,7 @@ date: 2020-11-15
 description: Predicting H1N1 Vaccination based on Flu Survey Data
 menu:
   sidebar:
-    name: 03 Predictive analytics
+    name: 05 Predictive analytics
     identifier: predictive
     weight: 30
 author:
