@@ -1,5 +1,5 @@
 ---
-title: "Post-COVID Recovery for Singapore Airlines: Optimizing Passenger-Cargo Fleet Allocation "
+title: Post-COVID Recovery for Singapore Airlines: Optimizing Passenger-Cargo Fleet Allocation
 date: 2020-11-16
 description: Post-COVID Recovery for Singapore Airlines: Optimizing Passenger-Cargo Fleet Allocation
 menu:
