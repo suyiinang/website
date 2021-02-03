@@ -1,11 +1,11 @@
 ---
-title: Post-COVID Recovery for Singapore Airlines: Optimizing Passenger-Cargo Fleet Allocation
-date: 2020-11-16
-description: Post-COVID Recovery for Singapore Airlines: Optimizing Passenger-Cargo Fleet Allocation
+title: "Spreadsheet"
+date: 2020-10-18
+description: Spreadsheet.
 menu:
   sidebar:
-    name: Spreadsheet modeling
-    identifier: modeling
+    name: Spreadsheet
+    identifier: Spreadsheet
     weight: 30
 author:
   name: Su Yiin Ang
