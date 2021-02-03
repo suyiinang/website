@@ -20,7 +20,7 @@ For my first DataViz makeover, I have used data from the [Ministry of Manpower o
 
 ## 1) The original visualisation
 
-{{< img src="/posts/projects/makeover1/images/fig16.png" align="left" >}}
+{{< img src="/posts/projects/makeover1/images/fig1.png" align="left" >}}
 *Figure 1: Chart 6 of Labour Force in Singapore 2019 report (page 22)*
 
 Notes:  
@@ -59,7 +59,7 @@ Before making over the selected visualisation, it is important to have a clear u
 
 ## 3) Proposed Design
 ### 3.1 Sketch
-{{< img src="/posts/projects/makeover1/images/fig2.png" align="left" >}}
+{{< img src="/posts/projects/makeover1/images/fig2.jpg" align="left" >}}
 *Figure 2: Sketch of proposed design*
 
 ### 3.2 Advantages of proposed design
@@ -243,7 +243,7 @@ Add text to bottom left corner and add text : “DataViz Makeover #1 by @suyiina
 ## 5) Final visualisation
 ### 5.1 Snapshot of dashboard  
 {{< img src="/posts/projects/makeover1/images/fig16.png" align="left" >}}
-Figure 17: Dashboard  
+**Figure 16: Dashboard**
 *Full visualisation available at [Tableau Public](https://public.tableau.com/profile/suyiinang#!/vizhome/DataViz_16116824631860/Dashboard1)*
 
 ### 5.2 Main observations
