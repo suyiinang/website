@@ -1,6 +1,6 @@
 ---
 title: "Predicting H1N1 Vaccination"
-date: 2021-11-15T08:06:25+06:00
+date: 2021-11-15
 description: Predicting H1N1 Vaccination based on Flu Survey Data
 menu:
   sidebar:

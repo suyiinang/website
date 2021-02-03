@@ -1,6 +1,6 @@
 ---
 title: "DataViz Makeover #1"
-date: 2021-01-26T08:06:25+06:00
+date: 2021-01-26
 description: Making over a chart from the Singapore Labour Force (2019) report.
 menu:
   sidebar:

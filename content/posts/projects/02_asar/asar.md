@@ -1,6 +1,6 @@
 ---
 title: "The Math of Happiness"
-date: 2020-11-10T08:06:25+06:00
+date: 2020-11-10
 description: An analysis of factors that influence happiness. 
 menu:
   sidebar:

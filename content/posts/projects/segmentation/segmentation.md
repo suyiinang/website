@@ -1,6 +1,6 @@
 ---
 title: "Market segmentation of Philippines’ market"
-date: 2020-10-18T08:06:25+06:00
+date: 2020-10-18
 description: Market segmentation of Philippines’ market based on expenditure patterns of households.
 menu:
   sidebar:
