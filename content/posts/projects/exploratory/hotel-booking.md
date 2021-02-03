@@ -54,8 +54,6 @@ The variables ‘IsCanceled’ and ‘IsRepeatedGuest’ are categorical data bu
 Hence, for ease of reference and readers’ clarity, values were recoded as follows:
 
 {{< img src="/posts/projects/exploratory/images/fig1.png" align="left" >}}
-
-{{< vs >}}  
 *Figure 1*  
 
 **(b) Inaccurate Data Types**  
