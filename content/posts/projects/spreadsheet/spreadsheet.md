@@ -35,15 +35,16 @@ Data is obtained from a variety of sources covering financial and operational as
 # 3.	Influence diagram and Black Box model
 ## 3.1.	Black Box Model  
 
+{{< img src="/posts/projects/spreadsheet/images/fig1.png" align="left" >}}
 *Figure 1*  
 
-
+{{< img src="/posts/projects/spreadsheet/images/fig2.png" align="left" >}}
 *Figure 2*
 
-
+{{< img src="/posts/projects/spreadsheet/images/fig3.png" align="left" >}}
 *Figure 3*  
 
-
+{{< img src="/posts/projects/spreadsheet/images/fig4.png" align="left" >}}
 *Figure 4*
 
 # 4.	Computation and Analysis  
