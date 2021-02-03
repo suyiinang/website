@@ -1,15 +1,15 @@
 ---
-title: "Markdown Samples"
-date: 2020-06-08T08:06:25+06:00
-description: Markdown rendering samples
+title: "Show me the numbers"
+date: 2020-09-20
+description: An analysis of guests’ booking and cancellation trends for two Portuguese hotels.
 menu:
   sidebar:
-    name: Markdown Sample
-    identifier: markdown
+    name: Exploratory Analysis
+    identifier: exploratory
     weight: 30
 author:
-  name: Jessica Jonas
-  image: /images/author/jessica.png
+  name: Su Yiin Ang
+  image: /images/author/profile.png
 
 ---
 
