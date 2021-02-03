@@ -4,7 +4,7 @@ date: 2020-11-15
 description: Predicting H1N1 vaccination based on flu survey.
 menu:
   sidebar:
-    name: 05 Predict vaccination
+    name: 04 Predict vaccination
     identifier: Predictive
     weight: 30
 
