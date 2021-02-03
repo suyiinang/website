@@ -34,17 +34,16 @@ Data is obtained from a variety of sources covering financial and operational as
 
 # 3.	Influence diagram and Black Box model
 ## 3.1.	Black Box Model  
-![](images/fig1.png)  
-{{< img src="/posts/projects/spreadsheet/images/fig1.png" align="left" >}}
+
 *Figure 1*  
 
-{{< img src="/posts/projects/spreadsheet/images/fig2.png" align="left" >}}
+
 *Figure 2*
 
-{{< img src="/posts/projects/spreadsheet/images/fig3.png" align="left" >}}
+
 *Figure 3*  
 
-{{< img src="/posts/projects/spreadsheet/images/fig4.png" align="left" >}}
+
 *Figure 4*
 
 # 4.	Computation and Analysis  
@@ -68,7 +67,7 @@ fig5
 fig6
 *Figure 6*
 
-{{< img src="/posts/projects/spreadsheet/images/fig7.png" align="left" >}}
+
 *Figure 7*  
 
 Using Solver, the curve-fitting approach minimizes the error from the fitted value and the observed daily COVID case per million by changing the parameters peak height a, peak position b, and width c. (Fig. 7). Then, an estimated partial reopening date for a yellow bucket country is forecasted when the daily new case per million is down to one case. For Maldives, the partial reopening date is 1 January 2021. This approach is done for all yellow bucket countries.  
@@ -79,12 +78,12 @@ fig8
 After assigning each country with a traffic light profile and estimated reopening dates, recovery rates will be based on the country’s opening status.  SIA recovery rate is currently at [1.5%](https://sg.news.yahoo.com/changi-airport-now-worlds-58th-busiest-serving-15-of-usual-passenger-volume-ong-ye-kung-075644907.html) based on current rate of passenger volume in Changi Airport. Partial reopening dates are matched with a 16.5% recovery rate based on [Singapore Airlines optimistic forecast](https://www.singaporeair.com/en_UK/sg/media-centre/news-alert/?id=k88gnin9) on returning to approximately 15% of its passenger capacity from pre-COVID levels.   
   
 This model assumes that SIA recovery is progressive for all countries, which means that full recovery rate at 100% is expected in December 2025. To summarize the recovery rate calculation, recovery rate per country over time (in months) is forecasted linearly from 1.5% from today to partial reopening date and to 16.5% from the fully open date based on vaccine and to 100% by end of 2025.  
-{{< img src="/posts/projects/spreadsheet/images/fig9.png" align="left" >}}
+
 *Figure 9*     
 
 For each country, forecasted recovery rate by end of year is calculated by taking the average of recovery rates for that particular year. Historical data of [visitor arrivals](https://www.ceicdata.com/en) from SIA destination countries are extracted to then forecast number of visitors per year based on recovery rates (Fig. 10).  
 
-{{< img src="/posts/projects/spreadsheet/images/fig10.png" align="left" >}}
+
 *Figure 10*   
 
 Overall forecasted recovery rate and recovery rates per traffic light profile are summarized in Table 2 with visual representation in Fig. 11.  
@@ -120,11 +119,11 @@ Using this and previous calculations, a revenue maximizing model is developed an
 fig13
 *Figure 13*  
 
-{{< img src="/posts/projects/spreadsheet/images/fig15.png" align="left" >}}
+
 *Figure 14*  
    
 GRG Non-linear solver method was first used but resulted in local optimum solutions. Given the complexity of the model and to be able to arrive at global optimum solution, Evolutionary solving method was chosen and used with the below specifications:  
-{{< img src="/posts/projects/spreadsheet/images/fig16.png" align="left" >}}
+
 *Figure 15*
 
 
@@ -136,7 +135,7 @@ Scrap price is computed from the net present value of projected yearly cashflow 
 1.	Storage cost: Computed using Alice Spring’s storage fee based on the aircraft’s [MTOW](https://www.alicespringsairport.com.au/airport-charges)   
 2.	Expected yearly profit if not stored: Obtained from the base model  
 
-{{< img src="/posts/projects/spreadsheet/images/fig17.png" align="left" >}}
+
 *Figure 16*   
 
 The last year of useful life’s cashflow is the sum of expected book value at retirement and storage cost or expected profit, depending on the storage allocation. The expected book value is calculated from the purchase cost minus the depreciation along the course of its useful life. The depreciation value is estimated from [SIA’s financial report](https://www.singaporeair.com/saar5/pdf/Investor-Relations/Annual-Report/annualreport1920.pdf).  
