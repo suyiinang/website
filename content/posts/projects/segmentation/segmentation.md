@@ -15,7 +15,7 @@ author:
 
 *These reports were written as part of the requirements for the Data Analytics Lab module for [MITB](https://scis.smu.edu.sg/master-it-business).*
 
-For executive report, please view :
+For executive report, please view : [Executive Report - Segmentation](https://drive.google.com/file/d/1O3CCnBVoUOHd7w_96sEVDVMNkkwEbDcA/view?usp=sharing)
 
 ## 1. Objective  
 This report aims to group the Philippines’ consumer market into target segments based on similar spending patterns on hypermarket items using clustering methods in JMP. With reference to the characteristics of each cluster, we aim to align the target segment for an international hypermarket chain.  

@@ -15,7 +15,7 @@ author:
 
 *These reports were written as part of the requirements for the Data Analytics Lab module for [MITB](https://scis.smu.edu.sg/master-it-business).*
 
-For executive report, please view:
+For executive report, please view: [Executive Report - Predictive](https://drive.google.com/file/d/1Gw1I4vGezWTbzbLreE9eg5JNGADqHbHz/view?usp=sharing)
 
 
 ## 1.	Introduction  
