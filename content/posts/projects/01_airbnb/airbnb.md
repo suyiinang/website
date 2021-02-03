@@ -4,7 +4,7 @@ date: 2020-12-01
 description: Augmenting Numerical Data with Textual Analysis to Identify Key Determinants of Airbnb Review Scores
 menu:
   sidebar:
-    name: Text Analysis
+    name: 05 Text Analysis
     identifier: text
     weight: 30
 author:

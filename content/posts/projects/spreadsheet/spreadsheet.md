@@ -4,7 +4,7 @@ date: 2020-11-18
 description: Spreadsheet modeling
 menu:
   sidebar:
-    name: Spreadsheet modeling
+    name: 04 Spreadsheet modeling
     identifier: modeling
     weight: 30
 author:
