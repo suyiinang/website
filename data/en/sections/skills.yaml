@@ -31,10 +31,14 @@ skills:
   summary: "Currently learning."
 
 - name: MS Word, Excel, PowerPoint
-  logo: /images/sections/skills/ms.png
+  logo: 
+  summary: "Proficient."
 
 - name: SAS Enterprise Miner
   logo: 
   summary: "Experienced with predicitive analytics using regression and recursive partitioning models."
   
+- name: SAS JMP
+  logo: /images/sections/skills/jmp.png
+  summary: "Experienced with performing statistical (exploratory and confirmatory), cluster and time series analysis."
 
