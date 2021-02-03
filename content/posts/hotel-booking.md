@@ -9,7 +9,7 @@ menu:
     weight: 30
 author:
   name: Su Yiin Ang
-  image: /images/author/profile.png
+  image: /images/author/profile.jpg
 
 ---
 
