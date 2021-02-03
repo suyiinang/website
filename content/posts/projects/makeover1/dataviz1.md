@@ -1,6 +1,6 @@
 ---
 title: "DataViz Makeover #1"
-date: 2020-10-18
+date: 2021-01-26
 description: Making over a chart from the Singapore Labour Force (2019) report.
 menu:
   sidebar:
@@ -17,7 +17,7 @@ For my first DataViz makeover, I have used data from the [Ministry of Manpower o
 
 ## 1) The original visualisation
 
-{{< img src="/posts/dataviz/makeover1/images/fig1.png" align="left" >}}
+{{< img src="/posts/projects/dataviz/images/fig16.png" align="left" >}}
 *Figure 1: Chart 6 of Labour Force in Singapore 2019 report (page 22)*
 
 Notes:  
@@ -56,7 +56,7 @@ Before making over the selected visualisation, it is important to have a clear u
 
 ## 3) Proposed Design
 ### 3.1 Sketch
-{{< img src="/posts/dataviz/makeover1/images/fig2.png" align="left" >}}
+{{< img src="/posts/projects/dataviz/images/fig2.png" align="left" >}}
 *Figure 2: Sketch of proposed design*
 
 ### 3.2 Advantages of proposed design
@@ -80,17 +80,17 @@ from the [Ministry of Manpower of Singapore](https://stats.mom.gov.sg/Pages/Labo
 
 1) Remove unnecessary columns  
 Delete columns A, B, D, F, H, J, L, M, N, P, R, T, V, X, Z.  
-{{< img src="/posts/dataviz/makeover1/images/fig3.png" align="left" >}}
+{{< img src="/posts/projects/dataviz/images/fig3.png" align="left" >}}
 *Figure 3: Remove unnecessary columns*
 
 2) Remove empty rows  
 Delete rows 1 to 4 and 19.
-{{< img src="/posts/dataviz/makeover1/images/fig4.png" align="left" >}}
+{{< img src="/posts/projects/dataviz/images/fig4.png" align="left" >}}
 *Figure 4: Remove empty rows*
 
 3) Rename header  
 Rename header from “Age (Years)” to “Age band”.
-{{< img src="/posts/dataviz/makeover1/images/fig5.png" align="left" >}}
+{{< img src="/posts/projects/dataviz/images/fig5.png" align="left" >}}
 *Figure 5: Rename header*
 
 4) Delete unnecessary tabs  
@@ -104,13 +104,13 @@ Repeat steps 1 to 4 as done for Table 5 above.
 
 2) Pivot data  
 Import file into Tableau, select all the years, right click and select “Pivot”.
-{{< img src="/posts/dataviz/makeover1/images/fig6.png" align="left" >}}
+{{< img src="/posts/projects/dataviz/images/fig6.png" align="left" >}}
 *Figure 6: Pivot data*
 
 3) Rename headers  
 Rename ‘Pivot Field Names’ to ‘Year’.
 Rename ‘Pivot Field Values’ to ‘Labour force’.
-{{< img src="/posts/dataviz/makeover1/images/fig7.png" align="left" >}}
+{{< img src="/posts/projects/dataviz/images/fig7.png" align="left" >}}
 *Figure 7: Rename headers*
 
 4) Change data type  
@@ -126,18 +126,18 @@ Import both T5_T_clean and T7_T_pivot into Tableau.
 
 1) Import into Tableau & create flat file  
 Inspect imported data: Upon importation, the LFPR from 2009 to 2019 are spread across multiple columns. As such, we want to create a flat file - select the columns from 2009 to 2019, right click and select pivot.
-{{< img src="/posts/dataviz/makeover1/images/fig8.png" align="left" >}}
+{{< img src="/posts/projects/dataviz/images/fig8.png" align="left" >}}
 *Figure 8: Pivot data*
 
 2) Rename headers  
 Rename ‘Pivot Field Names’ to ‘Year’.  
 Rename ‘Pivot Field Values’ to ‘LFPR%’.  
-{{< img src="/posts/dataviz/makeover1/images/fig9.png" align="left" >}}
+{{< img src="/posts/projects/dataviz/images/fig9.png" align="left" >}}
 *Figure 9: Rename headers*
 
 3) Change data type  
 Change ‘Year’ data type from string to Date.  
-{{< img src="/posts/dataviz/makeover1/images/fig10.png" align="left" >}}
+{{< img src="/posts/projects/dataviz/images/fig10.png" align="left" >}}
 *Figure 10: Change data type*
 
 4) Import T7_T_pivot  
@@ -147,18 +147,18 @@ Inspect imported data to ensure data is in flat file format and data types are c
 
 1) Create line chart  
 Drag [Year] and [LFPR%] to Columns and Rows respectively.  
-{{< img src="/posts/dataviz/makeover1/images/fig11.png" align="left" >}}
+{{< img src="/posts/projects/dataviz/images/fig11.png" align="left" >}}
 *Figure 11: Create line chart*
 
 2) Apply filter  
 Drag [Age band] to Filters panel, and check these 4 values: 15- 24, 25-54, 55-64, 65+.  
-{{< img src="/posts/dataviz/makeover1/images/fig12.png" align="left" >}}
+{{< img src="/posts/projects/dataviz/images/fig12.png" align="left" >}}
 *Figure 12: Appy filter*
 
 3) Apply colour  
 Drag [Age band] to colour, change colours according to figure 13.  
 Update ‘Automatic’ to ‘Line’.  
-{{< img src="/posts/dataviz/makeover1/images/fig13.png" align="left" >}}
+{{< img src="/posts/projects/dataviz/images/fig13.png" align="left" >}}
 *Figure 13: Apply colour*
 
 4) Update view  
@@ -184,7 +184,7 @@ However, the increase in older workers' (55-64 and 65+) participation rate of 9p
 1) Create new age band group  
 Right click [Age band] > Create > Group.  
 Group and rename according to figure below.  
-{{< img src="/posts/dataviz/makeover1/images/fig14.png" align="left" >}}
+{{< img src="/posts/projects/dataviz/images/fig14.png" align="left" >}}
 *Figure 14: Group age bands*
 
 2) Apply filter	Filter out “Total”  
@@ -196,7 +196,7 @@ Reduce opacity to “60%".
 Drag [Labour force] and [Year1] to Columns and Rows respectively.  
 Convert to percentage : Right click [SUM(Labour force)] > Quick Table Calculation > Percent of Total.  
 Convert to stacked bar : Right click [SUM(Labour force)] > Compute using > Age band (group).  
-{{< img src="/posts/dataviz/makeover1/images/fig15.png" align="left" >}}
+{{< img src="/posts/projects/dataviz/images/fig15.png" align="left" >}}
 *Figure 15: Create stacked bar chart*
 
 4) Change view  
@@ -238,7 +238,7 @@ Add text to bottom left corner and add text : “DataViz Makeover #1 by @suyiina
 
 ## 5) Final visualisation
 ### 5.1 Snapshot of dashboard  
-{{< img src="/posts/dataviz/makeover1/images/fig1.png" align="left" >}}
+{{< img src="/posts/projects/dataviz/images/fig1.png" align="left" >}}
 Figure 17: Dashboard  
 *Full visualisation available at [Tableau Public](https://public.tableau.com/profile/suyiinang#!/vizhome/DataViz_16116824631860/Dashboard1)*
 
