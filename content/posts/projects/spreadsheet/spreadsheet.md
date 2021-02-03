@@ -1,5 +1,5 @@
 ---
-title: "Post-COVID Recovery for Singapore Airlines: Optimizing Passenger-Cargo Fleet Allocation"
+title: "Post-COVID Recovery for SIA"
 date: 2020-11-18
 description: Spreadsheet modeling
 menu:
@@ -9,6 +9,9 @@ menu:
     weight: 30
 
 ---
+
+Optimizing Passenger-Cargo Fleet Allocation
+
 *By: Ang Su Yiin, Gabriella Pauline Djojosaputro, Gordy Adiprasetyo, Kendra Luisa Baylon Gadong, Nguyen Nhi Thai An, Ulysses Chong Min Zhen*  
 
 *These reports were written as part of the requirements for the Spreadsheet Modeling module for [MITB](https://scis.smu.edu.sg/master-it-business).*
