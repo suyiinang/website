@@ -4,9 +4,9 @@ date: 2020-12-01T08:06:25+06:00
 description: Augmenting Numerical Data with Textual Analysis to Identify Key Determinants of Airbnb Review Scores
 menu:
   sidebar:
-    name: 06 Text Analysis
+    name: 06 Understanding the Stars
     identifier: text
-    weight: 10
+    weight: 30
 ---
 
 Augmenting Numerical Data with Textual Analysis to Identify Key Determinants of Airbnb Review Scores

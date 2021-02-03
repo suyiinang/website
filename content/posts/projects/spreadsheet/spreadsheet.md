@@ -4,7 +4,7 @@ date: 2020-11-18T08:06:25+06:00
 description: Spreadsheet modeling
 menu:
   sidebar:
-    name: 04 Spreadsheet modeling
+    name: 04 SIA
     identifier: modeling
     weight: 10
 

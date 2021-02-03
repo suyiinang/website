@@ -4,9 +4,9 @@ date: 2020-11-10T08:06:25+06:00
 description: An analysis of factors that influence happiness. 
 menu:
   sidebar:
-    name: 03 Statistical Analysis
+    name: 03 Math of Happiness
     identifier: statistics
-    weight: 10
+    weight: 30
 
 ---
 
