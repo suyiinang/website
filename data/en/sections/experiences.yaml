@@ -11,54 +11,33 @@ section:
 # Your experiences
 experiences:
 - company:
-    name: Example Co.
-    url: "https://www.example.com"
-    location: Dhaka Branch
+    name: PwC Deals Advisory
+    url: "https://www.pwc.com/sg/en/deals.html"
+    location: Singapore
     # company overview
-    overview: Example Co. is a widely recognized company for cloud-native development. It builds tools for Kubernetes.
+    overview: PwC Deals Advisory provides advisory services relating to mergers, acquisitions and divestitures and capital markets transactions.
   positions:
-  - designation: Senior Software Engineer
-    start: Nov 2019
+  - designation: Manager - Financial Due Diligence
+    start: Aug 2016
+    end: Dec 2019
     # don't provide end date if you are currently working there. It will be replaced by "Present"
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
-    - Design and develop XYZ tool for ABC task
-    - Design, develop and manage disaster recovery tool [Xtool](https://www.example.com) that backup Kubernetes volumes, databases, and cluster's resource definition.
-    - Lead backend team.
-
-  - designation: Junior Software Engineer
-    start: Nov 2017
-    end: Oct 2019
-    responsibilities:
-    - Implement and test xyz feature for abc tool.
-    - Support client for abc tool.
-    - Learn k,d,w technology for xyz.
+    - Project Management.
+    - Analyse financial and operational data to formula commercial insights.
+    - Review and report key issues to clients.
 
 - company:
-    name: PreExample Co.
-    url: "https://www.preexample.com"
-    location: Nowhere
-    overview: PreExample Co. is a gateway company to enter into Example co. So, nothing special here.
+    name: PwC Assurance
+    url: "https://www.pwc.com/sg/en/audit.html"
+    location: Singapore
+    overview: PwC Assurance provides audit services for corporate reporting
   positions:
-  - designation: Software Engineer
-    start: March 2016
-    end: May 2017
+  - designation: Senior Associate - Assurance
+    start: Sep 2013
+    end: July 2016
     responsibilities:
-    - Write lots of example codes.
-    - Read lots of examples.
-    - See lots of example videos.
-
-- company:
-    name: Intern Counting Company (ICC).
-    url: "https://www.intern.com"
-    location: Intern Land
-    overview: Intern counting Company (ICC) is responsible for counting worldwide intern Engineers.
-  positions:
-  - designation: Intern
-    start: Jun 2015
-    end: Jan 2016
-    responsibilities:
-    - Count lost of interns.
-    - Count more interns.
-    - Count me as an intern.
+    - Lead team.
+    - Objective testing and critical analysis.
+    - Review and report financial statements.
