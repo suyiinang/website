@@ -32,3 +32,9 @@ skills:
 
 - name: MS Word, Excel, PowerPoint
   logo: /images/sections/skills/ms.png
+
+- name: SAS Enterprise Miner
+  logo: /images/sections/skills/em.png
+  summary: "Experienced with predicitive analytics using regression and recursive partitioning models."
+  
+
