@@ -41,7 +41,7 @@ params:
     favicon: /images/site/favicon.png
 
   # GitHub repo URL of your site
-  gitRepo: https://github.com/suyiinang/toga
+  gitRepo: https://github.com/suyiinang/toha
 
   # specify whether you want to write some blog posts or not
   enableBlogPost: true
