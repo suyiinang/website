@@ -362,7 +362,7 @@ However, repeated guests only accounted for 2-4% of respective hotels’ booking
 ![](images/fig46.png)          
 *Figure 45*
 
-## 5. INTERPETATION OF RESULTS
+## 5. Intrepretation of results
 **Location matters.**
 Cancellation rate for city hotel was higher (42%) versus resort’s (28%). Interestingly, the cancellation rate throughout the 25 months for City Hotel has remained consistently around this level (42%) while that of Resort hotel had increased from 26% to 31%.   
 
