@@ -30,21 +30,21 @@ Two files were provided – an excel file of 85 variables and 147,717 observatio
 2.2.1 	Update incorrect modelling type  
 Several variables were recoded to the correct attributes, please see Figure 1.  
 
-![](images/fig1.png)  
+{{< img src="/posts/projects/segmentation/images/fig1.png" align="left" >}}
 *Figure 1*  
 
 2.2.2 	Check for missing data  
 The ‘Missing Data Pattern’ function was used to check for missing data. Figure 2, an extract of results, shows that there is no missing data.  
 
 
-![](images/fig2.png)  
+{{< img src="/posts/projects/segmentation/images/fig2.png" align="left" >}}
 *Figure 2*
 
 2.2.3	Variables lack context
 **i)	URB**   
 URB refers to urban/rural and had values of 1 and 2. The metadata did not provide any explanation as to what 1 and 2 were. We deduced that 1 is urban while 2 is rural as W Prov value of 76, 75, 74 pertains to National Capital Region (NCR) districts that are located within Metro Manila.    
 
-![](images/fig3.png)  
+{{< img src="/posts/projects/segmentation/images/fig3.png" align="left" >}}  
 *Figure 3*  
 
 2.2.4	Derive new variables
@@ -52,11 +52,11 @@ URB refers to urban/rural and had values of 1 and 2. The metadata did not provid
 There were several observations with decimal points. These observations are reasonable given that the survey was conducted over two separate visits and that there were Filipinos who did not spend the full year with their families.  
   
 However, to avoid readers’ confusion, we have rounded up the figures. Subsequently, this variable was binned into a categorical variable under ‘Fam size’.  
-![](images/fig4.png)  
+{{< img src="/posts/projects/segmentation/images/fig4.png" align="left" >}}  
 *Figure 4*
 
 **ii)	Total income (less imputed rent)**  
-![](images/fig5.png)  
+{{< img src="/posts/projects/segmentation/images/fig5.png" align="left" >}}  
 *Figure 5*  
 
 Ideally, we would like to examine disposable income of households (total income less rent / mortgage less taxes). However, due to lack of data such as mortgage cost and taxes, we were unable to recompute the disposable income of households.  
@@ -66,7 +66,7 @@ As such, we took a conservative approach by defining income as total income (‘
 Furthermore, we have not included the variable ‘other receipts’ in the total income, being irregular, such as winnings from gambling, sales of stocks, etc.  
 
 **iii)	Per capita income (PCINC) new**  
-![](images/fig6.png)  
+{{< img src="/posts/projects/segmentation/images/fig6.png" align="left" >}}  
 *Figure 6*
 
 We have classified households into different income groups based on  
@@ -74,47 +74,47 @@ a)	Income groups from a discussion paper by [PIDS](https://pidswebs.pids.gov.ph/
 b)	the [official poverty threshold in 2018](https://psa.gov.ph/poverty-press-releases/nid/138411) was PHP10,481 per month for family of five, which equates to ~PHP25,200 income per capita per year.  
 
 **Income band**  
-![](images/tab1.png)  
+{{< img src="/posts/projects/segmentation/images/tab1.png" align="left" >}}  
  
 The PCINC new variable was binned. To ensure that our figures are accurate, we have cross checked our figures with the PSA website where the poverty incidence was ~16%6. Given our poverty rate of 17.7% is relatively close to the official poverty rate, we have assumed that our calculations are valid. 
   
-![](images/fig7.png)  
+{{< img src="/posts/projects/segmentation/images/fig7.png" align="left" >}}  
 *Figure 7*  
 
 **v)	Combining variables**  
 We have grouped the variables according to food categories listed on [Landmark’s website](https://www.metromart.com/shops/landmark-makati), a Philippines supermarket.  
   
 a.	Meat + Fish  
-![](images/fig8.png)    
+{{< img src="/posts/projects/segmentation/images/fig8.png" align="left" >}}  
 *Figure 8*  
   
 b. Fruits & vegetables    
-![](images/fig9.png)  
+{{< img src="/posts/projects/segmentation/images/fig9.png" align="left" >}}  
 *Figure 9*    
 
 c. Food cupboard     
-![](images/fig10.png)    
+{{< img src="/posts/projects/segmentation/images/fig10.png" align="left" >}}  
 *Figure 10*  
 
 d. Beverages     
-![](images/fig11.png)   
+{{< img src="/posts/projects/segmentation/images/fig11.png" align="left" >}}  
 *Figure 11*   
   
 **vi) Total spent**      
-![](images/fig12.png)    
+{{< img src="/posts/projects/segmentation/images/fig12.png" align="left" >}}  
 *Figure 12*  
    
 For the purpose of this report, we have redefined the variable ‘total spent’ as the sum of a typical retailer’s items.  
 
 **vii) Island**   
-![](images/fig13.png)  
+{{< img src="/posts/projects/segmentation/images/fig13.png" align="left" >}}  
 *Figure 13*   
 The variables ‘region’ was grouped and recoded into the 3 main islands.  
 
 **viii)	Variables in percentage**    
 Given that the range of expenditure on respective items are quite wide, we have transformed 9 variables into a percentage of total spent respectively for a better comparison. Please refer to figure 14 for details. These variables will be used for our K-Means Clustering.  
 
-![](images/fig14.png)  
+{{< img src="/posts/projects/segmentation/images/fig14.png" align="left" >}}  
 *Figure 14*  
 
 **ix)	Binning continuous into categorical variables**  
@@ -122,12 +122,12 @@ Continuous variables were transformed into categorical variables through binning
 
 a)	Tobacco  
 Binned into ‘non-smoker’ if tobacco = 0, and ‘smoker’ if tobacco > 0  
-![](images/fig15.png)  
+{{< img src="/posts/projects/segmentation/images/fig15.png" align="left" >}}  
 *Figure 15*
  
 b)	Alcohol  
 Binned into ‘non-drinker’ if alcohol = 0 and ‘drinker’ if alcohol > 0  
-![](images/fig16.png)  
+{{< img src="/posts/projects/segmentation/images/fig16.png" align="left" >}}   
 *Figure 16*
 
 2.2.5 	Unrelated variables
@@ -135,7 +135,7 @@ Given that this study is to understand expenditure patterns for a hypermarket, w
 
 2.2.6	Non customers – observations excluded  
 Closer examination of the data revealed that there were 3 observations where total spent was zero. Since these are not customers of a hypermarket, we have excluded this from our customer segmentation analysis.  
-![](images/fig17.png)    
+{{< img src="/posts/projects/segmentation/images/fig17.png" align="left" >}}  
 *Figure 17*  
   
 ## 3. 	Customer segmentation and analysis  
@@ -149,64 +149,63 @@ The distribution analysis reveals that there is a high proportion of outliers fo
 Furthermore, we observed that the distributions are positively skewed.   
   
 We will take these into consideration when performing the K-means analysis.  
-![](images/fig18.png)  
+{{< img src="/posts/projects/segmentation/images/fig18.png" align="left" >}}  
 *Figure 18*    
 
 3.1.2	Examine correlation between variables  
 The results revealed that the variables are not highly correlated <|0.8|. As such, we are able to use all these variables in the cluster analysis.   
-![](images/fig19.png)      
+{{< img src="/posts/projects/segmentation/images/fig19.png" align="left" >}}   
 *Figure 19*   
 
 3.1.3	K-means for spending behaviour  
 Due to the high degree of skewness and number of outliers, columns were individually scaled when performing the k-mean analysis.  
 The cluster comparison report revealed that the optimal number of clusters is 9 - the largest CCC. Subsequently, cluster summary of the optimal cluster (Ncluster = 9) was examined to ensure that there were no clusters with small number of observations. Figure 20 shows that the minimum number of observations within a single cluster was 3,337; hence, this K-means cluster analysis is reliable.  
-![](images/fig20.png)   
+{{< img src="/posts/projects/segmentation/images/fig20.png" align="left" >}}  
 *Figure 20*    
 
-![](images/fig21.png)  
+{{< img src="/posts/projects/segmentation/images/fig21.png" align="left" >}}  
 *Figure 21*   
 
-![](images/fig22.png)   
+{{< img src="/posts/projects/segmentation/images/fig22.png" align="left" >}}  
 *Figure 22*  
 
-![](images/fig23.png)  
+{{< img src="/posts/projects/segmentation/images/fig23.png" align="left" >}}    
 *Figure 23*
 
 3.1.4 	Interpretation of K-Means Clustering based on spending patterns  
 Households were segmented into 9 clusters according to their spending patterns.   
-“The Dough Lovers” and “The Carnivores” are the two largest segments, accounting for 47% of the market. 
-![](images/tab2.png)  
+“The Dough Lovers” and “The Carnivores” are the two largest segments, accounting for 47% of the market. {{< img src="/posts/projects/segmentation/images/tab2.png" align="left" >}}  
 
 ### 3.2 Latent Class Analysis (LCA)  
 Similarly, we attempted to cluster the market according to expenditure patterns. However, clusters by LCA did not yield very meaningful insights. 
 
-![](images/fig24.png)     
+{{< img src="/posts/projects/segmentation/images/fig24.png" align="left" >}}  
 *Figure 23*   
 
-![](images/fig25.png)        
+{{< img src="/posts/projects/segmentation/images/fig25.png" align="left" >}}  
 *Figure 24*   
   
 ### 3.3 	Exploring expenditure patterns   
 Given the results from sections 3.1 and 3.2, as well as the stakeholders’ needs, latent class analysis may not be the appropriate clustering method for this dataset, which is predominantly continuous data. As such, we have used clusters obtained from K-Means for subsequent analysis.  
 Clusters obtained from K-means were further recoded ranked by percentage in descending order.  
-![](images/fig26.png)   
+{{< img src="/posts/projects/segmentation/images/fig26.png" align="left" >}}  
 *Figure 26*  
 
 3.3.1 Expenditure patterns differ by urban and rural areas –   
 *Dough Lovers was the top segment in the rural households whilst Carnivores in the urban households. Dough Lovers and Carnivores combined constitute the top 3 segments for this area.*  
-![](images/fig27.png)          
+{{< img src="/posts/projects/segmentation/images/fig27.png" align="left" >}}  
 *Figure 27*    
-![](images/fig28.png)          
+{{< img src="/posts/projects/segmentation/images/fig28.png" align="left" >}}  
 *Figure 27*  
 Rural households were predominantly Dough Lovers, Carnivores and Hoarders.  
 Urban households were predominantly Carnivores, Thirsty Hippos and Dough Lovers.  
 
 3.3.2	 Expenditure patterns were different across the islands -   
 *Luzon households are predominantly carnivores whilst Mindanao and Visayas households are predominantly Dough Lovers   *
-![](images/fig29.png)          
+{{< img src="/posts/projects/segmentation/images/fig29.png" align="left" >}}  
 *Figure 29*  
 
-![](images/fig30.png)          
+{{< img src="/posts/projects/segmentation/images/fig30.png" align="left" >}}  
 *Figure 30*  
 
 Based on figure 29, we observed that spending patterns vary by Islands. Households in Luzon, which is the most populated Island accounting for 50% of the population, predominantly belong to the Carnivores cluster.   
@@ -217,10 +216,10 @@ Interestingly, in Luzon, combined expenditure of the top 3 segment is ~11% lower
 3.3.3	 Expenditure patterns differ by family size – large families (>5) are predominantly Dough Lovers (34%).   
 *2-5 member families were more inclined to be in the Carnivores cluster (23–26%). In single person households, the Herbivores cluster dominates (18%)* 
 
-![](images/fig31.png)         
+{{< img src="/posts/projects/segmentation/images/fig31.png" align="left" >}}  
 *Figure 31*  
 
-![](images/fig32.png)         
+{{< img src="/posts/projects/segmentation/images/fig32.png" align="left" >}}  
 *Figure 32*  
   
 Large families with more than 5 members tend to be in the Dough Lovers and Carnivores clusters, spending a combined 56% on these 2 categories.  
@@ -232,10 +231,10 @@ It is interesting to note that as the family size increases from singles to 2-me
 3.3.4	Expenditure patterns varies significantly across the income groups - 
 *Dough Lovers cluster was dominant in the poor household (52%), Carnivores were more prevalent in the low to middle-income households, while HouseProud and Fashionistas dominated the rich households.*
 
-![](images/fig33.png)          
+{{< img src="/posts/projects/segmentation/images/fig33.png" align="left" >}}  
 *Figure 33*  
 
-![](images/fig34.png)          
+{{< img src="/posts/projects/segmentation/images/fig34.png" align="left" >}}  
 *Figure 34* 
 
 For the poor households, 51% belong to the Dough Lover cluster.  
@@ -244,10 +243,10 @@ Unsurprisingly, the HouseProud and Fashionistas clusters dominate the rich house
 We note that Philippines is a low-income country, whereby the low-income household accounts for 65% of the population. Retailers may want to take this into consideration when performing market feasibility studies.   
  
 3.3.5	Within each income group, willingness to spend differs by clusters.  
-![](images/fig35.png)         
+{{< img src="/posts/projects/segmentation/images/fig35.png" align="left" >}}  
 *Figure 35* 
 
-![](images/fig36.png)          
+{{< img src="/posts/projects/segmentation/images/fig36.png" align="left" >}}  
 *Figure 36*  
 
 For the purpose of this study, range of spending was taken as a proxy for willingness to spend – the wider the range, the more willing households are to spending on these items.
