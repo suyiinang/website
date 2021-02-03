@@ -16,18 +16,19 @@ skills:
   summary: "Experienced with creating websites, visualisations and shiny app."
   url: "https://cran.r-project.org/"
 
-- name: Go Development
-  logo: /images/sections/skills/go.png
-  summary: "Using as the main language for professional development. Capable of writing scalable, testable, and maintainable program."
-  url: "https://golang.org/"
+- name: Python
+  logo: /images/sections/skills/py.png
+  summary: "Currenty upgrading. Know basic python programming - pandas, numpy, visualisations."
+  url: "https://www.python.org/"
 
-- name: Cloud Computing
-  logo: /images/sections/skills/cloud.png
+- name: SAS JMP
+  logo: /images/sections/skills/jmp.png
   summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
+  url: "https://www.jmp.com/en_gb/home.html"
 
 - name: Docker
   logo: /images/sections/skills/docker.svg
-  summary: "Write most of the programs as dockerized container. Experienced with multi-stage, multi-arch build process."
+  summary: "Experienced with performing statistical (exploratory and confirmatory), cluster and time series analysis."
   url: "https://www.docker.com/"
 
 - name: Prometheus
