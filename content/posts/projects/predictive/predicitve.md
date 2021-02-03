@@ -29,40 +29,41 @@ The dataset originates from the National 2009 H1N1 Flu Survey (NHFS) conducted b
 
 ### 2.2	Setting up SAS Enterprise Miner  
 Step 1: Create a new project called: Assign3  
-![](images/fig1.png)  
+
+{{< img src="/posts/projects/predictive/images/fig1.png" align="left" >}}  
 *Figure 1*  
 
 Step 2: Create new library  
-![](images/fig2.png)  
+{{< img src="/posts/projects/predictive/images/fig2.png" align="left" >}}  
 *Figure 2*
 
 Step 3: Create New Diagram - Flu vaccination model  
-![](images/fig3.png)  
+{{< img src="/posts/projects/predictive/images/fig3.png" align="left" >}}  
 *Figure 3*  
 
 ### 2.3	Import and save data  
 Given that the dataset provided, flu_data, is in JMP file, we have imported the dataset using the “File Import” node under the Sample toolbar.  
-![](images/fig4.png)  
+{{< img src="/posts/projects/predictive/images/fig4.png" align="left" >}}  
 *Figure 4*
 
-![](images/fig5.png)  
+{{< img src="/posts/projects/predictive/images/fig5.png" align="left" >}}  
 *Figure 5*  
 
 Next, using the “Save Data” node under “Utility”, we have named the file as “flu_data” under the “Filename Prefix” option and saved the data into the SAS Library we created previously, Flu_data. 
 
-![](images/fig6.png)  
+{{< img src="/posts/projects/predictive/images/fig6.png" align="left" >}}  
 *Figure 6*
 
 ### 2.4	Create data source  
 Next, data source was created. In step 4 of the data source wizard (figure 8), we had customised settings using the ‘Advanced’ option. In the Advanced Advisor Options (figure 9), we changed two properties – i) Class Level Count Threshold, to account for binary data and ii) Missing Percentage Threshold from 50 to 40.   
 
-![](images/fig7.png)  
+{{< img src="/posts/projects/predictive/images/fig7.png" align="left" >}}  
 *Figure 7*  
 
-![](images/fig8.png)    
+{{< img src="/posts/projects/predictive/images/fig8.png" align="left" >}}  
 *Figure 8*  
   
-![](images/fig9.png)  
+{{< img src="/posts/projects/predictive/images/fig9.png" align="left" >}}  
 *Figure 9*     
 From the column metadata (figure 9), the following were observed (boxes in red):  
 1)	Respondent_id variable captured as ID    
@@ -72,30 +73,30 @@ Finally, we set “h1n1_vaccine” to Target.
 
 ### 2.5 	Data exploration   
 2.5.1 	Adjustments to variables  
-![](images/fig10.png)    
+{{< img src="/posts/projects/predictive/images/fig10.png" align="left" >}}  
 *Figure 10*  
 
 **i)	Ordinal variables (8 variables)**  
 From the description of the dataset, we understand that the following variables are ordinal in nature as the survey questionnaire required individuals to select a rating for their answers based on a number scale. We have cross checked this through examination of their distribution. As such, the level of these variables was updated to ordinal.  
-![](images/fig11.png)   
+{{< img src="/posts/projects/predictive/images/fig11.png" align="left" >}}  
 *Figure 11*   
   
 **ii)	Hhs_geo_region variable**  
 Hhs_geo_region distribution revealed a random string of text. According to the dataset description, respondents’ residences were classified using a 10-region geographic classification defined by the US Dept of Health and Human Services (HHS). However, we reviewed the 10 regions of HHS and was unable to clearly identify these 10 regions. Additionally, we tried to identify these regions by reviewing the documentations for the NHFS 2009 . Hence, we have excluded these variables from our model on basis of the garbage in, garbage out (GIGO) concept - poor data quality will affect the accuracy of our model.  
-![](images/fig15.png)    
+{{< img src="/posts/projects/predictive/images/fig15.png" align="left" >}}  
 *Figure 12*  
    
 Summary of variables.  
-![](images/fig16.png)  
+{{< img src="/posts/projects/predictive/images/fig16.png" align="left" >}}  
 *Figure 13*
 
 2.5.2 	Missing values  
 Excluding rejected variables, we observed that several variables have missing values of 0.08% – 16.5%. Nonetheless, no imputation or replacement was done to prevent distortion of the target. We are aware that these missing values may potentially affect our regression model but will not affect our recursive partitioning model.  
-![](images/fig17.png)    
+{{< img src="/posts/projects/predictive/images/fig17.png" align="left" >}}  
 *Figure 14*  
   
 2.5.3	Check for complete and quasi-complete separation  
-![](images/fig18.png)  
+{{< img src="/posts/projects/predictive/images/fig18.png" align="left" >}}  
 *Figure 15*    
 
 By using the default setting of the Multiplot node, variables were checked for any signs of complete and/or quasi-complete separation. Quasi-complete and complete separation variables must be excluded from the predictive model when performing logistic regression model as they will prevent the convergence of the maximum likelihood estimates for the coefficient and ultimately distorting the model.  
@@ -103,24 +104,24 @@ By using the default setting of the Multiplot node, variables were checked for a
 We did not observe any complete or quasi-complete separation. 
 
 2.5.4	Understand variables’ importance  
-![](images/fig19.png)      
+{{< img src="/posts/projects/predictive/images/fig19.png" align="left" >}}  
 *Figure 16*   
 
 Default settings of StatExplore was used to understand the importance of variables on the target. Given that the target and independent variables are mainly binary and nominal, the chi-square results were examined.  
   
 The Chi-square barplot suggests that the doctor_rec_h1n1 is the best predictor. While the Worth chart indicated that there are many useful predictors (worth > 0.01) with doctor_rec_h1n1 being a good predictor as it is the only variable with > 0.05 worth.  
-![](images/fig20.png)   
+{{< img src="/posts/projects/predictive/images/fig20.png" align="left" >}}  
 *Figure 17*    
 
-![](images/fig21.png)  
+{{< img src="/posts/projects/predictive/images/fig21.png" align="left" >}}  
 *Figure 18*
 
 2.6 Data Partition
 
-![](images/fig22.png)   
+{{< img src="/posts/projects/predictive/images/fig22.png" align="left" >}}  
 *Figure 19*  
 
-![](images/fig23.png)  
+{{< img src="/posts/projects/predictive/images/fig23.png" align="left" >}}  
 *Figure 20*
 
 Finally, prior to building our predictive models, the data was partitioned into   
@@ -129,23 +130,24 @@ Finally, prior to building our predictive models, the data was partitioned into
 -	Test: 30%  
 We have kept the default partitioning method, the stratified method, which ensured that the proportion of vaccine and no vaccine was allocated proportional across the different dataset.  
   
-![](images/fig24.png)     
+{{< img src="/posts/projects/predictive/images/fig24.png" align="left" >}}  
 *Figure 21*   
 
 From the partition summary, figure 21, number of observations were all above 5000, the minimum sample size for each dataset.   
 
-![](images/fig231.png)     
+{{< img src="/posts/projects/predictive/images/fig231.png" align="left" >}}  
 *Figure 22*   
 
 While results of the summary statistics for class targets indicated that the percentage between vaccine and no vaccine received is proportionate across the different dataset.  
 
 ## 3.	Predictive models  
 We have built 11 predictive models - 5 logistic regression and 6 recursive partitioning (Decision Trees) for our testing and selection.  
-![](images/fig25.png)        
+{{< img src="/posts/projects/predictive/images/fig25.png" align="left" >}}  
 *Figure 23*   
   
 **Confusion matrix for results interpretation**
-![](images/fig26.png)   
+
+{{< img src="/posts/projects/predictive/images/fig26.png" align="left" >}}  
 *Figure 24*    
 True Negative is when an **unvaccinated** individual was predicted to be **unvaccinated.**.  
 False Negative is when a **vaccinated** individual was predicted to be **unvaccinated**.  
@@ -154,9 +156,11 @@ True Positive is when a **vaccinated** individual was predicted to be **vaccinat
 
 
 ### 3.1 Logistic regression models
-![](images/fig27.png)          
+
+{{< img src="/posts/projects/predictive/images/fig27.png" align="left" >}}  
 *Figure 25*    
-![](images/fig28.png)          
+
+{{< img src="/posts/projects/predictive/images/fig28.png" align="left" >}}  
 *Figure 26*    
 Filtering selections via variable selection  
 Given that we are building a predictive model, variable selection was used instead of variable clustering. Variable selection is best when identifying variables that are useful for predicting the target variables while variable clustering is best for choosing best variables for clustering analysis.
@@ -166,7 +170,7 @@ Given that our dataset is binary in nature, we selected both R and Chi-square fo
 A total of 10 variables were retained, the remaining variables were rejected due to small R and Chi-square.  
 
 
-![](images/fig29.png)          
+{{< img src="/posts/projects/predictive/images/fig29.png" align="left" >}}           
 *Figure 27*  
 
 **Regression type**  
@@ -181,13 +185,13 @@ For logistic regressions after variable selection, backward and forward methods 
 For the selection criterion, we used the ‘Validation Misclassification’, which selects the model with lowest misclassification rate for our stepwise and backward models. This criterion was selected given our aim of building decision prediction that predict the likelihood of an individual being vaccinated (yes/no).
 
 
-![](images/fig30.png)          
+{{< img src="/posts/projects/predictive/images/fig30.png" align="left" >}}  
 *Figure 28*  
 
 **Summary of results - logistic regression models**  
-![](images/fig31.png)         
-![](images/fig33.png)         
-![](images/fig34.png)   
+{{< img src="/posts/projects/predictive/images/fig31.png" align="left" >}}  
+{{< img src="/posts/projects/predictive/images/fig33.png" align="left" >}}  
+{{< img src="/posts/projects/predictive/images/fig34.png" align="left" >}}  
 *Figure 29*  
 
 **Interpretation of results – logistic regression**  
@@ -196,7 +200,7 @@ In terms of misclassification rate, regression model 4 has the lowest misclassif
 However, regression model 1 has the highest True Negative percentage of 95.09% and 95.27%, and True Negative observations of 7,999 and 6,012.  
 
 ### 3.2 Recursive Partitioning (Decision Trees)
-![](images/fig35.png)         
+{{< img src="/posts/projects/predictive/images/fig35.png" align="left" >}}          
 *Figure 30*  
   
 In order to find the best tree, we created 6 different decision trees model by varying the Nominal and Ordinal Target Criterion, Method and Assessment Measure.   
@@ -215,13 +219,13 @@ The assessment measure has 4 options – decision, misclassification, average sq
 The other two measures were not selection as (a) The ‘Average Square Error’ is more appropriate when the target is continuous, and (b) the ‘Decision’ measure maximises the largest average profit if defined previously, if not, the measure would be set to ‘Misclassification’ given that our data is binary. Since we did not define any Decision previously, the measure would revert to ‘Misclassification’ and would produce the same results as our ‘Misclassification’ trees, thus redundant.  
 
 
-![](images/fig36.png)          
+{{< img src="/posts/projects/predictive/images/fig36.png" align="left" >}}   
 *Figure 36*  
   
 **Summary of Recursive Partitioning Results**
-![](images/fig37.png) 
-![](images/fig38.png)
-![](images/fig39.png) 
+{{< img src="/posts/projects/predictive/images/fig37.png" align="left" >}}
+{{< img src="/posts/projects/predictive/images/fig38.png" align="left" >}}  
+{{< img src="/posts/projects/predictive/images/fig39.png" align="left" >}}  
 *Figure 37*  
 
 **Interpretation of results – decision trees**  
@@ -232,7 +236,7 @@ Similar to our regression models, there are slight signs of overfitting for all 
 Excluding model 10, we observed that model 6 has the lowest misclassification rate of 13.55%, while model 11 has the best performance in terms True Negative outcome percentage of 93.93% and 94%, and observations of 7,902 and 5,932.
 
 ## 4. 	Model comparison
-![](images/fig40.png)   
+{{< img src="/posts/projects/predictive/images/fig40.png" align="left" >}}  
 *Figure 38*  
 All the 11 models were compared using the model comparison node.   
 We have selected misclassification rate for our Selection and Grid Selection Statistics as our model is an accuracy model.  
@@ -247,24 +251,24 @@ In assessing our models, we looked at
 *a)	Misclassification rate*  
 Based on misclassification rate performance, Model 11 outperformed all other models with the lowest classification rate of 15.15%. The misclassification rate among all models were quite close, ranging from 15.15% to 15.84%.   
 
-![](images/fig41.png)   
+{{< img src="/posts/projects/predictive/images/fig41.png" align="left" >}}  
 *Figure 39* 
 
 **b)	Specificity**  
 Given the objective is to identify individuals that did not get vaccinated (h1n1 = 0), we want to maximise the Specificity Rate: TN / (TN + FP), otherwise also known as the True Negative Rate.
 Based on this assessment, Model 9 performed the best with the highest Specificity percentage for validation data. Further, Model 9’s misclassification rate is the 3rd lowest of 15.20%.  
 
-![](images/fig42.png)   
+{{< img src="/posts/projects/predictive/images/fig42.png" align="left" >}}  
 *Figure 40* 
 
-![](images/fig43.png)   
+{{< img src="/posts/projects/predictive/images/fig43.png" align="left" >}}  
 *Figure 41* 
 
 **ROC curve of Model 9 and 11**
-![](images/fig44.png)   
+{{< img src="/posts/projects/predictive/images/fig44.png" align="left" >}}  
 *Figure 42*
 
-![](images/fig45.png)   
+{{< img src="/posts/projects/predictive/images/fig45.png" align="left" >}}  
 *Figure 43* 
 
 ROC index for Model 9 is 0.837, while ROC index for Model 11 is 0.85.  
@@ -277,19 +281,19 @@ From a public health standpoint, it is more important to have a low False Positi
   
 Hence, to improve the True Negative rate, Cut-off node was added to the selected model, Model 9. To obtain the optimal cut-off value, the Cut-off User Input was varied and the node was rerun several times.  
 
-![](images/fig46.png)   
+{{< img src="/posts/projects/predictive/images/fig46.png" align="left" >}}   
 *Figure 44*
 
 
-![](images/fig47.png)   
+{{< img src="/posts/projects/predictive/images/fig47.png" align="left" >}}  
 *Figure 45*
 
 
-![](images/fig48.png)   
+{{< img src="/posts/projects/predictive/images/fig48.png" align="left" >}}  
 *Figure 46*
 
 
-![](images/fig49.png)   
+{{< img src="/posts/projects/predictive/images/fig48.png" align="left" >}}  
 *Figure 47*
 
 Given the results from figure 46, the cut-off point would largely depend on the government’s benchmark and how widespread the virus is.   
@@ -314,5 +318,5 @@ Based on our assessment, model 9 is deemed to be the best performing model on ba
 
 The model can be further refined by varying the cut-off point, which would largely depend on the public health policies in place.  
 
-![](images/fig50.png)   
+{{< img src="/posts/projects/predictive/images/fig50.png" align="left" >}}  
 *Figure 48*
