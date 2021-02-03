@@ -13,22 +13,21 @@ author:
 
 ---
 
-
-
 *These reports were written as part of the requirements for the Data Analytics Lab module for [MITB](https://scis.smu.edu.sg/master-it-business).*
 
 For executive report, please view:
 
-# 1.	Introduction  
+
+## 1.	Introduction  
 The H1N1 outbreak in April 2009 swept across the world and caused a global pandemic. [CDC](https://www.cdc.gov/flu/pandemic-resources/2009-h1n1-pandemic.html) estimated that the H1N1 virus claimed the lives of 151,700 – 575,400 people worldwide during its first year of circulation. A vaccine for the H1N1 flu was subsequently available in October 2009.   
 
 The objective of this study is to build a predictive model to predict how likely individuals are to receive their H1N1 vaccination. Individuals with low likelihood of being vaccinated, of whom would require a more interventional approach by public health to incentivise them to be vaccinated. The predictive model is based on information such as individuals’ social, economic and demographic background as well opinions on risks and vaccine effectiveness.   
 
-# 2. 	Data  
-## 2.1 	Dataset  
+## 2. 	Data  
+### 2.1 	Dataset  
 The dataset originates from the National 2009 H1N1 Flu Survey (NHFS) conducted between Oct-09 and Jun-10 in the United States. The dataset has 26,707 observations and 38 variables. 
 
-## 2.2	Setting up SAS Enterprise Miner  
+### 2.2	Setting up SAS Enterprise Miner  
 Step 1: Create a new project called: Assign3  
 ![](images/fig1.png)  
 *Figure 1*  
@@ -41,7 +40,7 @@ Step 3: Create New Diagram - Flu vaccination model
 ![](images/fig3.png)  
 *Figure 3*  
 
-## 2.3	Import and save data  
+### 2.3	Import and save data  
 Given that the dataset provided, flu_data, is in JMP file, we have imported the dataset using the “File Import” node under the Sample toolbar.  
 ![](images/fig4.png)  
 *Figure 4*
@@ -54,7 +53,7 @@ Next, using the “Save Data” node under “Utility”, we have named the file
 ![](images/fig6.png)  
 *Figure 6*
 
-## 2.4	Create data source  
+### 2.4	Create data source  
 Next, data source was created. In step 4 of the data source wizard (figure 8), we had customised settings using the ‘Advanced’ option. In the Advanced Advisor Options (figure 9), we changed two properties – i) Class Level Count Threshold, to account for binary data and ii) Missing Percentage Threshold from 50 to 40.   
 
 ![](images/fig7.png)  
@@ -71,8 +70,8 @@ From the column metadata (figure 9), the following were observed (boxes in red):
 3)	3 variables were rejected - high percentage of missing values (missing values for these variables were 45 – 50%, our cut-off was 40%)   
 Finally, we set “h1n1_vaccine” to Target.
 
-## 2.5 	Data exploration  
-### 2.5.1 	Adjustments to variables  
+### 2.5 	Data exploration   
+2.5.1 	Adjustments to variables  
 ![](images/fig10.png)    
 *Figure 10*  
 
@@ -90,12 +89,12 @@ Summary of variables.
 ![](images/fig16.png)  
 *Figure 13*
 
-### 2.5.2 	Missing values  
+2.5.2 	Missing values  
 Excluding rejected variables, we observed that several variables have missing values of 0.08% – 16.5%. Nonetheless, no imputation or replacement was done to prevent distortion of the target. We are aware that these missing values may potentially affect our regression model but will not affect our recursive partitioning model.  
 ![](images/fig17.png)    
 *Figure 14*  
   
-### 2.5.3	Check for complete and quasi-complete separation  
+2.5.3	Check for complete and quasi-complete separation  
 ![](images/fig18.png)  
 *Figure 15*    
 
@@ -103,7 +102,7 @@ By using the default setting of the Multiplot node, variables were checked for a
 
 We did not observe any complete or quasi-complete separation. 
 
-### 2.5.4	Understand variables’ importance  
+2.5.4	Understand variables’ importance  
 ![](images/fig19.png)      
 *Figure 16*   
 
@@ -116,7 +115,7 @@ The Chi-square barplot suggests that the doctor_rec_h1n1 is the best predictor. 
 ![](images/fig21.png)  
 *Figure 18*
 
-## 2.6 Data Partition
+2.6 Data Partition
 
 ![](images/fig22.png)   
 *Figure 19*  
@@ -140,7 +139,7 @@ From the partition summary, figure 21, number of observations were all above 500
 
 While results of the summary statistics for class targets indicated that the percentage between vaccine and no vaccine received is proportionate across the different dataset.  
 
-# 3.	Predictive models  
+## 3.	Predictive models  
 We have built 11 predictive models - 5 logistic regression and 6 recursive partitioning (Decision Trees) for our testing and selection.  
 ![](images/fig25.png)        
 *Figure 23*   
@@ -154,7 +153,7 @@ False Positive is when an **unvaccinated** individual was predicted to be **vacc
 True Positive is when a **vaccinated** individual was predicted to be **vaccinated**.  
 
 
-## 3.1 Logistic regression models
+### 3.1 Logistic regression models
 ![](images/fig27.png)          
 *Figure 25*    
 ![](images/fig28.png)          
@@ -196,7 +195,7 @@ Comparing the training and validation data percentage, we observed that there ar
 In terms of misclassification rate, regression model 4 has the lowest misclassification rate of 14.77%.   
 However, regression model 1 has the highest True Negative percentage of 95.09% and 95.27%, and True Negative observations of 7,999 and 6,012.  
 
-## 3.2 Recursive Partitioning (Decision Trees)
+### 3.2 Recursive Partitioning (Decision Trees)
 ![](images/fig35.png)         
 *Figure 30*  
   
@@ -232,7 +231,7 @@ Similar to our regression models, there are slight signs of overfitting for all 
   
 Excluding model 10, we observed that model 6 has the lowest misclassification rate of 13.55%, while model 11 has the best performance in terms True Negative outcome percentage of 93.93% and 94%, and observations of 7,902 and 5,932.
 
-# 4. 	Model comparison
+## 4. 	Model comparison
 ![](images/fig40.png)   
 *Figure 38*  
 All the 11 models were compared using the model comparison node.   
@@ -240,7 +239,7 @@ We have selected misclassification rate for our Selection and Grid Selection Sta
 For the Selection Table, Test data was used as a comparison given that we seek to understand how well the selected model performs when applied to new data.  
 See figure 38 for changes made to the node property.  
 
-## 4.1 	Model comparison results and model selection  
+### 4.1 	Model comparison results and model selection  
 In assessing our models, we looked at   
     a)	Misclassification rate – minimise.  
     b)	Specificity - maximise.  
@@ -273,7 +272,7 @@ Both models are strong models as they both >0.7.
   
 Given the above assessment, model 9 is deemed to be the best performing model on basis that it produces the highest Specificity rate, 3rd lowest misclassification and high ROC index.  
 
-## 4.2 	Model improvement  
+### 4.2 	Model improvement  
 From a public health standpoint, it is more important to have a low False Positive rate - those not likely to be vaccinated but was predicted to be vaccinated. It is more detrimental to misclassify the individual as False Positive as compared to False Negative. The cost of a False Positive is an individual left unvaccinated to spread the virus, or worst succumb to the virus. While the cost of a False Negative is additional follow up with individuals who are already vaccinated. True Negative rate is inversely related to False Positive.  
   
 Hence, to improve the True Negative rate, Cut-off node was added to the selected model, Model 9. To obtain the optimal cut-off value, the Cut-off User Input was varied and the node was rerun several times.  
@@ -308,7 +307,7 @@ In short, as the cut-off point increase, public health officers will be followin
 Hence, ultimately the cut-off point depends on governments’ benchmark, public health policy and resources available to follow-up on cases.  
 
 
-# 5. 	Conclusion  
+## 5. 	Conclusion  
 The 11 models created share similar misclassification rate ranging from 15.15% to 15.85%.  
 
 Based on our assessment, model 9 is deemed to be the best performing model on basis that it produces the highest Specificity, 3rd lowest misclassification and high ROC index.  
