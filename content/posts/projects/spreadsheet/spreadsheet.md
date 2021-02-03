@@ -65,6 +65,8 @@ There are two sets of opening dates: **partial** (business travel only) and **fu
 {{< img src="/posts/projects/spreadsheet/images/fig5.png" align="left" >}}
 *Figure 5*  
 
+For Yellow bucket countries, daily new cases are projected using a curve-fitting approach with a Log-Normal distribution  to meet the asymmetric feature of the distribution of daily new cases of COVID-19. The formula for the Log-Normal Distribution (Fig. 6) and Yellow bucket country Maldives curve-fitting example is illustrated in Fig. 7 and 8.
+
 {{< img src="/posts/projects/spreadsheet/images/fig6.png" align="left" >}}
 *Figure 6*
 
