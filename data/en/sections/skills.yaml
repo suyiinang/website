@@ -34,7 +34,7 @@ skills:
   logo: /images/sections/skills/ms.png
 
 - name: SAS Enterprise Miner
-  logo: /images/sections/skills/em.png
+  logo: 
   summary: "Experienced with predicitive analytics using regression and recursive partitioning models."
   
 
