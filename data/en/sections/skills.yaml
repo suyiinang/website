@@ -26,19 +26,15 @@ skills:
   summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
   url: "https://www.jmp.com/en_gb/home.html"
 
-- name: Docker
-  logo: /images/sections/skills/docker.svg
-  summary: "Experienced with performing statistical (exploratory and confirmatory), cluster and time series analysis."
-  url: "https://www.docker.com/"
+- name: SAS Enterprise Miner
+  logo: /images/sections/skills/em.png
+  summary: " with predicitive analytics using regression and recursive partitioning models."
+  url: "https://www.sas.com/en_sg/software/enterprise-miner.html"
 
-- name: Prometheus
-  logo: /images/sections/skills/prometheus.png
-  summary: "Capable of setup, configure Prometheus metrics. Experienced with PromQL, AlertManager. Also, experienced with writing metric exporters."
-  url: "https://prometheus.io/"
-
-- name: Linux
-  logo: /images/sections/skills/linux.png
-  summary: "Using as the main operating system. Capable of writing bash/shell scripts."
+- name: Tableau
+  logo: /images/sections/skills/tab.png
+  summary: "Experienced with creating interactive dashboards."
+  url: "https://www.tableau.com"
 
 - name: Git
   logo: /images/sections/skills/git.png
