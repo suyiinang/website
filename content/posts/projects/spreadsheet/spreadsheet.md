@@ -1,11 +1,11 @@
 ---
-title: "Spreadsheet"
-date: 2020-10-18
-description: Spreadsheet.
+title: "Post-COVID Recovery for Singapore Airlines: Optimizing Passenger-Cargo Fleet Allocation"
+date: 2020-11-18
+description: Spreadsheet modeling
 menu:
   sidebar:
-    name: Spreadsheet
-    identifier: Spreadsheet
+    name: Spreadsheet modeling
+    identifier: modeling
     weight: 30
 author:
   name: Su Yiin Ang
