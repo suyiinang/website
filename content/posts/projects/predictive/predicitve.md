@@ -4,7 +4,7 @@ date: 2020-11-15
 description: Predicting H1N1 Vaccination based on Flu Survey Data
 menu:
   sidebar:
-    name: Predictive analytics
+    name: 03 Predictive analytics
     identifier: predictive
     weight: 30
 author:
@@ -15,9 +15,9 @@ author:
 
 Predicting H1N1 Vaccination based on Flu Survey Data
 
----
-
 *These reports were written as part of the requirements for the Data Analytics Lab module for [MITB](https://scis.smu.edu.sg/master-it-business).*
+
+----
 
 For executive report, please view: [Executive Report - Predictive](https://drive.google.com/file/d/1Gw1I4vGezWTbzbLreE9eg5JNGADqHbHz/view?usp=sharing)
 

@@ -4,7 +4,7 @@ date: 2020-10-18
 description: Market segmentation of Philippines’ market based on expenditure patterns of households.
 menu:
   sidebar:
-    name: Cluster analysis
+    name: 02 Cluster analysis
     identifier: segmentation
     weight: 30
 author:
@@ -15,9 +15,9 @@ author:
 
 Market segmentation of Philippines’ market based on expenditure patterns of households.
 
----
-
 *These reports were written as part of the requirements for the Data Analytics Lab module for [MITB](https://scis.smu.edu.sg/master-it-business).*
+
+---
 
 For executive report, please view : [Executive Report - Segmentation](https://drive.google.com/file/d/1O3CCnBVoUOHd7w_96sEVDVMNkkwEbDcA/view?usp=sharing)
 
