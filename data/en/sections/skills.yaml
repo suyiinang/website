@@ -23,24 +23,20 @@ skills:
 
 - name: SAS JMP
   logo: /images/sections/skills/jmp.png
-  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
-  url: "https://www.jmp.com/en_gb/home.html"
+  summary: "Experienced with performing statistical (exploratory and confirmatory), cluster and time series analysis."
 
 - name: SAS Enterprise Miner
   logo: /images/sections/skills/em.png
   summary: " with predicitive analytics using regression and recursive partitioning models."
-  url: "https://www.sas.com/en_sg/software/enterprise-miner.html"
 
 - name: Tableau
   logo: /images/sections/skills/tab.png
   summary: "Experienced with creating interactive dashboards."
   url: "https://www.tableau.com"
 
-- name: Git
-  logo: /images/sections/skills/git.png
-  summary: "Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab."
-  url: "https://git-scm.com/"
+- name: MySQL
+  logo: /images/sections/skills/mysql.png
+  summary: "Currently learning."
 
-- name: C++
-  logo: /images/sections/skills/c++.png
-  summary: "Know basic C/C++ programming. Used for contest programming and problem solving."
+- name: MS Word, Excel, PowerPoint
+  logo: /images/sections/skills/ms.png
