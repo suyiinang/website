@@ -12,7 +12,7 @@ math: true
 
 # Predicting H1N1 vaccination based on flu survey.
 
-*This was written as part of the requirements for the Visual Analytics module for [MITB](https://scis.smu.edu.sg/master-it-business).*
+*This was written as part of the requirements for the Data Analytics Lab module for [MITB](https://scis.smu.edu.sg/master-it-business).*
 
 ---
 

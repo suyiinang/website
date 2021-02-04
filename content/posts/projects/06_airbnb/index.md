@@ -83,8 +83,8 @@ The obtained Binary-DTM and TFIDF-DTM (each containing 50 terms/phrases) are thu
 ### 4.3 Final set of variables
 The final dataset for analysis consists of 3,425 observations, 1 dependent variable being review scores, 30 independent variables representing structured data, 200 variables representing textual data from the generated DTMs, with some other variables for reference.
 
-## Analytical Methods
-## Exploratory and confirmation data analysis
+## 5 Analytical Methods
+### 5.1 Exploratory and confirmation data analysis
 After data cleaning has been conducted under cleaning of structured variables, exploratory data analysis (EDA) and confirmatory data analysis (CDA) are conducted.
 
 **Review scores**
@@ -136,7 +136,8 @@ Figure 13 suggests that verified hosts tend to have higher review scores. Anders
 *Figure 15*
 Welch tests return p-values <0.05, indicating that whether the host’s identity is verified causes a significant difference in review scores of the listings. In particular, Figure 13 suggests that being a verified host increases mean review scores by 1 point on average (from 91.3 to 92.3).
 
-# Model Building
+## 6 Model Building and Comparison
+### 6.1 Model Building
 All independent continuous variables are checked for multi-collinearity issues. Only pairwise correlation between ‘accommodates’ and ‘beds’ is considerably high above 0.7 (Figure 16), thus ‘beds’ is removed from the list of variables imported into Enterprise Miner for model building. 
  
 {{< img src="/posts/projects/06_airbnb/images/fig7.png" align="left" >}} 
@@ -148,7 +149,7 @@ Model building & selection is conducted via 2 steps:
 •	First, models with all structured variables and either TFIDF or Binary DTM variables are constructed with review_scores_rating as the target, each with either multiple linear regression or binary regression tree to determine whether TFIDF or Binary DTM is better.  
 •	Second, the chosen DTM variables coming from either reviews or listing together with structured variables are run to determine best key determinants of overall review_scores_rating
 
-# Model Comparison
+### 6.2 Model Comparison
 **Step 1**
 To distinguish between TFIDF and Binary DTM, 6 different models were built (see Table 1 for comparison). Result reveals that Model 6 - Binary DTM regression tree provided a better fit (lowest validation ASE) compared to Binary DTM linear regression and TF-IDF models. Given that the TFIDF algorithm assigns more weight to rare terms, TFIDF DTM would penalize top terms as terms were pre-processed to remove stopwords and irrelevant words (see Text Cleaning section). Thus, we have selected model 6 as a base for step 2 – model optimization.
 
@@ -170,7 +171,7 @@ Of the 4 regression trees (Table 2), model 7 was the best performing model with 
 {{< img src="/posts/projects/06_airbnb/images/fig18.png" align="left" >}}  
 *Figure 18: Score ranking overlay for binary regression trees*
 
-# Results and discussion 
+## 7 Results and discussion 
 
 {{< img src="/posts/projects/06_airbnb/images/fig19.png" align="left" >}} 
 *Figure 19: Model 7 - score ranking matrix*
@@ -192,13 +193,13 @@ From the optimal model (Figure 20 & Figure 21), we obtained 6 variables of impor
 -	Host_response_time: while there is a range of possible response times, it is most important that the host’s response is made within 1 hour. 
 Somewhat counterintuitively, location-related variables and amenities are not key factors in determining review scores. A plausible reason for this is that Singapore's efficient transport network and small land-area may alleviate guest concerns regarding transportation to areas of interest.  
 
-# Futher work
+## 8 Futher work
 There are several potential avenues for improvements:
 -	Apart from overall review scores, Airbnb also provides scores focusing on 6 different aspects of the experience. Further exploration on relative weightings amongst these aspects can be carried out.
 -	Given that Singapore is multilingual and multicultural, the cultural/racial dimension of Airbnb matching can be further explored. In our own analysis, we detected a substantial number of non-English reviews, which may provide valuable insights that have not been covered in this analysis. These reviews can be further augmented by image processing of host’s profile pictures to infer racial information, as has been done in the USA.  
 -	More sophisticated textual analysis techniques may be employed. For example, singular value decomposition applied to text mining can reveal the latent structure of a text corpus as opposed to simple DTM, which contains a lot of noise. Alternatively, latent Dirichlet allocation may also reveal the relevant set of topics and topic mixtures in review and description texts. 
 
-# Conclusion
+## 9 Conclusion
 Based on model building of textual & structured variables, we identified key factors influencing review scores in Singapore to be predominantly host-related: superhost status, number of host listings, host tenure, host response time, pricing, and smooth check-in. We also identified DTM produced from Binary weighting scheme as sufficient compared to TFIDF in producing the optimal model, which was determined to be a binary regression tree.
 
 
