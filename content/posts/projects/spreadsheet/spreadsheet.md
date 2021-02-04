@@ -4,13 +4,13 @@ date: 2020-11-18
 description: Spreadsheet modeling
 menu:
   sidebar:
-    name: SIA
+    name: Post-COVID Recovery for SIA
     identifier: modeling
     weight: 96
 
 ---
 
-Optimizing Passenger-Cargo Fleet Allocation
+# Optimizing Passenger-Cargo Fleet Allocation
 
 *By: Ang Su Yiin, Gabriella Pauline Djojosaputro, Gordy Adiprasetyo, Kendra Luisa Baylon Gadong, Nguyen Nhi Thai An, Ulysses Chong Min Zhen*  
 
@@ -53,7 +53,7 @@ The spreadsheet model is built for the purpose of making the following computati
 •	Compute scrap price for stored aircrafts  
 Each sub-component as outlined in the influence diagrams is explained in further detail below.  
 
-**4.1	Forecasting COVID recovery rate by country from 2021 to 2025**
+### 4.1	Forecasting COVID recovery rate by country from 2021 to 2025  
 Based on the current number of [COVID cases per capita](https://ourworldindata.org/covid-cases), each country is assigned a risk profile based on a [traffic light system](https://www.dw.com/en/coronavirus-what-the-eus-new-traffic-light-system-means/a-55265476) adapted from the European Center for Disease Prevention and Control (ECDC). Each country is assigned a traffic light (Green, Yellow, Red) based on the rate of new infections per 100,000 inhabitants in the past 14 days:  
   
 -	Green is for countries reporting less than 1 new infection per 100,000 inhabitants.  
@@ -144,7 +144,7 @@ Scrap price is computed from the net present value of projected yearly cashflow 
 
 The last year of useful life’s cashflow is the sum of expected book value at retirement and storage cost or expected profit, depending on the storage allocation. The expected book value is calculated from the purchase cost minus the depreciation along the course of its useful life. The depreciation value is estimated from [SIA’s financial report](https://www.singaporeair.com/saar5/pdf/Investor-Relations/Annual-Report/annualreport1920.pdf).  
 
-## 4.	Results  
+## 5.	Results  
 Overall, SIA’s profit is highly dependent on passenger demand recovery rate.  
 {{< img src="/posts/projects/spreadsheet/images/fig18.png" align="left" >}}
 *Figure 17*    
@@ -153,27 +153,27 @@ Given that all countries are only forecasted to reopen in Dec-2022, a large prop
 {{< img src="/posts/projects/spreadsheet/images/fig19.png" align="left" >}}
 *Figure 18*   
 
-## 5.	Trade-offs and sensitivity
-### 5.1	Sensitivity of fuel cost on total profit  
+## 6.	Trade-offs and sensitivity
+### 6.1	Sensitivity of fuel cost on total profit  
 {{< img src="/posts/projects/spreadsheet/images/fig20.png" align="left" >}}
 *Figure 19*    
 
 Total profit is more sensitive to changes in fuel cost in the later years due to more aircrafts being in service. Based on figure 16, a 2.5% increase in fuel cost would result in losses, hence proper risk mitigation strategies, for example hedging fuel cost and dynamic seat pricing, must be in place to preserve profits.  
   
-### 5.2 	Sensitivity of passenger demand recovery rate on total profit  
+### 6.2 	Sensitivity of passenger demand recovery rate on total profit  
 {{< img src="/posts/projects/spreadsheet/images/fig21.png" align="left" >}}
 *Figure 20*    
 
 The sensitivity analysis of passenger demand recovery reveals that total profit highly sensitive to the vaccine availability date.  
 Given that the vaccine release date is uncontrollable and uncertain at the date of this report, SIA should take the necessary steps to manage cash flow.  
 
-### 5.3	Trade off analysis   
+### 6.3	Trade off analysis   
 {{< img src="/posts/projects/spreadsheet/images/fig22.png" align="left" >}}
 *Figure 21*
 
 Profits would turn negative beyond a certain level of over allocation to passenger services due to supply outstripping demand for seats. As demand is the limiting factor, every additional plane allocated reduces profit. That being said, SIA may decide to allocate more aircrafts to passenger services to increase route offering for other business or technical reasons.  
 
-## 6.	Model limitations and assumptions  
+## 7.	Model limitations and assumptions  
 *Operating Costs*  
 -	Model does not account for any redundancies and pay cut as projected cost is based on 2019 cost.  
 -	Model does not account for any changes in flight operating cost (e.g. different number of flights per aircraft per year) as it is based on 2019 cost.  

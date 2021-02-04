@@ -11,14 +11,14 @@ menu:
 
 An analysis of guests’ booking and cancellation trends for two Portuguese hotels.
 
----
-
 *These reports were written as part of the requirements for the Data Analytics Lab module for [MITB](https://scis.smu.edu.sg/master-it-business).*
+
+---
 
 For executive report, please view : [Executive report - hotel booking](https://drive.google.com/file/d/1PF6ZHf-r5Fm_WzqlCgfGxuBDRdVKsV4A/view?usp=sharing)
 
 ## 1. Overview
-**Changing Landscape of the Hotel Industry**
+**Changing Landscape of the Hotel Industry**  
 According to [D-Edge](https://www.d-edge.com/the-rise-of-direct-bookings-over-otas/), the rise of online travel agents (OTAs) has caused hotels in Europe to experience a shift in distribution channel mix – in particular, from the websites of hotels, to OTAs (particularly Booking.com). The market share of Booking.com increased by 4.7% from 43.6% in 2014 to 48.3% in 2018, while that of hotels’ websites declined by 6.3% from 27.2% in 2014 to 20.9% in 2018.  
 
 From a revenue standpoint, this shift is not necessarily a concern as Booking.com’s reservation revenue index grew by 62.4%, compared to the hotels’ websites which declined by 12.5% over 5 years ([D-Edge](https://www.d-edge.com/the-rise-of-direct-bookings-over-otas/)).  
@@ -164,7 +164,8 @@ Two observations – 737 and 709 days were excluded.
 
 ## 4. Insights
 
-# 4.1 Cancellation rates differ by hotel – City 41.7% and Resort 27.8%
+### 4.1 Cancellation rates differ by hotel  
+City 41.7% and Resort 27.8%
 {{< img src="/posts/projects/exploratory/images/fig18.png" align="left" >}}  
 *Figure 17*  
   
@@ -183,7 +184,7 @@ Thus, we will analyse cancellation rate for the two hotels separately, with a vi
 Interestingly, although City hotel had a higher average cancellation rate, the rate has been relatively consistent across the 25 months. In contrast, Resort hotel’s cancellation rate has been steadily increasing.
 
 # Seasonality
-# 4.2 Cancellation fluctuated across the months due to seasonality.
+### 4.2 Cancellation fluctuated across the months.
 
 For City hotel, we observed some seasonality during the years; bookings peaked around Sep/Oct and May/June. Similarly, cancellation rates fluctuated during the year (figure 21).   
   
@@ -203,7 +204,8 @@ While cancellation rates tend to fluctuate across the year, peak cancellation mo
 *Figure 23*   
 
 # Customer demographics
-# 4.3 Couples accounted for ~70% of bookings, but form the biggest group to cancel for City Hotel.
+### 4.3 Couples cancels the most
+Couples accounted for ~70% of bookings, but form the biggest group to cancel for City Hotel.
 
 {{< img src="/posts/projects/exploratory/images/fig25.png" align="left" >}}  
 *Figure 24*   
@@ -216,7 +218,7 @@ Guests’ demographics were similar for both hotels. Couples accounted for ~69% 
 Despite the similarity in guests’ profile, the cancellation rate by customer segment differs for each hotel.   
 For City Hotel, couples cancelled the most (45%). In contrast, for Resort Hotel, day trippers had the highest cancellation rate of 66.7%, although day trippers’ bookings were <1% of total. 
 
-# 4.4 Portuguese Nationals formed the highest cancellation group for both hotels.
+# 4.4 Portuguese Nationals cancels the most
 {{< img src="/posts/projects/exploratory/images/fig27.png" align="left" >}}  
 *Figure 26*  
   
@@ -239,13 +241,13 @@ Since both hotels has similar cancellation trends by nationality, hypothesis was
 {{< img src="/posts/projects/exploratory/images/fig30.png" align="left" >}}  
 *Figure 28*  
 
-{{< img src="/posts/projects/exploratory/images/fig.29" align="left" >}}  
+{{< img src="/posts/projects/exploratory/images/fig29.png" align="left" >}}  
 *Figure 29*
 
     
 With the p-value 0.001 < critical value 0.05, there is no statistical evidence to support the claim that cancellation rates are independent of nationality.  
 
-# 4.5 Portuguese couples and solo travellers - extremely high cancellation rate of 64-70%
+### 4.5 Portuguese couples and solo travellers - extremely high cancellation rate 64-70%
 
 {{< img src="/posts/projects/exploratory/images/fig31.png" align="left" >}}  
 *Figure 30*  
@@ -256,7 +258,7 @@ Portuguese couples and solo travellers, who accounted for 37.7% of total booking
 *Figure 31*
 
 # Distribution channel
-# 4.6 Cancellation rate was the highest for TA/TO and lowest for direct.
+### 4.6 Cancellation rate was the highest for TA/TO and lowest for direct.
 
 {{< img src="/posts/projects/exploratory/images/fig33.png" align="left" >}}  
 *Figure 32*  
@@ -279,7 +281,7 @@ To validate our hypothesis, we performed the Chi-Square test as both variables a
 With the p-value 0.001 < critical value 0.05, we can conclude that cancellation rates are not independent of the distribution channel.
 
 # Guests’ booking patterns
-# 4.7 Cancellation rate increased with bookings for short term stay (0-18 nights), but decreased with longer stays ( > 18 nights)  
+### 4.7 Cancellation rate increased with bookings for short term stay (0-18 nights), but decreased with longer stays ( > 18 nights)  
   
 {{< img src="/posts/projects/exploratory/images/fig36.png" align="left" >}}  
 *Figure 35*  
@@ -295,7 +297,7 @@ Further investigation revealed that there is
 i)	a weak-moderate positive linear relationship for short-term stay (r = 0.435).  
 ii)	a moderate negative linear relationship for long-term stay (r = -0.608).  
   
-# 4.8 Cancelled bookings have longer lead time on average.
+### 4.8 Cancelled bookings have longer lead time on average.
 
 {{< img src="/posts/projects/exploratory/images/fig38.png" align="left" >}}  
 *Figure 37*
@@ -306,17 +308,17 @@ This seems to indicate that the bookings with longer lead time have a higher can
   
 *4.8.1 Is there a difference in the average lead time for cancelled and non-cancelled? (Hypothesis testing)*  
 
-To decide on our hypothesis testing method, we had to determine if (a) variance is equal and (b) distribution of lead time is normal.  
+To decide on our hypothesis testing method, we had to determine if   
+  (a) variance is equal and   
+  (b) distribution of lead time is normal.  
 
-a)	Variance is unequal  
-  
+**a)	Variance is unequal**
 JMP performed 5 different tests for the equality of variances. As shown in figure 38, all tests have the same conclusion - p-values 0.001 < critical value 0.05. Thus, there is sufficient evidence to reject null assumption that variances are equal. Therefore, this data will be analysed using an unequal variance test.  
 
 {{< img src="/posts/projects/exploratory/images/fig39.png" align="left" >}}  
 *Figure 38* 
 
-b)	Distribution of Leadtime is not normal 
-  
+**b)	Distribution of Leadtime is not normal**
 To test normality, we have performed the Anderson-Darling Goodness of Fit Test with confidence level of 95%. With p-value 0.001 < critical value 0.05, there is no statistical evidence to support that lead time’s distribution is normal. Thus, this data will be analysed using a non-normal test.  
 
 {{< img src="/posts/projects/exploratory/images/fig40.png" align="left" >}}  
@@ -334,7 +336,7 @@ Since both hotels have similar trends, we tested our hypothesis on a consolidate
 
 Test result (figure 40) with p-value 0.0001 < our critical value 0.05. Hence, there is statistical evidence to reject the null hypothesis. Thus, we can conclude that the average lead time for cancelled and not cancelled bookings is different.  
 
-# 4.9 Bookings with reassigned rooms had fewer cancellations
+### 4.9 Bookings with reassigned rooms had fewer cancellations
   
 {{< img src="/posts/projects/exploratory/images/fig42.png" align="left" >}}  
 *Figure 41*
@@ -346,9 +348,9 @@ Test result (figure 40) with p-value 0.0001 < our critical value 0.05. Hence, th
   
 Reasons for reassignment, or when assigments were made, were not provided. For this analysis, we have assumed that all reassignments were made prior to check-in as there were combinations of ‘diff room’ and reservation status of ‘cancelled’/’no show’.  
   
-Figure 41 indicates that bookings with reassigned rooms had a much lower cancellation rate of ~5% compared to bookings with same rooms of 33% - 45%.  
+Figure 42 indicates that bookings with reassigned rooms had a much lower cancellation rate of ~5% compared to bookings with same rooms of 33% - 45%.  
 
-# 4.10 Recurring guests cancelled less
+### 4.10 Recurring guests cancelled less
 
 {{< img src="/posts/projects/exploratory/images/fig44.png" align="left" >}}  
 *Figure 43* 
@@ -363,7 +365,7 @@ However, repeated guests only accounted for 2-4% of respective hotels’ booking
 *Figure 45*
 
 ## 5. Intrepretation of results
-**Location matters.**
+**Location matters.**  
 Cancellation rate for city hotel was higher (42%) versus resort’s (28%). Interestingly, the cancellation rate throughout the 25 months for City Hotel has remained consistently around this level (42%) while that of Resort hotel had increased from 26% to 31%.   
 
 **Expect seasonality.**  

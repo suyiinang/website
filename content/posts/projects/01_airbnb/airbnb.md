@@ -9,7 +9,7 @@ menu:
     weight: 95
 ---
 
-Augmenting Numerical Data with Textual Analysis to Identify Key Determinants of Airbnb Review Scores
+# Augmenting Numerical Data with Textual Analysis to Identify Key Determinants of Airbnb Review Scores
 
 **By: Ang Su Yiin, Anne Nguyen Nhi Thai An, Toh E-Lynn**
 
@@ -17,17 +17,17 @@ Augmenting Numerical Data with Textual Analysis to Identify Key Determinants of 
 
 ---
 
-For post, please view : [Poster](https://drive.google.com/file/d/1BIwU2oUqKrYxyTnZSbpzDUyPL4Gsan7n/view?usp=sharing)
+For poster, please view : [Poster](https://drive.google.com/file/d/1BIwU2oUqKrYxyTnZSbpzDUyPL4Gsan7n/view?usp=sharing)
 
-## Abstract 
+## 1. Abstract 
 Text analytics provides powerful tools for transforming large amounts of unstructured data into quantitative variables, allowing researchers to contribute unique insights to business decision-making. In this study, we use textual data from reviews provided by Airbnb guests and descriptions of listings by Airbnb hosts to augment existing analyses of structured variables associated with Airbnb listings. Utilizing text mining techniques, we procure top terms by relevance from reviews and listing descriptions. These unstructured variables are combined with other structured variables describing various host and listing characteristics. We then employ an array of multiple linear regression and regression tree models with Binary Document Term Matrix and Term Frequency Inverse Document Frequency variants to identify the key determinants of review scores. Evaluating these models in accordance with their lowest average square error, the optimal model is determined to be a regression tree, parametrized by 2 branches, 6 depth, 100 leaf size, 100 rules and 100 split size. The key determinants obtained from the optimal model are predominately host related – superhost status, number of host listings, host tenure, host response time, pricing, and smooth check-in. Following our analysis, we suggest several insights and recommendations specific to the Airbnb sharing-economy of Singapore.
 
-## Introduction
+## 2. Introduction
 Widely described as the most disruptive innovation of tourism in recent times, Airbnb has enjoyed exponential growth after its entry into the short-term accommodation market in 2008. In 2019, almost 7 million listings were placed on Airbnb, generating over [USD 4.7b in global revenue](https://www.businessofapps.com/data/airbnb-statistics/). Closer to home, Airbnb revealed that its guests contributed $411m to Singapore’s economy via host payouts and daytime spending in 2017. Indeed, Singapore has been reported to be one of “Airbnb’s most penetrated markets globally”, with almost [1.5 million Singaporeans using Airbnb listings overseas](https://vulcanpost.com/641967/airbnb-singapore-report-2017/#:~:text=Singapore%20was%20also%20reported%20to,Singaporeans%20using%20Airbnb%20listings%20overseas.&text=Locally%2C%20hosts%20welcomed%20350%2C000%20guests,hosts%20sharing%20their%20primary%20residence).  
 
 Sharing platforms like Airbnb play an important intermediating role in connecting hosts and guests who would not ordinarily be able to interact with each other in the absence of the platform.  However, the large number of listings on Airbnb entails strong competition amongst hosts for potential guests, who may also be willing to opt for a hotel or serviced apartment. Thus, our results have important implications for Airbnb hosts who seek to remain attractive to potential guests.
 
-## Literature Review  
+## 3. Literature Review  
 Given the importance of review scores in host profitability, a large body of literature has attempted to identify the key determinants of an Airbnb guest’s experience with a given accommodation. The methodological approaches adopted by these studies have largely diverged into two paths. 
   
 First, several studies have focused on structured variables in their identification strategies. Employing surveys with a five-point Likert-type scale, Yang et.al found several important factors in determining review scores for hotels in Taiwan: the quality of the service, room cleanliness, and provision of certain amenities.  The authors recommended that resort hotels needed to improve the quality of amenities provided, while business hotels needed to improve their transportation services to/from airports. Other studies have focused on the effect of observable (non-survey) data on review scores. Zhu et.al focused on independent variables published by Airbnb to determine their effect on Airbnb ratings across 43 cities. They established that good communication, space and provision of information about the listings’ environment were the primary determinants of Airbnb guest satisfaction. 
@@ -36,7 +36,7 @@ Second, the heavy reliance on survey data and other structured variables has bee
 
 Despite the ubiquity of literature on the determinants of Airbnb reviews, few studies have combined the use of both unstructured and structured variables in the same analysis. Furthermore, studies relying on unstructured variables have suggested that there may be substantial differences across countries, perhaps due to cultural and socioeconomic factors. Our paper attempts to contribute to the literature in two ways. First, we introduce a methodological innovation of combining both types of variables in our analysis. Second, we aim to examine whether certain determinants are unique to Singapore’s Airbnb context.
 
-## Data Preparation
+## 4. Data Preparation
 The overall flow of the analysis process is as summarized in Figure 1. The two main inputs are listings and reviews data which were obtained from [InsideAirbnb’s](http://insideairbnb.com/get-the-data.html) archive dated 28/12/2019,  to avoid exogenous effects attributable to the COVID-19 pandemic.
 
 Listings data consists of majority of listings characteristics with a total of 8,000 observations and 106 variables. This is supplemented by reviews data which can be linked back to listings data through the listings’ unique IDs; this has 108,685 observations in total.
@@ -44,8 +44,8 @@ Listings data consists of majority of listings characteristics with a total of 8
 {{< img src="/posts/projects/01_airbnb/images/fig1.png" align="left" >}}
 *Figure 1*
 
-## Cleaning of Structured Variables
-Since accessibility to public transport is an important determinant, distance to the nearest train station is calculated using geodesic distance as an approximation, with coordinates of train stations obtained from [GitHub](https://github.com/hxchua/datadoubleconfirm/blob/master/datasets/mrtsg.csv), carried out in R with the use of the [geodist R package](https://cran.r-project.org/web/packages/geodist/vignettes/geodist.html) (Annex I). Further, distance to city center is also calculated with the city centre used being Fullerton Hotel  (Annex II). 
+### 4.1 Cleaning of Structured Variables
+Since accessibility to public transport is an important determinant, distance to the nearest train station is calculated using geodesic distance as an approximation, with coordinates of train stations obtained from [GitHub](https://github.com/hxchua/datadoubleconfirm/blob/master/datasets/mrtsg.csv), carried out in R with the use of the [geodist R package](https://cran.r-project.org/web/packages/geodist/vignettes/geodist.html). Further, distance to city center is also calculated with the city centre used being Fullerton Hotel. 
 Out of all text fields describing the listing, ‘description’ was most complete and thus retained. Other text fields were excluded. 
 
 {{< img src="/posts/projects/01_airbnb/images/fig2.png" align="left" >}}
@@ -66,7 +66,7 @@ The variable ‘price_per_pax’ was created to compare value for money, calcula
 
 ‘Amenities’ consists of up to 74 different items, with the [most important being Wifi, air-conditioning, kitchen, and parking](https://www.airbnb.com.sg/resources/hosting-homes/a/the-best-amenities-to-offer-right-now-203 ). Excluding parking due to h[igh cost of driving](https://www.straitstimes.com/singapore/transport/true-cost-of-driving) in Singapore, binary variables were created for WiFi/Internet, air-conditioning, and kitchen, together with an overall ‘amenities_count’. Other relevant variables created include ‘host_tenure’, ‘host_response_rate_pct’, ‘listing_age’, ‘pct_recent_reviews’ to capture various aspects of host and property. 
 
-## Text Cleaning
+### 4.2 Text Cleaning
 First-pass text-analysis in JMP Text Explorer shows a substantial number of foreign reviews and listing descriptions being misclassified as English. [Google’s ‘cld3’ R package](https://cran.r-project.org/web/packages/cld3/cld3.pdf) is used to detect text language (Annex II). Approximately 19.9% of the review and 6.5% of listing descriptions were in foreign languages.
 Since each listing may have multiple reviews, reviews in English belonging to the same listing with available review scores are concatenated together. 
 
@@ -80,7 +80,7 @@ nDocTerm: Number of documents that contains the term
 
 The obtained Binary-DTM and TFIDF-DTM (each containing 50 terms/phrases) are thus the textual scores obtained from reviews and descriptions for each listing, compiled into a single dataset together with structured variables for model building purposes. 
 
-## Final set of variables
+### 4.3 Final set of variables
 The final dataset for analysis consists of 3,425 observations, 1 dependent variable being review scores, 30 independent variables representing structured data, 200 variables representing textual data from the generated DTMs, with some other variables for reference.
 
 ## Analytical Methods
@@ -103,10 +103,10 @@ A geographical distribution of Airbnbs within Singapore shows that most resident
 *Figure 8*
 
 {{< img src="/posts/projects/01_airbnb/images/fig9.png" align="left" >}} 
-*Figure 9*
+*Figure 9 Price per pax of listings by neighbourhood groups, sorted by median*
 
 {{< img src="/posts/projects/01_airbnb/images/fig10.png" align="left" >}} 
-*Figure 10*
+*Figure 10 Distribution of Airbnbs by room types*
 
 While hotel rooms and shared rooms are typically concentrated nearer to the city center, entire home/apartment and private rooms are available further away in the residential suburbs.
 
@@ -164,7 +164,7 @@ Model 6 was further calibrated by varying the splitting rules, node properties a
 Of the 4 regression trees (Table 2), model 7 was the best performing model with a validation ASE of 84.9 using 6 variables. 
 
 {{< img src="/posts/projects/01_airbnb/images/tab2.png" align="left" >}} 
-(Note: Models’ properties used are default settings unless otherwise stated above.)
+(Note: Models’ properties used are default settings unless otherwise stated above.)  
 *Table 2*
 
 {{< img src="/posts/projects/01_airbnb/images/fig18.png" align="left" >}}  

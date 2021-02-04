@@ -4,19 +4,19 @@ date: 2020-11-15
 description: Predicting H1N1 vaccination based on flu survey.
 menu:
   sidebar:
-    name: Predict vaccination
+    name: Predicting H1N1 vaccination
     identifier: Predictive
     weight: 97
 
 ---
 
-Predicting H1N1 vaccination based on flu survey.
+# Predicting H1N1 vaccination based on flu survey.
 
 *This was written as part of the requirements for the Visual Analytics module for [MITB](https://scis.smu.edu.sg/master-it-business).*
 
 ---
 
-For executive report, please view: [Executive Report - Predictive](https://drive.google.com/file/d/1Gw1I4vGezWTbzbLreE9eg5JNGADqHbHz/view?usp=sharing)
+For executive report, please view: [Executive Report - Predicting H1N1 vaccination](https://drive.google.com/file/d/1Gw1I4vGezWTbzbLreE9eg5JNGADqHbHz/view?usp=sharing)
 
 
 ## 1.	Introduction  
@@ -26,7 +26,7 @@ The objective of this study is to build a predictive model to predict how likely
 
 ## 2. 	Data  
 ### 2.1 	Dataset  
-The dataset originates from the National 2009 H1N1 Flu Survey (NHFS) conducted between Oct-09 and Jun-10 in the United States. The dataset has 26,707 observations and 38 variables. 
+The dataset originates from the [National 2009 H1N1 Flu Survey](https://www.cdc.gov/nchs/nis/data_files_h1n1.htm) (NHFS) conducted between Oct-09 and Jun-10 in the United States. The dataset has 26,707 observations and 38 variables. 
 
 ### 2.2	Setting up SAS Enterprise Miner  
 Step 1: Create a new project called: Assign3  
@@ -43,20 +43,20 @@ Step 3: Create New Diagram - Flu vaccination model
 *Figure 3*  
 
 ### 2.3	Import and save data  
-Given that the dataset provided, flu_data, is in JMP file, we have imported the dataset using the “File Import” node under the Sample toolbar.  
+Given that the dataset provided, flu_data, is in JMP file, I have imported the dataset using the “File Import” node under the Sample toolbar.  
 {{< img src="/posts/projects/05_predict/images/fig4.png" align="left" >}}  
 *Figure 4*
 
 {{< img src="/posts/projects/05_predict/images/fig5.png" align="left" >}}  
 *Figure 5*  
 
-Next, using the “Save Data” node under “Utility”, we have named the file as “flu_data” under the “Filename Prefix” option and saved the data into the SAS Library we created previously, Flu_data. 
+Next, using the “Save Data” node under “Utility”, I have named the file as “flu_data” under the “Filename Prefix” option and saved the data into the SAS Library I created previously, Flu_data. 
 
 {{< img src="/posts/projects/05_predict/images/fig6.png" align="left" >}}  
 *Figure 6*
 
 ### 2.4	Create data source  
-Next, data source was created. In step 4 of the data source wizard (figure 8), we had customised settings using the ‘Advanced’ option. In the Advanced Advisor Options (figure 9), we changed two properties – i) Class Level Count Threshold, to account for binary data and ii) Missing Percentage Threshold from 50 to 40.   
+Next, data source was created. In step 4 of the data source wizard (figure 8), I had customised settings using the ‘Advanced’ option. In the Advanced Advisor Options (figure 9), I changed two properties – i) Class Level Count Threshold, to account for binary data and ii) Missing Percentage Threshold from 50 to 40.   
 
 {{< img src="/posts/projects/05_predict/images/fig7.png" align="left" >}}  
 *Figure 7*  
@@ -69,8 +69,8 @@ Next, data source was created. In step 4 of the data source wizard (figure 8), w
 From the column metadata (figure 9), the following were observed (boxes in red):  
 1)	Respondent_id variable captured as ID    
 2)	All variables with 2 levels captured as Binary   
-3)	3 variables were rejected - high percentage of missing values (missing values for these variables were 45 – 50%, our cut-off was 40%)   
-Finally, we set “h1n1_vaccine” to Target.
+3)	3 variables were rejected - high percentage of missing values (missing values for these variables were 45 – 50%, my cut-off was 40%)   
+Finally, I set “h1n1_vaccine” to Target.
 
 ### 2.5 	Data exploration   
 2.5.1 	Adjustments to variables  
@@ -78,12 +78,12 @@ Finally, we set “h1n1_vaccine” to Target.
 *Figure 10*  
 
 **i)	Ordinal variables (8 variables)**  
-From the description of the dataset, we understand that the following variables are ordinal in nature as the survey questionnaire required individuals to select a rating for their answers based on a number scale. We have cross checked this through examination of their distribution. As such, the level of these variables was updated to ordinal.  
+From the description of the dataset, I understand that the following variables are ordinal in nature as the survey questionnaire required individuals to select a rating for their answers based on a number scale. I have cross checked this through examination of their distribution. As such, the level of these variables was updated to ordinal.  
 {{< img src="/posts/projects/05_predict/images/fig11.png" align="left" >}}  
 *Figure 11*   
   
 **ii)	Hhs_geo_region variable**  
-Hhs_geo_region distribution revealed a random string of text. According to the dataset description, respondents’ residences were classified using a 10-region geographic classification defined by the US Dept of Health and Human Services (HHS). However, we reviewed the 10 regions of HHS and was unable to clearly identify these 10 regions. Additionally, we tried to identify these regions by reviewing the documentations for the NHFS 2009 . Hence, we have excluded these variables from our model on basis of the garbage in, garbage out (GIGO) concept - poor data quality will affect the accuracy of our model.  
+Hhs_geo_region distribution revealed a random string of text. According to the dataset description, respondents’ residences were classified using a 10-region geographic classification defined by the US Dept of Health and Human Services (HHS). However, I reviewed the [10 regions of HHS](https://www.hhs.gov/about/agencies/iea/regional-offices/index.html) and was unable to clearly identify these 10 regions. Additionally, I tried to identify these regions by reviewing the documentations for the NHFS 2009 . Hence, I have excluded these variables from my model on basis of the garbage in, garbage out (GIGO) concept - poor data quality will affect the accuracy of my model.  
 {{< img src="/posts/projects/05_predict/images/fig15.png" align="left" >}}  
 *Figure 12*  
    
@@ -92,7 +92,7 @@ Summary of variables.
 *Figure 13*
 
 2.5.2 	Missing values  
-Excluding rejected variables, we observed that several variables have missing values of 0.08% – 16.5%. Nonetheless, no imputation or replacement was done to prevent distortion of the target. We are aware that these missing values may potentially affect our regression model but will not affect our recursive partitioning model.  
+Excluding rejected variables, I observed that several variables have missing values of 0.08% – 16.5%. Nonetheless, no imputation or replacement was done to prevent distortion of the target. I am aware that these missing values may potentially affect my regression model but will not affect my recursive partitioning model.  
 {{< img src="/posts/projects/05_predict/images/fig17.png" align="left" >}}  
 *Figure 14*  
   
@@ -102,7 +102,7 @@ Excluding rejected variables, we observed that several variables have missing va
 
 By using the default setting of the Multiplot node, variables were checked for any signs of complete and/or quasi-complete separation. Quasi-complete and complete separation variables must be excluded from the predictive model when performing logistic regression model as they will prevent the convergence of the maximum likelihood estimates for the coefficient and ultimately distorting the model.  
 
-We did not observe any complete or quasi-complete separation. 
+I did not observe any complete or quasi-complete separation. 
 
 2.5.4	Understand variables’ importance  
 {{< img src="/posts/projects/05_predict/images/fig19.png" align="left" >}}  
@@ -117,7 +117,7 @@ The Chi-square barplot suggests that the doctor_rec_h1n1 is the best predictor. 
 {{< img src="/posts/projects/05_predict/images/fig21.png" align="left" >}}  
 *Figure 18*
 
-2.6 Data Partition
+## 2.6 Data Partition
 
 {{< img src="/posts/projects/05_predict/images/fig22.png" align="left" >}}  
 *Figure 19*  
@@ -125,11 +125,11 @@ The Chi-square barplot suggests that the doctor_rec_h1n1 is the best predictor. 
 {{< img src="/posts/projects/05_predict/images/fig23.png" align="left" >}}  
 *Figure 20*
 
-Finally, prior to building our predictive models, the data was partitioned into   
+Finally, prior to building my predictive models, the data was partitioned into   
 -	Training: 40%  
 -	Validation: 30%   
 -	Test: 30%  
-We have kept the default partitioning method, the stratified method, which ensured that the proportion of vaccine and no vaccine was allocated proportional across the different dataset.  
+I have kept the default partitioning method, the stratified method, which ensured that the proportion of vaccine and no vaccine was allocated proportional across the different dataset.  
   
 {{< img src="/posts/projects/05_predict/images/fig24.png" align="left" >}}  
 *Figure 21*   
@@ -142,7 +142,7 @@ From the partition summary, figure 21, number of observations were all above 500
 While results of the summary statistics for class targets indicated that the percentage between vaccine and no vaccine received is proportionate across the different dataset.  
 
 ## 3.	Predictive models  
-We have built 11 predictive models - 5 logistic regression and 6 recursive partitioning (Decision Trees) for our testing and selection.  
+I have built 11 predictive models - 5 logistic regression and 6 recursive partitioning (Decision Trees) for my testing and selection.  
 {{< img src="/posts/projects/05_predict/images/fig25.png" align="left" >}}  
 *Figure 23*   
   
@@ -164,9 +164,9 @@ True Positive is when a **vaccinated** individual was predicted to be **vaccinat
 {{< img src="/posts/projects/05_predict/images/fig28.png" align="left" >}}  
 *Figure 26*    
 Filtering selections via variable selection  
-Given that we are building a predictive model, variable selection was used instead of variable clustering. Variable selection is best when identifying variables that are useful for predicting the target variables while variable clustering is best for choosing best variables for clustering analysis.
+Given that I am building a predictive model, variable selection was used instead of variable clustering. Variable selection is best when identifying variables that are useful for predicting the target variables while variable clustering is best for choosing best variables for clustering analysis.
   
-Given that our dataset is binary in nature, we selected both R and Chi-square for our target model, see figure 26.  
+Given that my dataset is binary in nature, I have selected both R and Chi-square for my target model, see figure 26.  
   
 A total of 10 variables were retained, the remaining variables were rejected due to small R and Chi-square.  
 
@@ -175,7 +175,7 @@ A total of 10 variables were retained, the remaining variables were rejected due
 *Figure 27*  
 
 **Regression type**  
-Given that our target is in binary, all our regression models are logistic regression (instead of linear regression) as it predicts the probability that a binary target will acquire the event of interest as a function. While the other option – linear regression predicts the value of an interval target. 
+Given that my target is in binary, all my regression models are logistic regression (instead of linear regression) as it predicts the probability that a binary target will acquire the event of interest as a function. While the other option – linear regression predicts the value of an interval target. 
   
 **Selection of model and criterion**  
 There are 4 types of models for us to select – backwards, forward, stepwise and none (default).
@@ -183,7 +183,7 @@ For logistic regressions without variable selection, all methods were used excep
   
 For logistic regressions after variable selection, backward and forward methods were not included as results were the same as VR basic and stepwise regression respectively.  
   
-For the selection criterion, we used the ‘Validation Misclassification’, which selects the model with lowest misclassification rate for our stepwise and backward models. This criterion was selected given our aim of building decision prediction that predict the likelihood of an individual being vaccinated (yes/no).
+For the selection criterion, I used the ‘Validation Misclassification’, which selects the model with lowest misclassification rate for my stepwise and backward models. This criterion was selected given my aim of building decision prediction that predict the likelihood of an individual being vaccinated (yes/no).
 
 
 {{< img src="/posts/projects/05_predict/images/fig30.png" align="left" >}}  
@@ -196,7 +196,7 @@ For the selection criterion, we used the ‘Validation Misclassification’, whi
 *Figure 29*  
 
 **Interpretation of results – logistic regression**  
-Comparing the training and validation data percentage, we observed that there are slight signs of overfitting for regression model 3,4 and 5 as target percentage for True Negative is slightly smaller than training data, but this is still acceptable as the two True Negative percentages are within 5% range.  
+Comparing the training and validation data percentage, I observed that there are slight signs of overfitting for regression model 3,4 and 5 as target percentage for True Negative is slightly smaller than training data, but this is still acceptable as the two True Negative percentages are within 5% range.  
 In terms of misclassification rate, regression model 4 has the lowest misclassification rate of 14.77%.   
 However, regression model 1 has the highest True Negative percentage of 95.09% and 95.27%, and True Negative observations of 7,999 and 6,012.  
 
@@ -204,20 +204,20 @@ However, regression model 1 has the highest True Negative percentage of 95.09% a
 {{< img src="/posts/projects/05_predict/images/fig35.png" align="left" >}}          
 *Figure 30*  
   
-In order to find the best tree, we created 6 different decision trees model by varying the Nominal and Ordinal Target Criterion, Method and Assessment Measure.   
+In order to find the best tree, I created 6 different decision trees model by varying the Nominal and Ordinal Target Criterion, Method and Assessment Measure.   
   
-All trees were set at maximum branch of 5 and maximum depth of 11, except for tree 6, where we used the default branch and depth number – 2 branches and 6 depth.   
+All trees were set at maximum branch of 5 and maximum depth of 11, except for tree 6, where I used the default branch and depth number – 2 branches and 6 depth.   
 
 **i)	Nominal & Ordinal Target criterion**  
-The choice of purity measure largely depends on the target’s data type. Given that our target is binary (categorical), the Gini Index and Entropy are more appropriate measures than ProbChisq (the 3rd option for Nominal Target criterion that we did not use). Hence, we selected these two for our decision trees.  
+The choice of purity measure largely depends on the target’s data type. Given that my target is binary (categorical), the Gini Index and Entropy are more appropriate measures than ProbChisq (the 3rd option for Nominal Target criterion that I did not use). Hence, I selected these two for my decision trees.  
   
 **ii)	Method**  
-We used two methods – Largest and Assessment. The largest method gives the fullest tree, while the assessment method returns the best assessment value based on the selected assessment measure (iii) below, which in our study would be misclassification and lift.
+I used two methods – Largest and Assessment. The largest method gives the fullest tree, while the assessment method returns the best assessment value based on the selected assessment measure (iii) below, which in my study would be misclassification and lift.
   
 **iii)	Assessment measure**  
-The assessment measure has 4 options – decision, misclassification, average square error and lift. Given that our target is in binary, misclassification and lift would be more appropriate measures for our decision trees.  
+The assessment measure has 4 options – decision, misclassification, average square error and lift. Given that my target is in binary, misclassification and lift would be more appropriate measures for my decision trees.  
   
-The other two measures were not selection as (a) The ‘Average Square Error’ is more appropriate when the target is continuous, and (b) the ‘Decision’ measure maximises the largest average profit if defined previously, if not, the measure would be set to ‘Misclassification’ given that our data is binary. Since we did not define any Decision previously, the measure would revert to ‘Misclassification’ and would produce the same results as our ‘Misclassification’ trees, thus redundant.  
+The other two measures were not selection as (a) The ‘Average Square Error’ is more appropriate when the target is continuous, and (b) the ‘Decision’ measure maximises the largest average profit if defined previously, if not, the measure would be set to ‘Misclassification’ given that my data is binary. Since I did not define any Decision previously, the measure would revert to ‘Misclassification’ and would produce the same results as my ‘Misclassification’ trees, thus redundant.  
 
 
 {{< img src="/posts/projects/05_predict/images/fig36.png" align="left" >}}   
@@ -230,22 +230,22 @@ The other two measures were not selection as (a) The ‘Average Square Error’ 
 *Figure 37*  
 
 **Interpretation of results – decision trees**  
-Our results showed that model 10 has the lowest misclassification rate, however we see signs of overfitting as the target percentage of the validation data of 87.46% is more than 5% lower than training data percentage of 93%. Hence, we did not include this model for our final model comparison.  
+My results showed that model 10 has the lowest misclassification rate, however there are signs of overfitting as the target percentage of the validation data of 87.46% is more than 5% lower than training data percentage of 93%. Hence, I did not include this model for the  final model comparison.  
   
-Similar to our regression models, there are slight signs of overfitting for all other models but still acceptable as the difference in target percentage of true negative is within 5%.  
+Similar to the  regression models, there are slight signs of overfitting for all other models but still acceptable as the difference in target percentage of true negative is within 5%.  
   
-Excluding model 10, we observed that model 6 has the lowest misclassification rate of 13.55%, while model 11 has the best performance in terms True Negative outcome percentage of 93.93% and 94%, and observations of 7,902 and 5,932.
+Excluding model 10, I observed that model 6 has the lowest misclassification rate of 13.55%, while model 11 has the best performance in terms True Negative outcome percentage of 93.93% and 94%, and observations of 7,902 and 5,932.
 
 ## 4. 	Model comparison
 {{< img src="/posts/projects/05_predict/images/fig40.png" align="left" >}}  
 *Figure 38*  
 All the 11 models were compared using the model comparison node.   
-We have selected misclassification rate for our Selection and Grid Selection Statistics as our model is an accuracy model.  
-For the Selection Table, Test data was used as a comparison given that we seek to understand how well the selected model performs when applied to new data.  
+I have selected misclassification rate for the  Selection and Grid Selection Statistics as the model is an accuracy model.  
+For the Selection Table, Test data was used as a comparison given that I seek to understand how well the selected model performs when applied to new data.  
 See figure 38 for changes made to the node property.  
 
 ### 4.1 	Model comparison results and model selection  
-In assessing our models, we looked at   
+In assessing the models, I looked at   
     a)	Misclassification rate – minimise.  
     b)	Specificity - maximise.  
 
@@ -256,7 +256,7 @@ Based on misclassification rate performance, Model 11 outperformed all other mod
 *Figure 39* 
 
 **b)	Specificity**  
-Given the objective is to identify individuals that did not get vaccinated (h1n1 = 0), we want to maximise the Specificity Rate: TN / (TN + FP), otherwise also known as the True Negative Rate.
+Given the objective is to identify individuals that did not get vaccinated (h1n1 = 0), I want to maximise the Specificity Rate: TN / (TN + FP), otherwise also known as the True Negative Rate.
 Based on this assessment, Model 9 performed the best with the highest Specificity percentage for validation data. Further, Model 9’s misclassification rate is the 3rd lowest of 15.20%.  
 
 {{< img src="/posts/projects/05_predict/images/fig42.png" align="left" >}}  
@@ -315,7 +315,7 @@ Hence, ultimately the cut-off point depends on governments’ benchmark, public 
 ## 5. 	Conclusion  
 The 11 models created share similar misclassification rate ranging from 15.15% to 15.85%.  
 
-Based on our assessment, model 9 is deemed to be the best performing model on basis that it produces the highest Specificity, 3rd lowest misclassification and high ROC index.  
+Based on my assessment, model 9 is deemed to be the best performing model on basis that it produces the highest Specificity, 3rd lowest misclassification and high ROC index.  
 
 The model can be further refined by varying the cut-off point, which would largely depend on the public health policies in place.  
 

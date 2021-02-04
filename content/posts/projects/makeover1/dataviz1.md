@@ -10,11 +10,12 @@ menu:
 
 ---
 
-Making over a chart from the Singapore Labour Force (2019) report.
+# Making over a chart from the Singapore Labour Force (2019) report.
 
----
 
 *This was written as part of the requirements for the Visual Analytics module for [MITB](https://scis.smu.edu.sg/master-it-business).*
+
+---
 
 For my first DataViz makeover, I have used data from the [Ministry of Manpower of Singapore](https://stats.mom.gov.sg/Pages/Labour-Force-In-Singapore-2019.aspx), which analyses Singapore’s labour force to understand shifts in the labour market to facilitate better decision making.  
 
@@ -63,13 +64,13 @@ Before making over the selected visualisation, it is important to have a clear u
 *Figure 2: Sketch of proposed design*
 
 ### 3.2 Advantages of proposed design
-i)	Clear title – shows how the participation rate and distribution of Singapore’s labour force has shifted by age bands from 2009 to 2019.
-ii)	Chart titles tell the big picture story, followed up with short commentary to provide more context.
-iii)	Shows how labour force has changed across the 10 years instead of 2 year points as shown in the original visualisation.
-iv)	Figures and age bands per commentary and chart are consistent for easy cross referencing.
-v)	Axis are properly labeled – LFPR% and share of labour force.
-vi)	Only selected figures (2009 and 2019) are shown to highlight the shift.
-vii)	Colours are consistent throughout the dashboard.   
+i)	Clear title – shows how the participation rate and distribution of Singapore’s labour force has shifted by age bands from 2009 to 2019.  
+ii)	Chart titles tell the big picture story, followed up with short commentary to provide more context.   
+iii)	Shows how labour force has changed across the 10 years instead of 2 year points as shown in the original visualisation.  
+iv)	Figures and age bands per commentary and chart are consistent for easy cross referencing.  
+v)	Axis are properly labeled – LFPR% and share of labour force.  
+vi)	Only selected figures (2009 and 2019) are shown to highlight the shift.  
+vii)	Colours are consistent throughout the dashboard.     
 
 ## 4) Data visualisation steps
 In remaking the existing visualisation, I used  
@@ -171,7 +172,7 @@ Update view from ‘Standard’ to ‘Entire View’.
 I only want to highlight points on 2009 and 2019. Hence for points on
     -	2009: Right click on each of the points (4 in total) and select Annotate > Point. In the “Edit Annotation” panel, write “<SUM(LFPR%)>%” and colour font according to the age band colour done previously.  
     -	2019: Right click on each of the points (4 in total) and select Annotate > Point. In the “Edit Annotation” panel, write “<Age band> <SUM(LFPR%)>%” and colour font according to the age band colour done previously.
-
+  
 6) Format annotation  
 Remove borders and shading.
 
@@ -200,7 +201,7 @@ Drag [Labour force] and [Year1] to Columns and Rows respectively.
 Convert to percentage : Right click [SUM(Labour force)] > Quick Table Calculation > Percent of Total.  
 Convert to stacked bar : Right click [SUM(Labour force)] > Compute using > Age band (group). 
 
-{{< img src="/posts/projects/dataviz/makeover1/fig15.png" align="left" >}}
+{{< img src="/posts/projects/makeover1/fig15.png" align="left" >}}
 *Figure 15: Create stacked bar chart*
 
 4) Change view  
