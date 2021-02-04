@@ -6,7 +6,7 @@ menu:
   sidebar:
     name: Hotel booking
     identifier: hotel
-    weight: 30
+    weight: 100
 math: true
 ---
 
