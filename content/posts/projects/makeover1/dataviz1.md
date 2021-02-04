@@ -4,7 +4,7 @@ date: 2021-01-26
 description: Making over a chart from the Singapore Labour Force (2019) report.
 menu:
   sidebar:
-    name: 07 DataViz Makeover #1
+    name: DataViz Makeover 01
     identifier: Dataviz makeover
     weight: 94
 
