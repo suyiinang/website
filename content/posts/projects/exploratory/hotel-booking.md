@@ -4,9 +4,9 @@ date: 2020-09-20
 description: An analysis of guests’ booking and cancellation trends for two Portuguese hotels.
 menu:
   sidebar:
-    name: 01 Hotel booking
+    name: Hotel booking
     identifier: exploratory
-    weight: 1
+    weight: 100
 ---
 
 An analysis of guests’ booking and cancellation trends for two Portuguese hotels.

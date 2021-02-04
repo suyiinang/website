@@ -4,9 +4,9 @@ date: 2020-11-10
 description: An analysis of factors that influence happiness. 
 menu:
   sidebar:
-    name: 03 Math of Happiness
+    name: Math of Happiness
     identifier: statistics
-    weight: 3
+    weight: 98
 
 ---
 

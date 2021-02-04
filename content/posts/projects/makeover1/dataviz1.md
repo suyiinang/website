@@ -6,7 +6,7 @@ menu:
   sidebar:
     name: 07 DataViz Makeover #1
     identifier: Dataviz makeover
-    weight: 7
+    weight: 94
 
 ---
 

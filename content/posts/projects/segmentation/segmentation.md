@@ -4,9 +4,9 @@ date: 2020-10-18
 description: Market segmentation of Philippines’ market based on expenditure patterns of households.
 menu:
   sidebar:
-    name: 02 Market segmentation
+    name: Market segmentation
     identifier: segmentation
-    weight: 2
+    weight: 99
 ---
 
 Market segmentation of Philippines’ market based on expenditure patterns of households.
