@@ -7,7 +7,7 @@ menu:
     name: Post-COVID Recovery for SIA
     identifier: modeling
     weight: 96
-
+math: true
 ---
 
 # Optimizing Passenger-Cargo Fleet Allocation
