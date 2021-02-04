@@ -321,3 +321,7 @@ The model can be further refined by varying the cut-off point, which would large
 
 {{< img src="/posts/projects/04_predict/images/fig50.png" align="left" >}}  
 *Figure 48*
+
+---
+
+Health vector created by [freepik](https://www.freepik.com/vectors/health)

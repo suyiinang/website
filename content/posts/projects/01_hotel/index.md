@@ -1,6 +1,6 @@
 ---
 title: "Hotel booking cancellations"
-date: 2020-09-20T08:06:25+06:00
+date: 2020-09-20
 description: An analysis of guests’ booking and cancellation trends for two Portuguese hotels.
 menu:
   sidebar:
@@ -394,5 +394,7 @@ Guests who were reassigned to different rooms from their reserved rooms had a ca
 **So, they come back!**  
 Repeat guests cancel less than new guests.  
  
+---
 
+People vector created by [stories](https://www.freepik.com/vectors/people) - www.freepik.com
 
