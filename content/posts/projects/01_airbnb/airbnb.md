@@ -5,7 +5,7 @@ description: Augmenting Numerical Data with Textual Analysis to Identify Key Det
 menu:
   sidebar:
     name: Understanding the Stars
-    identifier: text
+    identifier: text analysis
     weight: 95
 ---
 
