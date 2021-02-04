@@ -6,7 +6,7 @@ menu:
   sidebar:
     name: 02 Market segmentation
     identifier: segmentation
-    weight: 30
+    weight: 2
 ---
 
 Market segmentation of Philippines’ market based on expenditure patterns of households.

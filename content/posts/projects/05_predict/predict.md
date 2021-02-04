@@ -6,7 +6,7 @@ menu:
   sidebar:
     name: 04 Predict vaccination
     identifier: Predictive
-    weight: 30
+    weight: 5
 
 ---
 

@@ -6,7 +6,7 @@ menu:
   sidebar:
     name: 03 Math of Happiness
     identifier: statistics
-    weight: 30
+    weight: 3
 
 ---
 

@@ -6,7 +6,7 @@ menu:
   sidebar:
     name: 01 Hotel booking
     identifier: exploratory
-    weight: 30
+    weight: 1
 ---
 
 An analysis of guests’ booking and cancellation trends for two Portuguese hotels.

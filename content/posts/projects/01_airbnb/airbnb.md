@@ -6,7 +6,7 @@ menu:
   sidebar:
     name: 06 Understanding the Stars
     identifier: text
-    weight: 30
+    weight: 6
 ---
 
 Augmenting Numerical Data with Textual Analysis to Identify Key Determinants of Airbnb Review Scores

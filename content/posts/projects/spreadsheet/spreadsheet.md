@@ -6,7 +6,7 @@ menu:
   sidebar:
     name: 05 SIA
     identifier: modeling
-    weight: 30
+    weight: 5
 
 ---
 
