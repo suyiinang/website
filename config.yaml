@@ -38,7 +38,7 @@ params:
   logo:
     main: 
     inverted: 
-    favicon: /images/site/favicon.png
+    favicon: 
 
   # GitHub repo URL of your site
   gitRepo: https://github.com/suyiinang/toha
