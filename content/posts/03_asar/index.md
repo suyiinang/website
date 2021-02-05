@@ -17,3 +17,5 @@ The Math of Happiness: An analysis of factors that influence happiness.
 ---
 
 ### Work in progress
+
+Education vector created by [stories](https://www.freepik.com/vectors/education) - www.freepik.com</a>
