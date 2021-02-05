@@ -22,7 +22,7 @@ For my first DataViz makeover, I have used data from the [Ministry of Manpower o
 
 ## 1) The original visualisation
 
-{{< img src="/posts/DataViz_Makeover/01_makeover/images/fig1.jpg" align="left" >}}
+{{< img src="/posts/DataViz_Makeover/01_makeover/images/fig1.png" align="left" >}}
 *Figure 1: Chart 6 of Labour Force in Singapore 2019 report (page 22)*
 
 Notes:  
