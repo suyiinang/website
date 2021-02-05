@@ -202,7 +202,7 @@ Drag [Labour force] and [Year1] to Columns and Rows respectively.
 Convert to percentage : Right click [SUM(Labour force)] > Quick Table Calculation > Percent of Total.  
 Convert to stacked bar : Right click [SUM(Labour force)] > Compute using > Age band (group). 
 
-{{< img src="/posts/DataViz_Makeover/01_makeover/fig15.png" align="left" >}}
+{{< img src="/posts/DataViz_Makeover/01_makeover/images/fig15.png" align="left" >}}
 *Figure 15: Create stacked bar chart*
 
 4) Change view  
