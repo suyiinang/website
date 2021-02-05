@@ -253,4 +253,6 @@ Add text to bottom left corner and add text : “DataViz Makeover #1 by @suyiina
 - The shift in labour force’s distribution was mainly due to shift from the 25-54 age band to the 55-64 and 65+ age band. While the share of labour force for the 15 -24 age band was quite stable (share of 8-9%) across the 10 years.
 - Given that the financial crisis happened in 2008/2009, 2009 may not give the best numbers to use as a base comparison as is it historically lower compared to other years. As such, the increase in participation of old workers may be due to workers re-joining the workforce as the economy recovers, of which leads to the shift in the share of labour force towards older workers.
 
+---
 
+Business vector created by [stories](https://www.freepik.com/vectors/business) - www.freepik.com
