@@ -12,7 +12,7 @@ math: true
 
 # Optimizing Passenger-Cargo Fleet Allocation
 
-*By: Ang Su Yiin, Gabriella Pauline Djojosaputro, Gordy Adiprasetyo, Kendra Luisa Baylon Gadong, Nguyen Nhi Thai An, Ulysses Chong Min Zhen*  
+By: Ang Su Yiin, Gabriella Pauline Djojosaputro, Gordy Adiprasetyo, Kendra Luisa Baylon Gadong, Nguyen Nhi Thai An, Ulysses Chong Min Zhen  
 
 *These reports were written as part of the requirements for the Spreadsheet Modeling module for [MITB](https://scis.smu.edu.sg/master-it-business).*
 
