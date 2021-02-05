@@ -6,7 +6,7 @@ menu:
   sidebar:
     name: DataViz Makeover 01
     identifier: Dataviz-makeover-01
-    parent DataViz-Makeover
+    parent: DataViz-Makeover
     weight: 100
 math: true
 ---
