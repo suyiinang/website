@@ -1,13 +1,13 @@
 ---
-title: "DataViz Makeover #1"
+title: "DataViz Makeover #2"
 date: 2021-01-26
-description: Making over a chart from the Singapore Labour Force (2019) report.
+description: tbd.
 menu:
   sidebar:
-    name: DataViz Makeover 01
-    identifier: Dataviz-makeover-01
-    parent DataViz-Makeover
-    weight: 100
+    name: DataViz Makeover 02
+    identifier: Dataviz-makeover
+    parent DataViz-Makeover    
+    weight: 99
 math: true
 ---
 
