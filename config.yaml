@@ -22,7 +22,7 @@ markup:
     ordered: false
 
 # Enable Google Analytics
-googleAnalytics: G-RQ1RZRRZP6
+googleAnalytics: UA-189162512-1
 
 # Enable global emoji support
 enableEmoji: true
