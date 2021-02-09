@@ -18,7 +18,8 @@ math: true
 ---
 
 ## Cycle plots
-{{< img src="https://public.tableau.com/views/CycleplotSingaporestouristbycountry/Dashboard1?:language=en&:display_count=y&:origin=viz_share_link" align="left" >}}
+{{< img src="https://public.tableau.com/profile/suyiinang#!/vizhome/CycleplotSingaporestouristbycountry/Dashboard1" align="left" >}}
+Full visualisation available at [@suyiinang](https://public.tableau.com/profile/suyiinang#!/vizhome/CycleplotSingaporestouristbycountry/Dashboard1).
 
 ## Used for 
 - useful for analysing seasonality / cyclical patterns
