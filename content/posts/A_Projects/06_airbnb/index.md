@@ -6,6 +6,7 @@ menu:
   sidebar:
     name: Understanding the Stars
     identifier: text analysis
+    parent: Academic Projects
     weight: 95
 ---
 

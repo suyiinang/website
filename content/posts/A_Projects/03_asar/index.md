@@ -6,6 +6,7 @@ menu:
   sidebar:
     name: Math of Happiness
     identifier: statistics
+    parent: Academic Projects
     weight: 98
 ---
 

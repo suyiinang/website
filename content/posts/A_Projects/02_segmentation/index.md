@@ -6,6 +6,7 @@ menu:
   sidebar:
     name: Market segmentation
     identifier: segmentation
+    parent: Academic Projects
     weight: 99
 math: true
 ---

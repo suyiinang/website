@@ -6,6 +6,7 @@ menu:
   sidebar:
     name: Post-COVID Recovery for SIA
     identifier: modeling
+    parent: Academic Projects
     weight: 96
 math: true
 ---

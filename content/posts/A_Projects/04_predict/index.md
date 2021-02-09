@@ -6,6 +6,7 @@ menu:
   sidebar:
     name: Predicting H1N1 vaccination
     identifier: Predictive
+    parent: Academic Projects
     weight: 97
 math: true
 ---
