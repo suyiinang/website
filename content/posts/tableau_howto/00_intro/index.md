@@ -6,7 +6,7 @@ menu:
   sidebar:
     name: Introduction
     identifier: Introduction
-    parent: Tableau-how-to
+    parent: tableau_howto
     weight: 1
 math: true
 ---
