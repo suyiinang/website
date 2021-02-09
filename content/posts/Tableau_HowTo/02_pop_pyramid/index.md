@@ -1,6 +1,6 @@
 ---
 title: "Animated Population Pyramid"
-date: 2021-02-10
+date: 2021-02-09
 description: Singapore's population pyramid from 1980 t0 2019
 menu:
   sidebar:
