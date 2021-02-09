@@ -321,7 +321,7 @@ Based on my assessment, model 9 is deemed to be the best performing model on bas
 The model can be further refined by varying the cut-off point, which would largely depend on the public health policies in place.  
 
 {{< img src="/posts/A_Projects/04_predict/images/fig50.png" align="left" >}}  
-*Figure 48*
+*Figure 48 Final model diagram*
 
 ---
 
