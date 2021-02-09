@@ -68,7 +68,7 @@ I want a dynamic title that changes according to my country filter.
 {{< img src="/posts/Tableau_Howto/01_cycleplot/images/fig9.png" align="left" >}}
 Use the "Insert" dropdown to insert field name.
 
-There have you it! An interactive cycle plot.
+And... there have you it! An interactive cycle plot ready for analysis!
 
 ---
 I would like to thank Prof Kam of Singapore Management University for the inspiration.
