@@ -42,10 +42,10 @@ Select the necessary columns, right click and select 'Pivot' and there you have 
 **Step 3 -  Filter Date**
 My current dataset has data from year 1978 to 2015, which may be too overwhelming.  
 For this exercise, I only want data from 2005 to 2015. (SARS affected Singapore's tourism in 2004, hence I want to exclude that as it is a anomaly.)  
-To do so, I dragged the "Month" field to the Filters panel > Range of Dates and applied filter according to figure below.  
+To do so, drag the "Month" field to the Filters panel > Range of Dates and apply filter according to the figure below.  
 {{< img src="/posts/Tableau_Howto/01_cycleplot/images/fig4.png" align="left" >}}  
   
-Right click and show filter. Here you can move the slider according to the dates you want.  
+Right click and show filter. You can move the slider according to the dates desired.  
 {{< img src="/posts/Tableau_Howto/01_cycleplot/images/fig4_1.png" align="left" >}}
 
 
@@ -54,7 +54,7 @@ Populate rows according to the figure below.
 {{< img src="/posts/Tableau_Howto/01_cycleplot/images/fig5.png" align="left" >}}
 
 **Step 5 - Filter country**  
-To see the cycle plot by country, add country into the Filters panel, select one country > right click > show filter. The list of country should be to the right of the chart.  
+To see the cycle plot by country, add country into the Filters panel, select one country > right click > show filter. The list of countries should be to the right of the chart.  
 Click on the arrow button of the Country filter and select "Single Value (list)".  
 {{< img src="/posts/Tableau_Howto/01_cycleplot/images/fig7.png" align="left" >}}
 

@@ -6,6 +6,7 @@ menu:
   sidebar:
     name: Hotel booking
     identifier: hotel
+    parent: Academic Projects
     weight: 100
 math: true
 ---
@@ -54,12 +55,12 @@ The variables ‘IsCanceled’ and ‘IsRepeatedGuest’ are categorical data bu
   
 Hence, for ease of reference and readers’ clarity, values were recoded as follows:
 
-{{< img src="/posts/01_hotel/images/fig1.png" align="left" >}}
+{{< img src="/posts/A_Projects/01_hotel/images/fig1.png" align="left" >}}
 *Figure 1*  
 
 **(b) Inaccurate Data Types**  
 2 variables were recoded to the correct attributes, please see figure 2. We did not correct attributes for ‘IsCanceled’ and ‘IsRepeatedGuest’.  
-{{< img src="/posts/01_hotel/images/fig2.png" align="left" >}}
+{{< img src="/posts/A_Projects/01_hotel/images/fig2.png" align="left" >}}
 *Figure 2*
 
 **(c) Missing values**  
@@ -78,63 +79,63 @@ There were 2 steps to this process:
 “Customer Segment” was formulated to profile travellers into 5 types of travellers – Day Trippers, Solo, Couple, Family and Groups. Values were derived using the formula below.  
 
 With this, trends between types of travellers and cancellation rates can be observed.  
-{{< img src="/posts/01_hotel/images/fig3.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig3.png" align="left" >}}  
 *Figure 3*  
 
 **iii) No of nights**  
 We have concatenated ‘StaysInWeekendNights’ and ‘StaysInWeekNights’ to obtain the total length of stay/booking. This column was created using the formula below:  
-{{< img src="/posts/01_hotel/images/fig4.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig4.png" align="left" >}}  
 *Figure 4*
 
 **iv) Room assigned**  
 Where assigned rooms differ from reserved ones – due to upgrading by hotel, request to change and others, a new column indicating “Diff room” and “Same room” has been created for this using the formula below.   
 With this, we can observe how cancellation rate trends with room change.   
-{{< img src="/posts/01_hotel/images/fig5.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig5.png" align="left" >}}  
 *Figure 5*  
 
 **(d) Ghost booking – 97 bookings**  
 Closer examination of the data revealed 97 records of ghost booking where occupants were 0 (day tripper), length of stay > 0 and had subsequently checked out. We have filtered out these records using “Row Selection” under the Table function.  
   
 As we are not able to explain the reason for such combination, we have excluded these records for our analysis. This matter will be raised for further investigation.   
-{{< img src="/posts/01_hotel/images/fig6.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig6.png" align="left" >}}  
 *Figure 6*
 
 **(e) Too many classes**  
 
 i.	Agent
-{{< img src="/posts/01_hotel/images/fig7.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig7.png" align="left" >}}  
 *Figure 7*  
 ‘Agent’ represents the ID of respective travel agencies; there are 334 levels. The sheer number of IDs makes it difficult to produce meaningful analysis. Null values indicate that these bookings do not originate from travel agents and are therefore NOT considered as missing values.  
 
 Thus, we have recoded number values to “travel agent” and NULL values to “non-agent. With this, we are able observe cancellation patterns between travel agents and non-agents. 
   
 ii.	Company
-{{< img src="/posts/01_hotel/images/fig8.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig8.png" align="left" >}}  
 *Figure 8*  
   
 Similarly, ‘Company’ represents ID of respective companies; there are 353 levels, thus we have recoded number values to “company” and NULL values to “non-company”.
 
 
 iii. Country  
-{{< img src="/posts/01_hotel/images/fig9.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig9.png" align="left" >}}  
 *Figure 9*    
 
 Refers to nationality of hotel guests. With 178 levels, it is difficult to analyse cancellation rates for all countries. Hence for a more meaningful analysis, we have retained the top 8 countries, which accounts for ~80% of total population, and grouped the rest as “Others”.   
 
 iv.	Meal  
-{{< img src="/posts/01_hotel/images/fig10.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig10.png" align="left" >}}  
 *Figure 10*  
 
 Refers to meal packages. According to Antonio, Almeida and Nunes (2018), ‘SC’ and ‘Undefined’ are considered as ‘no meal’, we have grouped them accordingly.  
   
 v.	Market Segment  
-{{< img src="/posts/01_hotel/images/fig11.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig11.png" align="left" >}}  
 *Figure 11*   
   
 We have recoded to group “Aviation”, “Complementary” and “Undefined” together on basis that individually account for <1% of total.
 
 vi.	Distribution channel  
-{{< img src="/posts/01_hotel/images/fig12.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig12.png" align="left" >}}  
 *Figure 12*  
    
 “Aviation”, ‘complementary’ and ‘undefined’ were grouped together.  
@@ -144,30 +145,30 @@ In order to meaningfully analyse the data, extreme outliers were removed on basi
   
 i) Adults  
 Excluded 3 observations with >30 adults – account for <1% of population and will not affect analysis.  
-{{< img src="/posts/01_hotel/images/fig13.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig13.png" align="left" >}}  
 *Figure 13*  
 
 ii) Children  
 An observation with 10 babies were excluded as it appears to be one off.  
-{{< img src="/posts/01_hotel/images/fig14.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig14.png" align="left" >}}  
 *Figure 14*  
 
 iii) Babies  
 Similarly, we have excluded two separate bookings – 2 adults and 10 babies, 1 adult and 9 babies.  
-{{< img src="/posts/01_hotel/images/fig16.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig16.png" align="left" >}}  
 *Figure 15*
  
 
 iv) LeadTime  
 Two observations – 737 and 709 days were excluded.  
-{{< img src="/posts/01_hotel/images/fig17.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig17.png" align="left" >}}  
 *Figure 16*
 
 ## 4. Insights
 
 ### 4.1 Cancellation rates differ by hotel  
 City 41.7% and Resort 27.8%
-{{< img src="/posts/01_hotel/images/fig18.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig18.png" align="left" >}}  
 *Figure 17*  
   
 The cancellation rate for the two hotels were 37% across 25 months. This is relatively consistent with the average cancellation rate in [Europe](https://www.d-edge.com/how-online-hotel-distribution-is-changing-in-europe) - 34.8% in 2015, to 41.3% 2017.  
@@ -176,10 +177,10 @@ However, further investigation revealed that City hotel’s cancellation rate of
   
 Thus, we will analyse cancellation rate for the two hotels separately, with a view to identifying cancellation patterns for respective hotels.  
 
-{{< img src="/posts/01_hotel/images/fig19.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig19.png" align="left" >}}  
 *Figure 18*    
 
-{{< img src="/posts/01_hotel/images/fig20.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig20.png" align="left" >}}  
 *Figure 19*   
 
 Interestingly, although City hotel had a higher average cancellation rate, the rate has been relatively consistent across the 25 months. In contrast, Resort hotel’s cancellation rate has been steadily increasing.
@@ -189,38 +190,38 @@ Interestingly, although City hotel had a higher average cancellation rate, the r
 
 For City hotel, we observed some seasonality during the years; bookings peaked around Sep/Oct and May/June. Similarly, cancellation rates fluctuated during the year (figure 21).   
   
-{{< img src="/posts/01_hotel/images/fig21.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig21.png" align="left" >}}  
 *Figure 20*    
 
-{{< img src="/posts/01_hotel/images/fig22.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig22.png" align="left" >}}  
 *Figure 21*     
   
 Similarly, bookings for resort hotel had peaked in Sep/Oct; other busy months included April-16 and August-17.  
 While cancellation rates tend to fluctuate across the year, peak cancellation months were between July and August - the summer months.
   
-{{< img src="/posts/01_hotel/images/fig23.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig23.png" align="left" >}}  
 *Figure 22*    
 
-{{< img src="/posts/01_hotel/images/fig24.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig24.png" align="left" >}}  
 *Figure 23*   
 
 # Customer demographics
 ### 4.3 Couples cancels the most
 Couples accounted for ~70% of bookings, but form the biggest group to cancel for City Hotel.
 
-{{< img src="/posts/01_hotel/images/fig25.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig25.png" align="left" >}}  
 *Figure 24*   
   
 Guests’ demographics were similar for both hotels. Couples accounted for ~69% of total booking for both hotels.
 
-{{< img src="/posts/01_hotel/images/fig26.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig26.png" align="left" >}}  
 *Figure 25*  
 
 Despite the similarity in guests’ profile, the cancellation rate by customer segment differs for each hotel.   
 For City Hotel, couples cancelled the most (45%). In contrast, for Resort Hotel, day trippers had the highest cancellation rate of 66.7%, although day trippers’ bookings were <1% of total. 
 
 # 4.4 Portuguese Nationals cancels the most
-{{< img src="/posts/01_hotel/images/fig27.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig27.png" align="left" >}}  
 *Figure 26*  
   
 Based on our observations, the Portuguese nationals, the largest proportion of guests for both hotels (39% to 44%), had the highest cancellation rate among all countries – 64.9% for City, and 42.2% for Resort.  
@@ -236,13 +237,13 @@ To validate our analysis, we have performed the Chi-Square test. The Chi-Square�
      
 Since both hotels has similar cancellation trends by nationality, hypothesis was tested on a consolidated level.  
   
-{{< img src="/posts/01_hotel/images/fig28.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig28.png" align="left" >}}  
 *Figure 27*  
   
-{{< img src="/posts/01_hotel/images/fig30.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig30.png" align="left" >}}  
 *Figure 28*  
 
-{{< img src="/posts/01_hotel/images/fig29.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig29.png" align="left" >}}  
 *Figure 29*
 
     
@@ -250,21 +251,21 @@ With the p-value 0.001 < critical value 0.05, there is no statistical evidence t
 
 ### 4.5 Portuguese couples and solo travellers - extremely high cancellation rate 64-70%
 
-{{< img src="/posts/01_hotel/images/fig31.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig31.png" align="left" >}}  
 *Figure 30*  
   
 Portuguese couples and solo travellers, who accounted for 37.7% of total bookings, were the driving force of high cancellation rates.  
 
-{{< img src="/posts/01_hotel/images/fig32.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig32.png" align="left" >}}  
 *Figure 31*
 
 # Distribution channel
 ### 4.6 Cancellation rate was the highest for TA/TO and lowest for direct.
 
-{{< img src="/posts/01_hotel/images/fig33.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig33.png" align="left" >}}  
 *Figure 32*  
 
-{{< img src="/posts/01_hotel/images/fig34.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig34.png" align="left" >}}  
 *Figure 33* 
 
 TA/TO, the largest channel, had a significantly high cancellation rate of 41%, as compared to the rates of other channels of 17% - 22%.  
@@ -276,7 +277,7 @@ To validate our hypothesis, we performed the Chi-Square test as both variables a
 -	H0 = There is no association between the distribution channel and cancellation.  
 -	H1 = There is an association between the distribution channel and cancellation.  
   
-{{< img src="/posts/01_hotel/images/fig35.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig35.png" align="left" >}}  
 *Figure 34* 
 
 With the p-value 0.001 < critical value 0.05, we can conclude that cancellation rates are not independent of the distribution channel.
@@ -284,14 +285,14 @@ With the p-value 0.001 < critical value 0.05, we can conclude that cancellation 
 # Guests’ booking patterns
 ### 4.7 Cancellation rate increased with bookings for short term stay (0-18 nights), but decreased with longer stays ( > 18 nights)  
   
-{{< img src="/posts/01_hotel/images/fig36.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig36.png" align="left" >}}  
 *Figure 35*  
 
 Interestingly, figure 35 suggests that cancellation rate is positively correlated with length of stay, until a certain point, then longer stays become negatively correlated with cancellation rate.  
 To further observe the correlation of cancellation rate and length of stay, we have analysed duration of stay by short (0 – 18 nights) and long-term stay (18 to 69 nights). Since both hotels have similar trends, we analysed them on a consolidated level.  
   
  
-{{< img src="/posts/01_hotel/images/fig37.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig37.png" align="left" >}}  
 *Figure 36* 
 
 Further investigation revealed that there is  
@@ -300,7 +301,7 @@ ii)	a moderate negative linear relationship for long-term stay (r = -0.608).
   
 ### 4.8 Cancelled bookings have longer lead time on average.
 
-{{< img src="/posts/01_hotel/images/fig38.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig38.png" align="left" >}}  
 *Figure 37*
 
 Lead time refers to the number of days between system recorded date of booking and arrival date.
@@ -316,13 +317,13 @@ To decide on our hypothesis testing method, we had to determine if
 **a)	Variance is unequal**
 JMP performed 5 different tests for the equality of variances. As shown in figure 38, all tests have the same conclusion - p-values 0.001 < critical value 0.05. Thus, there is sufficient evidence to reject null assumption that variances are equal. Therefore, this data will be analysed using an unequal variance test.  
 
-{{< img src="/posts/01_hotel/images/fig39.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig39.png" align="left" >}}  
 *Figure 38* 
 
 **b)	Distribution of Leadtime is not normal**
 To test normality, we have performed the Anderson-Darling Goodness of Fit Test with confidence level of 95%. With p-value 0.001 < critical value 0.05, there is no statistical evidence to support that lead time’s distribution is normal. Thus, this data will be analysed using a non-normal test.  
 
-{{< img src="/posts/01_hotel/images/fig40.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig40.png" align="left" >}}  
 *Figure 39* 
 
 Given that the data failed to conform to equal variance and normal distribution assumption, the Welch test was used to perform our hypothesis testing.  
@@ -331,7 +332,7 @@ Since both hotels have similar trends, we tested our hypothesis on a consolidate
 -	H1 = There is a difference between the average lead time for cancelled and not cancelled bookings.  
 
 
-{{< img src="/posts/01_hotel/images/fig41.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig41.png" align="left" >}}  
 *Figure 40* 
 
 
@@ -339,10 +340,10 @@ Test result (figure 40) with p-value 0.0001 < our critical value 0.05. Hence, th
 
 ### 4.9 Bookings with reassigned rooms had fewer cancellations
   
-{{< img src="/posts/01_hotel/images/fig42.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig42.png" align="left" >}}  
 *Figure 41*
 
-{{< img src="/posts/01_hotel/images/fig43.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig43.png" align="left" >}}  
 *Figure 42* 
 
 “Same room” bookings are bookings where reserved and assigned rooms were of the same type. While for “Diff room” bookings, reserved and assigned rooms were of different type.  
@@ -353,16 +354,16 @@ Figure 42 indicates that bookings with reassigned rooms had a much lower cancell
 
 ### 4.10 Recurring guests cancelled less
 
-{{< img src="/posts/01_hotel/images/fig44.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig44.png" align="left" >}}  
 *Figure 43* 
 
-{{< img src="/posts/01_hotel/images/fig45.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig45.png" align="left" >}}  
 *Figure 44* 
 
 Cancellation rate for City Hotel for repeat guests was 21.8% and non-repeat guests 42.3%. While for Resort Hotel, cancellation rate for repeat guests was 6.2% and non-repeat guests 28.7%.
 However, repeated guests only accounted for 2-4% of respective hotels’ booking.
  
-{{< img src="/posts/01_hotel/images/fig46.png" align="left" >}}  
+{{< img src="/posts/A_Projects/01_hotel/images/fig46.png" align="left" >}}  
 *Figure 45*
 
 ## 5. Intrepretation of results
