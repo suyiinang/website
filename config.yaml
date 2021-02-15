@@ -1,7 +1,7 @@
-baseURL: https://suyiinang.netlify.app/
+baseURL: https://gordyadi.netlify.app/
 
 languageCode: en-us
-title: "Su Yiin's Blog"
+title: "Gordy Adi's blog"
 theme: "toha"
 
 # Manage languages
@@ -22,7 +22,7 @@ markup:
     ordered: false
 
 # Enable Google Analytics
-googleAnalytics: UA-189162512-1
+googleAnalytics: 
 
 # Enable global emoji support
 enableEmoji: true
@@ -41,7 +41,7 @@ params:
     favicon: 
 
   # GitHub repo URL of your site
-  gitRepo: https://github.com/suyiinang/toha
+  gitRepo: https://github.com/gordyadi/blog
 
   # specify whether you want to write some blog posts or not
   enableBlogPost: true
