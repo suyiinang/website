@@ -48,7 +48,7 @@ softSkills:
   color: yellow
 - name: Communicator
   percentage: 100
-  color: red
+  color: pink
 - name: Leader
   percentage: 100
   color: green
