@@ -8,11 +8,11 @@ section:
   template: sections/about.html
 
 # your designation
-designation: Supply Chain Analyst at Apple
+designation: Supply Chain Analyst
 # your company information
 company:
-  name: SMU
-  url: "https://scis.smu.edu.sg/master-it-business"
+  name: Apple
+  url: ""
 
 # your resume. this file path should be relative to you "static" directory
 resume: "files/resume.pdf"
@@ -25,19 +25,16 @@ summary: 'Before venturing into the world of analytics, I spent 6 years in audit
 socialLinks:
 - name: Email
   icon: "fas fa-envelope"
-  url: "suyiinang@gmail.com"
+  url: "gordyadi@gmail.com"
 
 - name: LinkedIn
   icon: "fab fa-linkedin"
-  url: "https://www.linkedin.com/in/suyiinang/"
+  url: "https://www.linkedin.com/in/gordyadi/"
 
 - name: GitHub
   icon: "fab fa-github"
-  url: "https://github.com/suyiinang"
+  url: "https://github.com/gordyadi"
 
-- name: Tableau
-  icon: "fas fa-chart-line"
-  url: "https://public.tableau.com/profile/suyiinang#!/"
 
 # your soft skills
 # give the percentage between 50 to 100 with 5 intervals.

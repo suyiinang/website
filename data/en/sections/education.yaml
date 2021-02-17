@@ -12,13 +12,13 @@ section:
 degrees:
 - name: Master of IT in Business (Analytics)
   icon: fa-graduation-cap
-  timeframe: Aug20 - Dec21
+  timeframe: 2020 - 2022
   institution:
     name: Singapore Management University
     url: "https://scis.smu.edu.sg/master-it-business"
-- name: Bachelor of Commerce (Accounting and Finance)
+- name: Bachelor of Engineering in Indsutrial Systems and Management
   icon: fa-graduation-cap
-  timeframe: 2010-2012
+  timeframe: 2013-2017
   institution:
-    name: University of New South Wales (UNSW)
-    url: "https://www.unsw.edu.au/"
+    name: National University of Singapore
+    url: "https://nus.edu.sg/"
