@@ -11,33 +11,31 @@ section:
 # Your experiences
 experiences:
 - company:
-    name: PwC Deals Advisory
-    url: "https://www.pwc.com/sg/en/deals.html"
+    name: Apple
+    url: "https://www.apple.com/jobs/sg/teams/operations-and-supply-chain.html"
     location: Singapore
     # company overview
-    overview: PwC Deals Advisory provides advisory services relating to mergers, acquisitions and divestitures and capital markets transactions.
+    overview: The mission of Pacific Reseller Operations is to be the voice of Reseller Channel within Operations to ensure our products are in the right places at the right time, supporting Sales and our Partners to achieve Apple’s financial goals.
   positions:
-  - designation: Manager - Financial Due Diligence
-    start: Aug 2016
-    end: Dec 2019
+  - designation: Order Fulfilment Analyst, Pacific Reseller Operations
+    start: Feb 2021
+    end:
     # don't provide end date if you are currently working there. It will be replaced by "Present"
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
-    - Project Management.
-    - Analyse financial and operational data to formula commercial insights.
-    - Review and report key issues to clients.
+    - Post-ship supply chain issue resolutions
+    - Translating large sets of operational data into actionable business process improvements 
 
 - company:
-    name: PwC Assurance
-    url: "https://www.pwc.com/sg/en/audit.html"
+    name: FedEx Express Singapore
+    url: "https://www.fedex.com/en-sg/home.html"
     location: Singapore
-    overview: PwC Assurance provides audit services for corporate reporting
+    overview: 
   positions:
-  - designation: Senior Associate - Assurance
-    start: Sep 2013
-    end: July 2016
+  - designation: Operation Manager, Customs Clearance
+    start: June 2017
+    end: August 2020
     responsibilities:
-    - Lead team.
-    - Objective testing and critical analysis.
-    - Review and report financial statements.
+    - Lead a team of Clearance Brokers and Clearance Customer Service Representatives
+    - Spearheaded digital transformation projects of opertional processes
