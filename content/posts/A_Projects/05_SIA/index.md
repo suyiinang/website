@@ -36,16 +36,16 @@ Data is obtained from a variety of sources covering financial and operational as
 ## 3.	Influence diagram and Black Box model
 ### 3.1.	Black Box Model  
 
-{{< img src="/posts/A_Projects/05_SIA/images/fig1.png" align="left" >}}
+![](images/fig1.png)
 *Figure 1*  
 
-{{< img src="/posts/A_Projects/05_SIA/images/fig2.png" align="left" >}}
+![](images/fig2.png)
 *Figure 2*
 
-{{< img src="/posts/A_Projects/05_SIA/images/fig3.jpg" align="left" >}}
+![](images/fig3.jpg)
 *Figure 3*  
 
-{{< img src="/posts/A_Projects/05_SIA/images/fig4.png" align="left" >}}
+![](images/fig4.png)
 *Figure 4*
 
 ## 4.	Computation and Analysis  
@@ -63,39 +63,39 @@ Based on the current number of [COVID cases per capita](https://ourworldindata.o
   
 There are two sets of opening dates: **partial** (business travel only) and **full** [(365 days after vaccine is available)](https://www.bmj.com/content/371/bmj.m3846). Each country in the green and yellow category will be assigned two opening dates based on the traffic light profile. Countries in the red category will only have one reopening date – fully reopening date.  
 
-{{< img src="/posts/A_Projects/05_SIA/images/fig5.png" align="left" >}}
+![](images/fig5.png)
 *Figure 5*  
 
 For Yellow bucket countries, daily new cases are projected using a curve-fitting approach with a Log-Normal distribution  to meet the asymmetric feature of the distribution of daily new cases of COVID-19. The formula for the Log-Normal Distribution (Fig. 6) and Yellow bucket country Maldives curve-fitting example is illustrated in Fig. 7 and 8.
 
-{{< img src="/posts/A_Projects/05_SIA/images/fig6.png" align="left" >}}
+![](images/fig6.png)
 *Figure 6*
 
-{{< img src="/posts/A_Projects/05_SIA/images/fig7.png" align="left" >}}
+![](images/fig7.png)
 *Figure 7*  
 
 Using Solver, the curve-fitting approach minimizes the error from the fitted value and the observed daily COVID case per million by changing the parameters peak height a, peak position b, and width c. (Fig. 7). Then, an estimated partial reopening date for a yellow bucket country is forecasted when the daily new case per million is down to one case. For Maldives, the partial reopening date is 1 January 2021. This approach is done for all yellow bucket countries.  
 
-{{< img src="/posts/A_Projects/05_SIA/images/fig8.png" align="left" >}}
+![](images/fig8.png)
 *Figure 8*  
 
 After assigning each country with a traffic light profile and estimated reopening dates, recovery rates will be based on the country’s opening status.  SIA recovery rate is currently at [1.5%](https://sg.news.yahoo.com/changi-airport-now-worlds-58th-busiest-serving-15-of-usual-passenger-volume-ong-ye-kung-075644907.html) based on current rate of passenger volume in Changi Airport. Partial reopening dates are matched with a 16.5% recovery rate based on [Singapore Airlines optimistic forecast](https://www.singaporeair.com/en_UK/sg/media-centre/news-alert/?id=k88gnin9) on returning to approximately 15% of its passenger capacity from pre-COVID levels.   
   
 This model assumes that SIA recovery is progressive for all countries, which means that full recovery rate at 100% is expected in December 2025. To summarize the recovery rate calculation, recovery rate per country over time (in months) is forecasted linearly from 1.5% from today to partial reopening date and to 16.5% from the fully open date based on vaccine and to 100% by end of 2025.  
 
-{{< img src="/posts/A_Projects/05_SIA/images/fig9.png" align="left" >}}
+![](images/fig9.png)
 *Figure 9*     
 
 For each country, forecasted recovery rate by end of year is calculated by taking the average of recovery rates for that particular year. Historical data of [visitor arrivals](https://www.ceicdata.com/en) from SIA destination countries are extracted to then forecast number of visitors per year based on recovery rates (Fig. 10).  
 
-{{< img src="/posts/A_Projects/05_SIA/images/fig10.png" align="left" >}}
+![](images/fig10.png)
 *Figure 10*   
 
 Overall forecasted recovery rate and recovery rates per traffic light profile are summarized in Table 2 with visual representation in Fig. 11.  
-{{< img src="/posts/A_Projects/05_SIA/images/fig11.png" align="left" >}}
+![](images/fig11.png)
 *Figure 11*   
 
-{{< img src="/posts/A_Projects/05_SIA/images/fig12.png" align="left" >}}
+![](images/fig12.png)
 *Figure 12*  
   
 ### 4.2	Forecasting cargo demand  
@@ -121,14 +121,14 @@ Another pivotal statistic that was retrieved from FRFY19 is [Load Factor (LF)](h
   
 Using this and previous calculations, a revenue maximizing model is developed and is solved using Solver.  
 
-{{< img src="/posts/A_Projects/05_SIA/images/fig13.png" align="left" >}}
+![](images/fig13.png)
 *Figure 13*  
 
-{{< img src="/posts/A_Projects/05_SIA/images/fig15.png" align="left" >}}
+![](images/fig15.png)
 *Figure 14*  
    
 GRG Non-linear solver method was first used but resulted in local optimum solutions. Given the complexity of the model and to be able to arrive at global optimum solution, Evolutionary solving method was chosen and used with the below specifications:  
-{{< img src="/posts/A_Projects/05_SIA/images/fig16.png" align="left" >}}
+![](images/fig16.png)
 *Figure 15*
 
 
@@ -140,36 +140,36 @@ Scrap price is computed from the net present value of projected yearly cashflow 
 1.	Storage cost: Computed using Alice Spring’s storage fee based on the aircraft’s [MTOW](https://www.alicespringsairport.com.au/airport-charges)   
 2.	Expected yearly profit if not stored: Obtained from the base model  
 
-{{< img src="/posts/A_Projects/05_SIA/images/fig17.png" align="left" >}}
+![](images/fig17.png)
 *Figure 16*   
 
 The last year of useful life’s cashflow is the sum of expected book value at retirement and storage cost or expected profit, depending on the storage allocation. The expected book value is calculated from the purchase cost minus the depreciation along the course of its useful life. The depreciation value is estimated from [SIA’s financial report](https://www.singaporeair.com/saar5/pdf/Investor-Relations/Annual-Report/annualreport1920.pdf).  
 
 ## 5.	Results  
 Overall, SIA’s profit is highly dependent on passenger demand recovery rate.  
-{{< img src="/posts/A_Projects/05_SIA/images/fig18.png" align="left" >}}
+![](images/fig18.png)
 *Figure 17*    
 
 Given that all countries are only forecasted to reopen in Dec-2022, a large proportion – 93% (125/133) of aircrafts are allocation to storage initially, and gradually allocation to passenger services as passenger demand recovers.  
-{{< img src="/posts/A_Projects/05_SIA/images/fig19.png" align="left" >}}
+![](images/fig19.png)
 *Figure 18*   
 
 ## 6.	Trade-offs and sensitivity
 ### 6.1	Sensitivity of fuel cost on total profit  
-{{< img src="/posts/A_Projects/05_SIA/images/fig20.png" align="left" >}}
+![](images/fig20.png)
 *Figure 19*    
 
 Total profit is more sensitive to changes in fuel cost in the later years due to more aircrafts being in service. Based on figure 16, a 2.5% increase in fuel cost would result in losses, hence proper risk mitigation strategies, for example hedging fuel cost and dynamic seat pricing, must be in place to preserve profits.  
   
 ### 6.2 	Sensitivity of passenger demand recovery rate on total profit  
-{{< img src="/posts/A_Projects/05_SIA/images/fig21.png" align="left" >}}
+![](images/fig21.png)
 *Figure 20*    
 
 The sensitivity analysis of passenger demand recovery reveals that total profit highly sensitive to the vaccine availability date.  
 Given that the vaccine release date is uncontrollable and uncertain at the date of this report, SIA should take the necessary steps to manage cash flow.  
 
 ### 6.3	Trade off analysis   
-{{< img src="/posts/A_Projects/05_SIA/images/fig22.png" align="left" >}}
+![](images/fig22.png)
 *Figure 21*
 
 Profits would turn negative beyond a certain level of over allocation to passenger services due to supply outstripping demand for seats. As demand is the limiting factor, every additional plane allocated reduces profit. That being said, SIA may decide to allocate more aircrafts to passenger services to increase route offering for other business or technical reasons.  
