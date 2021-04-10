@@ -1,7 +1,7 @@
 ---
-title: Exploring Airbnb Singapore
+title: Shiny prototype test
 author: Su Yiin Ang
-date: 'Sys.Date()'
+date: '2021-04-10'
 slug: []
 categories:
   - A_Projects
@@ -12,8 +12,9 @@ tags:
   - ggplot
 draft: no
 output:
-  html_document:
-    toc: yes
+  blogdown::html_page:
+    keep_md: yes
+always_allow_html: true
 ---
 
 
@@ -21,51 +22,57 @@ output:
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = TRUE)
 ```
 
-# 1. Introduction
+# Prototype testing for the Exploratory module for [OurShinyPET](https://ourshinypet.netlify.app/)
 
-## 1.1 Overview of application
+This was written as part of the requirements for the Visual Analytics module for MITB.
 
-The increasing availability of data has resulted in the increased demand for data driven decisions. Although there is an extensive range of commercial statistical tools, they are often subscription-based and demand good technical knowledge to mine and draw insights from. Therefore, it may not appeal to the average user.
+---
 
-The `Shiny` package of R provides an interface to build interactive web application using R language. Furthermore, Shiny provides for fully interactive visualisation with its reactive function, while having the statistical framework of R.
+## 1. Introduction
 
-Hence, we aim to develop an application that is **user-friendly and interactive** [R Shiny interface](https://shiny.rstudio.com/) that would enable everyone to make data based decisions **without** needing programming, statistical background or expensive subscriptions.  
+#### 1.1 Overview of application
+
+The increasing availability of data has resulted in increased demand for data driven decisions. Although there is an extensive range of commercial statistical tools, they are often subscription-based and demand good technical knowledge to mine and draw insights from. Therefore, it may not appeal to the average user.
+
+The `Shiny` package of R provides an interface to build interactive web applications using R language. Furthermore, Shiny provides for fully interactive visualisation with its reactive functions, while retaining the statistical framework of R.
+
+Here, we aim to develop an application that is **user-friendly and interactive** [R Shiny](https://shiny.rstudio.com/) that would enable everyone to make data based decisions **without** needing programming, statistical backgrounds or expensive subscriptions.  
 
 We have selected Airbnb data as a base case given its extensive data (i.e location, pricing, host status, etc.). With this application, users (host, visitors) can analyse their needs to compare across other listings. There are three parts to this shiny application - Text Mining, Exploratory and Confirmatory, and Predictive Analytics. 
 
 Please visit our website at https://ourshinypet.netlify.app/ for more details.
 
-## 1.2 Objective of this report
+#### 1.2 Objective of this report
 
 This report covers the **Exploratory and Confirmatory Analysis module**.
 
 The objectives of this report are to
 
-(i) identify and select the appropriate R packages for the final R shiny application,  
-(ii) develop prototypes of the module, and  
-(iii) prepare storyboard sketch for the sub-module design.  
+i) identify and select the appropriate R packages for the final R shiny application,  
+ii) develop prototypes of the module, and  
+iii) prepare storyboard sketch for the sub-module design.  
 
 During prototype testing, 3 aspects were taken into consideration:
 
-(i) interactivity
-(ii) statistical testing
-(iii) compatibility with R Shiny
+i) interactivity
+ii) statistical testing
+iii) compatibility with R Shiny
 
-# 2. Literature review
+## 2. Literature review
 
-Prior to building our prototype, we examined two application as part of our literature review. We examined how the analysis were performed in relation to interactive web approach and visual analytics techniques and gaps in the application.
+Prior to building our prototype, we examined two applications as part of our literature review. We examined how the analyses were performed in relation to interactive web approach and visual analytics techniques and gaps both in the applications.
 
-The [Radiant](https://vnijs.shinyapps.io/radiant/?_ga=2.97157535.1465001607.1617910198-1515208298.1617518733&SSUID=71147ad3f8) Shiny application developed by [Vincent Nijs](https://rady.ucsd.edu/people/faculty/nijs/) is a powerful interface for business analytics using R. The two modules - _radiant.data_ and _radiant.basic_ offers tools to visualise and perform statistical analysis. Radiant utilises the `ggplot2` package for visualisation and R's stats package for statistical testing. For _radiant.data_ pivot tab, users are able to create a wide range of **static** charts with the given selections. While for the _radiant.basics_ module, users are expected to have a **basic understanding of statistical testing methods** as they are first required to select their testing method before proceeding. Furthermore, the statistical testing and visualisation are done separately, hence users are not able to visualise and perform inferential statistics on one page.
+The [Radiant](https://vnijs.shinyapps.io/radiant/?_ga=2.97157535.1465001607.1617910198-1515208298.1617518733&SSUID=71147ad3f8) Shiny application developed by [Vincent Nijs](https://rady.ucsd.edu/people/faculty/nijs/) is a powerful interface for business analytics using R. The two modules - _radiant.data_ and _radiant.basic_ offerss tools to visualise and perform statistical analysis. Radiant utilises the `ggplot2` package for visualisation and R's stats package for statistical testing. For _radiant.data_ pivot tab, users are able to create a wide range of **static** charts with the given selections. While for the _radiant.basics_ module, users are expected to have a **basic understanding of statistical testing methods** as they are first required to select their testing method before proceeding. Furthermore, the statistical testing and visualisation are done separately, hence users are not able to visualise and perform inferential statistics on one page.
 
-Meanwhile, the [MEPHAS](https://alain003.phs.osaka-u.ac.jp/mephas/#) Shiny application by Zhou, Y., Leung, Sw., Mizutani, S. et al. (2020) is an integrated web application for statistical analysis to support the medical and pharmaceutical analysis. To overcome the statistical knowledge hurdle, the MEPHAS application has an interactive user friendly flow chart that helps user find the right statistical method. The list of statistical test and visualisations covered are extensive, and the process flow is logical and easy to understand to an average user. Furthermore, MEPHAS has seamlessly integrated interactivity for both the visual plots and statistical outputs. However, different statistical test methods are located on web server, i.e parametric t test on [this erver](https://alain003.phs.osaka-u.ac.jp/mephas_web/2MFSttest/) and non-parametric t-test on [this serve](https://alain003.phs.osaka-u.ac.jp/mephas_web/3MFSnptest/). Hence, the **transition** from one testing method to another is relatively more **tedious with regards to user experience**.
+Meanwhile, the [MEPHAS](https://alain003.phs.osaka-u.ac.jp/mephas/#) Shiny application by Zhou, Y., Leung, Sw., Mizutani, S. et al. (2020) is an integrated web application for statistical analysis to support medical and pharmaceutical analysis. To overcome the statistical knowledge hurdle, the MEPHAS application has an interactive user friendly flow chart that helps user find the right statistical method. The list of statistical test and visualisations covered are extensive, and the process flow is logical and easy to understand to an average user. Furthermore, MEPHAS has seamlessly integrated interactivity for both the visual plots and statistical outputs. However, different statistical test methods are located on web server, i.e parametric t test on [this webpage](https://alain003.phs.osaka-u.ac.jp/mephas_web/2MFSttest/) and non-parametric t-test on [this webpage](https://alain003.phs.osaka-u.ac.jp/mephas_web/3MFSnptest/). Hence, the **transition** from one testing method to another is relatively more **tedious with regards to user experience**.
 
-Taking the two applications into consideration, our application intends to enhance user experience by incorporating interactivity to the graph, automating statistical testing that caters to the average user that has minimal statistical background, and presenting statistical test and interactive graph in a single tab that would enhance visual experience.
+Taking the two applications into consideration, our application intends to enhance user experience by incorporating interactivity to the graph, automating statistical testing that caters to the average user with a minimal statistical background, and presenting statistical test and interactive graph in a single tab that would enhance visual experience.
 
-# 3 Extracting, wrangling and preparing the input data 
+## 3 Extracting, wrangling and preparing the input data 
 
-Listings of Airbnbs in Singapore were extract from [InsideAirbnb.com](http://insideairbnb.com/get-the-data.html)
+Listings of Airbnbs in Singapore were extracted from [InsideAirbnb.com](http://insideairbnb.com/get-the-data.html)
 
-## 3.1 Load packages
+**3.1 Load packages**  
 
 We will focus on utilising packages from the [`Tidyverse`](https://www.tidyverse.org/) family.
 
@@ -76,7 +83,9 @@ The following packages were mainly used in exploring and developing our prototyp
 - [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html) to create plots with statistical tests included within plot.  
 
 ```{r, message = FALSE, class.source = 'fold-show'}
-packages = c('tidyverse', 'ggplot2', 'skimr', 'naniar', 'kableExtra','dplyr', 'ggstatsplot','plotly', 'readr','haven','funModeling','crosstalk','data.table', 'skimr', 'ggmosaic','ggExtra','ggpubr','sf','tmap','sp', 'leaflet')
+packages = c('tidyverse', 'ggplot2', 'skimr', 'naniar', 'kableExtra','dplyr', 'ggstatsplot','plotly',
+             'readr','haven','funModeling','crosstalk','data.table', 'skimr', 'ggmosaic','ggExtra','ggpubr',
+             'sf','tmap','sp', 'leaflet','widgetframe')
 
 for(p in packages){
   if(!require(p, character.only = T)){
@@ -86,7 +95,7 @@ for(p in packages){
 }
 ```
 
-## 3.2 Load data
+**3.2 Load data**
 
 The data was loaded using `read_csv()` of the readr package, which reads delimited files into a `tibble`.
 
@@ -97,28 +106,30 @@ listings <- read_csv("./data/raw/listings.csv")
 **View data**    
 
 The dataset has 4,255 observations and 74 variables.  
-Upon initial glimpse, we noticed a number of redundant variables such as _id_, _listing_url_, etc. These should be removed as they do not add value to any analysis.  
+At the intial glimpse, we noticed a number of redundant variables such as _id_, _listing_url_, etc. These should be removed as they do not add value to any analysis.  
 
 Further, textual variables such as _description_, _name_ etc, were removed these will be done in the Text Mining module. To the extent useful, textual data was converted to structured data through feature engineering (length of text).  
 
-Additionally, we noticed that some variables are in the wrong data type - _price_, _host_response_rate_, _host_acceptance_rate_ are in character format, these should be in numerical form.  
+Additionally, we noticed that some variables are in the wrong data type - _price_, _host_response_rate_, _host_acceptance_rate_ are in character format, when they should be numerical.  
 
 ```{r,  message = FALSE, class.source = 'fold-show'}
 glimpse(listings)
 ```
 
-## 3.3 Remove unnecessary variables 
+**3.3 Remove unnecessary variables **
 
 To avoid having too many variables that would overwhelm the user, we have dropped variables that are not useful for analysis.  
 
 ```{r,  message = FALSE, class.source = 'fold-show'}
 listings2 <- listings %>%
-  select(-id, -listing_url, -scrape_id, -neighborhood_overview, -picture_url, -host_id, -host_url, -host_name, -host_location, -host_thumbnail_url, -host_picture_url, -first_review, -last_review, -last_scraped, -calendar_last_scraped, -has_availability, -host_has_profile_pic, -calendar_updated, -license, -bathrooms, -neighbourhood, -host_neighbourhood)
+  select(-id, -listing_url, -scrape_id, -neighborhood_overview, -picture_url, -host_id, -host_url, -host_name, -host_location,
+         -host_thumbnail_url, -host_picture_url, -first_review, -last_review, -last_scraped, -calendar_last_scraped,
+         -has_availability, -host_has_profile_pic, -calendar_updated, -license, -bathrooms, -neighbourhood, -host_neighbourhood)
 ```
 
-## 3.4 Create new variables
+**3.4 Create new variables**
 
-#### i) Feature engineering - Convert unstructured variables to structured variables 
+**i) Feature engineering - Convert unstructured variables to structured variables**  
 
 Textual variables such as _name_, _description_, _host_about_, _bathroom_text_ , _bathrooms_text_, _host_verifications_count_ were converted into structured variables by counting the length of the text.
 
@@ -154,7 +165,7 @@ listings3 <- listings3 %>%
   select(-host_verifications)
 ```
 
-#### ii) Derive the number of days since a host joined Airbnb platform - _days_joined_
+**ii) Derive the number of days since a host joined Airbnb platform - _days_joined_**
 
 Using the variable _host_since_, which is in date format,  we have calculated the number of days since the host started hosting Airbnb guests.  
 
@@ -165,9 +176,9 @@ listings4 <- listings3 %>%
   select(-host_since)
 ```
 
-#### iii) Derive property type 
+**iii) Derive property type**
 
-The _property_type_ variable comprises both room and property type (e.g. Private room in apartment). We will extract just the property type from _property_type_ variable.  
+The _property_type_ variable comprises both room and property type (e.g. Private room in apartment). We extracted the property type from _property_type_ variable.  
 
 ```{r,  message = FALSE, class.source = 'fold-show'}
 # get actual property type (remove room type component) from property_type
@@ -179,7 +190,7 @@ listings5 <- listings4 %>%
   ))
 ```
 
-## 3.5 Change data type
+**3.5 Change data type**
 
 - Change price-related attribute from _character_ format to _numeric_.  
 - Convert character and logical variables to factor data type.  
@@ -199,7 +210,7 @@ listings6 <- listings6 %>%
 
 ```
 
-## 3.6 Consolidate similar levels
+**3.6 Consolidate similar levels**
 
 For the _host_response_time_ variable, there are 6 levels of which 2 are _N/A_ and _NA_.   
 As such, we have renamed _NA_ to _N/A_ as one level.  
@@ -211,7 +222,7 @@ final_listing <- subset(listings6, !is.na(host_is_superhost))
 
 ```
 
-## 3.7 View final listing
+**3.7 View final listing**
 
 Review the final output after wrangling.  
 
@@ -219,9 +230,9 @@ Review the final output after wrangling.
 glimpse(final_listing)
 ```
 
-# 4. Testing protypes for submodule
+## 4. Testing protypes for submodule
 
-## 4.1 Observe variables
+### 4.1 Observe variables
 
 This allows users to understand variables available for exploration.
 
@@ -241,34 +252,38 @@ sum_n <-if ("numeric" %in% skimDf$skim_type){
   
 sum_f <-if ("factor" %in% skimDf$skim_type){skimDf %>% yank("factor")}
 
-DT::datatable(sum_data)
-DT::datatable(sum_n)
-DT::datatable(sum_f)
-```
-***
+all <- DT::datatable(sum_data)
+n <- DT::datatable(sum_n)
+f <- DT::datatable(sum_f)
 
-## 4.2 Plotting univariate charts
+widgetframe::frameWidget(all)
+widgetframe::frameWidget(n)
+widgetframe::frameWidget(f)
+```
+
+
+### 4.2 Plotting univariate charts
 
 For univariate exploratory analysis, we would like to be able to plot :  
 
 i) Distribution - through **histogram** for numerical variables and **barplot** for categorical variables,  
 ii) Outlier of selected variable - through **boxplot**.   
 
-### 4.2.1 Plotting distribution with histogram and bar plots
+**4.2.1 Plotting distribution with histogram and bar plots**
 
-#### 4.2.1.1 With [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html)
+**4.2.1.1 With [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html)**
 
-Upon reading `ggstatsplot` documentation, we realised that `ggbarstats()`, which plots barplots, currently only supports two variable barplots as evidence in the [documentation](https://indrajeetpatil.github.io/ggstatsplot/reference/ggbarstats.html) of the `y` argument. 
+Upon reading `ggstatsplot` documentation, we realised that `ggbarstats()`, which plots barplots, currently only supports two variable barplots
 
-See extract below:
+See extract from the [documentation](https://indrajeetpatil.github.io/ggstatsplot/reference/ggbarstats.html) of the `y` argument. 
 
 > The variable to use as the columns in the contingency table. Please note that if there are empty factor levels in your variable, they will be dropped. Default is `NULL.` If `NULL`, one-sample proportion test (a goodness of fit test) will be run for the `x` variable. Otherwise an appropriate association test will be run. This argument can not be `NULL` for `ggbarstats` function.
 
 Hence the visual below only applicable to numerical variables using `gghistostats`.
 
-`gghistostats` automatically automates the testing methodology based on inputs. Furthermore, `gghistostats` allows adjustments to the confident level and to the statistical approach with 4 options `parametric`, `nonparametric`, `robust` and `bayes`.
+`gghistostats` automates the testing methodology based on inputs. Furthermore, `gghistostats` allows adjustments to the confident level and to the statistical approach with 4 options `parametric`, `nonparametric`, `robust` and `bayes`.
 
-```{r, echo = FALSE, message = FALSE}
+```{r, echo = TRUE, message = FALSE}
 set.seed(123) # for reproducibility
 g_hist <- gghistostats(
     data = final_listing,
@@ -284,21 +299,22 @@ g_hist <- gghistostats(
 g_hist
 ```
 
-#### Attempt to add interactivity to [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html) chart using [`ggplotly`](https://plotly.com/ggplot2/)
+**Attempt to add interactivity to [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html) chart using [`ggplotly`](https://plotly.com/ggplot2/)**
 
-We have tried to wrap the `ggstatsplot` chart with `ggplotly()`, however by doing so, we would lose key metrics such as the fitted normal curve and statistical test results. As clarified by the author [here](https://github.com/IndrajeetPatil/ggstatsplot/issues/403), this is a [`ggplot2`](https://ggplot2.tidyverse.org/reference/index.html) issue.
+We tried to wrap the `ggstatsplot` chart with `ggplotly()`. However by doing so, we would lose key metrics such as the fitted normal curve and statistical test results. As clarified by the author [here](https://github.com/IndrajeetPatil/ggstatsplot/issues/403), this is a [`ggplot2`](https://ggplot2.tidyverse.org/reference/index.html) issue.
 
 ```{r}
-ggplotly(g_hist)
+histly <- ggplotly(g_hist)
+widgetframe::frameWidget(histly)
 ```
 
-***
 
-#### 4.2.1.2 With [`ggplot2`](https://ggplot2.tidyverse.org/reference/index.html)
 
-To work around `ggstatsplot` limitation while retaining interactivity, we have used `ggplot2` the visualise the variables and included computed statistical test below. However, we are unable to retain the fitted normal curve. We will remove the fit normal curve code from our final shiny application.   
+**4.2.1.2 With [`ggplot2`](https://ggplot2.tidyverse.org/reference/index.html)**
 
-For the statistical tests, we have assume normality as our dataset has 4000+ observations. Hence, we will use the  
+To work around `ggstatsplot` limitation while retaining interactivity, we have used `ggplot2` to visualise the variables and included computed statistical test below. However, we are unable to retain the fitted normal curve. We will remove the fit normal curve code from our final shiny application.   
+
+For the statistical tests, we have assumed normality as our dataset has 4000+ observations. Hence, we will use the  
 - Single mean `t.test()` for numerical variables to compare a single mean to the mean value of the population.  
 - Single proportion `prop.test()` for categorical variables to compare a single proportion to the population   proportion.
 
@@ -337,16 +353,17 @@ bar <- ggplot(final_listing, aes(x = room_type)) +
                           fill = '#FF5A5F')
    
 
-ggplotly(hist)
+histly2 <- ggplotly(hist)
+widgetframe::frameWidget(histly2)
 
 t.test(final_listing$review_scores_rating,mu = 100, alternative = 'two.sided',conf.level = 0.95)
 ```
 
-### 4.2.2 Plotting outliers with boxplot
+**4.2.2 Plotting outliers with boxplot**
 
 [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html) currently doesn't not have any graph to plot a single variable boxplot for outlier observations. As such, I have used [`ggplotly()`](https://plotly.com/ggplot2/) and [`ggplot2`](https://ggplot2.tidyverse.org/reference/index.html)  to create and interactive chart. 
 
-Here we observed that the outliers are those less than 70.
+Here we observe that the outliers are those less than 70.
 
 ```{r }
 boxchart <- ggplot(final_listing, 
@@ -362,10 +379,11 @@ boxchart <- ggplot(final_listing,
   theme_classic() +
   theme(legend.position = 'none')
   
-ggplotly(boxchart)
+boxly <- ggplotly(boxchart)
+widgetframe::frameWidget(boxly)
 ```
 
-## 4.3 Bivariate exploratory and confirmatory analysis
+### 4.3 Bivariate exploratory and confirmatory analysis
 
 For bivariate analysis, we would like to be able to plot 3 main types of interactions between variables - 
 
@@ -375,12 +393,10 @@ For bivariate analysis, we would like to be able to plot 3 main types of interac
 
 - 1 numerical and 1 categorical - box/violin plot
 
-*** 
+ 
+**4.3.1 Plotting numerical variables with scatterplot**
 
-
-### 4.3.1 Plotting numerical variables with scatterplot
-
-#### 4.3.1.1 With `ggMarginal()`
+**4.3.1.1 With `ggMarginal()`**
 
 `ggMarginal()` of the `ggExtra` package adds marginal plots to `ggplot2` by wrapping over the existing `ggplot2` chart. It is very quick and easy way of plotting marginal plots of existing `ggplot2` charts. However we noted that the chart does not with plotly.
 
@@ -392,9 +408,9 @@ p1 <- ggplot(final_listing,
 p2<-ggMarginal(p1, groupColour = TRUE, groupFill = TRUE)
 p2
 ```
-***
 
-#### 4.3.1.2 With [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html)
+
+**4.3.1.2 With [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html)**
 
 `ggscatterstats` is able to replicate `ggMarginal()` chart overlayed with statistical test.
 
@@ -427,9 +443,9 @@ grouped_ggscatterstats( #changed this
 plot.grid.args = list(nrows =1, ncol = 2)) #to view in one row
 ```
 
-***
 
-#### 4.3.1.3 using [`ggplot2`](https://ggplot2.tidyverse.org/reference/index.html) and [`ggplotly()`](https://plotly.com/ggplot2/)
+
+**4.3.1.3 using [`ggplot2`](https://ggplot2.tidyverse.org/reference/index.html) and [`ggplotly()`](https://plotly.com/ggplot2/)**
 
 By using `facet_wrap()` and `ggplotly()`, we can plot an interactive chart grouped by selected factor (i.e _host_is_superhost_). However correlation test must be done separately for these two groups (superhost and non-superhost), which may be difficult to implement in shiny given that different variables have different number of factor levels. 
 
@@ -442,15 +458,16 @@ scatter <- ggplot(final_listing, aes(x = review_scores_rating, y= amenities_coun
   facet_wrap(vars(host_is_superhost)) + 
   ggtitle('Scatterplot using ggplot2')
 
-ggplotly(scatter)
+scatterly <- ggplotly(scatter)
+widgetframe::frameWidget(scatterly)
 cor.test(final_listing$review_scores_rating, final_listing$amenities_count, conf.level = 0.95)
 ```
 
-***
 
-### 4.3.2 Plotting categorical variables - Mosaic plot
 
-#### 4.3.2.1 With [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html)
+**4.3.2 Plotting categorical variables - Mosaic plot**
+
+**4.3.2.1 With [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html)**
 
 ```{r}
 ggbarstats(data = final_listing,
@@ -463,9 +480,9 @@ ggbarstats(data = final_listing,
            ggtheme = ggplot2::theme_classic())
 ```
 
-***
 
-#### 4.3.2.2 Using [`ggmosaic`](https://haleyjeppson.github.io/ggmosaic/), [`ggplot2`](https://ggplot2.tidyverse.org/reference/index.html) and [`ggplotly()`](https://plotly.com/ggplot2/)
+
+**4.3.2.2 Using [`ggmosaic`](https://haleyjeppson.github.io/ggmosaic/), [`ggplot2`](https://ggplot2.tidyverse.org/reference/index.html) and [`ggplotly()`](https://plotly.com/ggplot2/)**
 
 ```{r}
 m <- ggplot(final_listing) + 
@@ -483,15 +500,15 @@ m <- ggplot(final_listing) +
 chisq <- chisq.test(x = final_listing$host_is_superhost,y = final_listing$room_type)
 
 #output
-ggplotly(m)
+mly <- ggplotly(m)
+widgetframe::frameWidget(mly)
 chisq
 ```
  
-***
 
-### 4.3.3 Plotting numerical and categorical variabes - Box and violin plot
+**4.3.3 Plotting numerical and categorical variabes - Box and violin plot** 
 
-#### 4.3.3.1 Using [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html)
+**4.3.3.1 Using [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html)**
 
 ```{r}
 ggbetweenstats(
@@ -508,14 +525,15 @@ ggbetweenstats(
 )
 ```
 
-***
 
-#### 4.3.3.2 Using [`ggplot2`](https://ggplot2.tidyverse.org/reference/index.html) and [`ggplotly()`](https://plotly.com/ggplot2/)
 
-Here we used `ggpubr` function of `stat_compare_means()` to include the p-value into the interactively chart. Similarly, we have cross check the p-value to the `t.test` and `ggbetweenstats` to ensure that all the results are consistent.
+**4.3.3.2 Using [`ggplot2`](https://ggplot2.tidyverse.org/reference/index.html) and [`ggplotly()`](https://plotly.com/ggplot2/)**
 
-In our example, 
-For categorical variables with more than 3 groups, 
+Here we used `ggpubr` function of `stat_compare_means()` to include the p-value into the interactively chart. Similarly, we have cross checked the p-value to the `t.test` and `ggbetweenstats` to ensure that all the results are consistent. Here, the p-value is > 0.05, this means that the average price difference between host and superhost is significant.
+
+In our example below, the categorical variable has 2 levels, hence the `t.test` was used.
+
+For categorical variables with more than 2 levels, the anova test will be used using `anova_test()`. Should the `anova_test()` be significant, the `tukey_hsd()` will be perform to show where the differences lie.
 
 ```{r}
 base <- ggplot(final_listing, aes(host_is_superhost, y = price)) + 
@@ -530,26 +548,26 @@ box <- base + bbox + stat_compare_means(method = 't.test')
 
 boxly <- ggplotly(box)
 
-boxly
+widgetframe::frameWidget(boxly)
 
 t.test(price ~ host_is_superhost, final_listing, var.equal = FALSE)
 ```
 
-***
 
-## 4.4 Mapping Airbnb
 
-### 4.4.1 Point symbol map
+### 4.4 Mapping Airbnb
+
+#### 4.4.1 Point symbol map
 
 Point symbol maps displays each listing as a point. We have used the `tmap` and `leaflet` during our prototype testing.
 
-#### 4.4.1.1 With `tmap`
+**4.4.1.1 With `tmap`**
 
 Subzone boundaries were extract from [data.gov.sg](https://data.gov.sg/dataset/master-plan-2014-subzone-boundary-web), which were used to draw the boundaries within Singapore.
 
 `tmap` allows for customisation (i.e title, facet by select factor, etc.). `tmap` can be made interactive by calling the `tmap_mode('view')` function, which we have shown in the chloropleth map below. Furthermore, `tmap` can be used with [shiny](https://rdrr.io/cran/tmap/man/renderTmap.html) through the `renderTmap` wrapper.
 
-```{r, message = FALSE, echo = FALSE}
+```{r, message = FALSE, echo = TRUE}
 #load subzone data
 mpsz <- st_read(dsn = 'data/spatial',
                 layer = 'MP14_SUBZONE_WEB_PL',
@@ -583,28 +601,29 @@ p_map <-tm_shape(mpsz) +
 p_map
 ```
 
-*** 
+ 
 
-#### 4.4.4.2 With `leaflet`
+**4.4.4.2 With `leaflet`**
 
 Plotting a point symbol map using `leaflet` is relatively easy and straight forward as it uses longitude and latitude.
 
 We need not do a point in polygon mapping, as done for `tmap` above, which maps longitude & latitude/neighbourhood to subzones. Such mapping may not be available for certain countries/areas.
 
 ```{r}
-leaflet(data = final_listing) %>% 
+leaf_map <- leaflet(data = final_listing) %>% 
   addTiles() %>% 
   addCircleMarkers(lng = ~longitude,
                    lat = ~latitude,
                    label = ~as.character(final_listing$host_is_superhost),
                    clusterOptions = markerClusterOptions()) 
+leaf_map
 ```
 
-*** 
+ 
 
-### 4.4.2 Chloropleth Map
+#### 4.4.2 Chloropleth Map
 
-#### With `tmap`
+**With `tmap`**
 
 When using `tmap` for chloropleth mapping, the dataset had to be summarised prior to joining with the subzone data. This may be tricky to implement using the reactive function of Shiny to summarise the dataset for mapping. We also experienced some trouble adding _avg_price_ to the tooltip.
 
@@ -640,14 +659,17 @@ map <- tm_shape(mpsz2)+
 
 # make map interactive
 tmap_mode('view')
-map
+c_map <- tmap_leaflet(map) #blogdown unable to render interactive tmap
+frameWidget(c_map)
 ```
 
-***
 
-#### With `leaflet`
+
+**With `leaflet`**
 
 Plotting the chloropleth map using _geojson_ data extracted from [InsideAirbnb](http://insideairbnb.com/get-the-data.html). We felt that `leaflet` was relatively straight forward and easy to customise compared to using the subzone file and `tmap`.
+
+However, we noted that the mapping of the neighbourhoods is not accurate. We are investigating this issue.  
 
 ```{r, message = FALSE}
 # load geojson file
@@ -676,17 +698,15 @@ l_m <- leaflet(hood) %>%
     labFormat = labelFormat(prefix = "$"),
     opacity = 1
   )
-l_m
-
+frameWidget(l_m)
 ```
 
-***
 
-# 5. Testing Shiny interface
+## 5. Testing Shiny interface
 
-Given that our main deliverable is a R Shiny application, we tested the comparability of both `ggstatsplot` and `ggplot2` with R Shiny, taking ease of scripting and transitioning into consideration.
+Given that our main deliverable is a R Shiny application, we tested the compatibility of both `ggstatsplot` and `ggplot2` with R Shiny, taking ease of scripting and transitioning into consideration.
 
-## 5.1 R Shiny with `ggstatsplot`
+### 5.1 R Shiny with `ggstatsplot`
 
 During our experiment, we noticed that `ggstatsplot` tends to take a little longer to transition from one plot to another, especially when toggling the statistical approach. Furthermore, we were unable to implement toggling the adjustment method and pairwise display using the typical Shiny input.
 
@@ -694,7 +714,7 @@ During our experiment, we noticed that `ggstatsplot` tends to take a little long
 ![](images/ggstatsplot.gif)
 
 
-**Expand to see code**
+Code below
 
 ```{r, eval =FALSE, message = FALSE}
 
@@ -745,16 +765,16 @@ bscols(widths = c(3,9),
 )
 ```
 
-***
 
-## 5.2 R Shiny with `ggplot2`
+
+### 5.2 R Shiny with `ggplot2`
 
 Syncing `ggplot2` charts with Shiny was relatively straight forward, we did not encounter any issues during our testing.
 
 
 ![](images/ggplot.gif)
 
-**Expand to see code**
+Code below.
 
 ```{r, eval =FALSE, message = FALSE}
 
@@ -827,41 +847,41 @@ bscols(widths = c(3,9),
        plotlyOutput('bbox'))
 ```
 
-***
 
-# 6. Assessment of prototype
 
-In deciding on the final prototype of our Shiny application, we assessed prototypes based on 3 main factors - interactivity, availability of statistical test and compatibility with Shiny.
+## 6. Assessment of prototype
 
-#### i) Interactivity - `ggplot2` with `plotly`
+In deciding on the final prototype of our Shiny application, we assessed prototypes based on 3 main factors - interactivity, availability of statistical tests and compatibility with Shiny.
 
-Given that the focus of our application is to be user friendly and interactive, `ggplot2` charts overlayed with `ggplotly()` triumphs `ggstatsplot`. 
+**i) Interactivity - `ggplot2` with `plotly`**
 
-#### ii) Statistical test - `ggstatsplot`
+Given that the focus of our application is to be user friendly and interactive, `ggplot2` charts overlayed with `ggplotly()` triumphs over `ggstatsplot`. 
+
+**ii) Statistical test - `ggstatsplot`**
 
 `ggstatsplot` is an amazing package, one stop shop for visual plots and extensive statistical background. 
 
-#### iii) Compatability with Shiny - `ggplot2`
+**iii) Compatability with Shiny - `ggplot2`**
 
 `ggstatsplot` has some outstanding comparability issues with Shiny as raised in [Github](https://github.com/IndrajeetPatil/ggstatsplot/issues/475) as of the date of this report. Furthermore, during our prototype testing, we experienced some issues when attempting to sync shinywidgets to charts.
 
-Meanwhile, `ggplot` syncs very well with Shiny. During our testing, we noticed that it is relatively easy and efficient to toggle between different chart types given that the base script, ie _ggplot(data, aes(x,y))_ is constant throughout all the charts required. While different functions are required for `ggstatsplot` i.e `gghistostat()` for histogram and `ggbarstats` for bar charts.
+Meanwhile, `ggplot` syncs very well with Shiny. During our testing, we noticed that it is relatively easy and efficient to toggle between different chart types given that the base script, ie _ggplot(data, aes(x,y))_ is constant throughout all the charts required. While different functions are required for `ggstatsplot` i.e `gghistostat()` for histogram and `ggbarstats` for bar charts, toggle between charts is more challenging to script.
 
-#### v) Map - `leaflet`
+**v) Map - `leaflet`**
 
-Although `tmap` fitted our requirements of being interactive and compatible with Shiny, however we found that `leaflet` was easier to script and customise. Nonetheless, this may just be our personal preference.
+Although `tmap` fitted our requirements of being interactive and compatible with Shiny, however we found that `leaflet` was easier to script and customise. Nonetheless, this may just be our personal preference. (this assumes that we are able to rectify the chloropleth map issue)
 
-#### v) Other matters
+**v) Other matters**
 
 We also noticed that `ggstatsplot` automatically drops NAs, while `ggplot2` displays NA values if they are present in the dataset.
  
-# 7. Conclusion 
+## 7. Conclusion 
 
 Based on the above assessment, we found that `ggplot2` and `leaflet` suited our needs better at this juncture. 
 
-Although `ggplot2` lacks the automation of statistical insights, it has an extensive list of charts available, interactive with `ggplotly()` and, more importantly, compatible with R Shiny. The lack of statistical automation can be worked around by performing the statistical test at the server backend. 
+Although `ggplot2` lacks the automation of statistical insights, it has an extensive list of charts available, is interactive with `ggplotly()` and, more importantly, compatible with R Shiny. The lack of statistical automation can be worked around by performing the statistical test at the server backend. 
 
-# 8. Storyboard - design of the submodule 
+## 8. Storyboard - design of the submodule 
 
 The exploratory and confirmatory module will consist of 3 parts
 
@@ -873,9 +893,11 @@ See sketch below for submodule design:
 
 ![](images/sketch.jpg)
 
-#### Our application will be live on the 25th April! For more details, watch this space - https://ourshinypet.netlify.app/
+## 9. References
 
-# 9. References
+Zhou, Y., Leung, Sw., Mizutani, S. et al. (2020) MEPHAS: an interactive graphical user interface for medical and pharmaceutical statistical analysis with R and Shiny. *BMC Bioinformatics 21, 183*. <https://doi.org/10.1186/s12859-020-3494-x>
 
-Zhou, Y., Leung, Sw., Mizutani, S. et al. (2020) MEPHAS: an interactive graphical user interface for medical and pharmaceutical statistical analysis with R and Shiny.* BMC Bioinformatics 21, 183*. <https://doi.org/10.1186/s12859-020-3494-x>
 
+# Our application will be live on the 25th April! For more details, watch this space - https://ourshinypet.netlify.app/
+
+Design vector created by [stories](https://www.freepik.com/vectors/design) - www.freepik.com
