@@ -59,7 +59,7 @@ Prior to building our prototype, we examined two application as part of our lite
 
 The [Radiant](https://vnijs.shinyapps.io/radiant/?_ga=2.97157535.1465001607.1617910198-1515208298.1617518733&SSUID=71147ad3f8) Shiny application developed by [Vincent Nijs](https://rady.ucsd.edu/people/faculty/nijs/) is a powerful interface for business analytics using R. The two modules - _radiant.data_ and _radiant.basic_ offers tools to visualise and perform statistical analysis. Radiant utilises the `ggplot2` package for visualisation and R's stats package for statistical testing. For _radiant.data_ pivot tab, users are able to create a wide range of **static** charts with the given selections. While for the _radiant.basics_ module, users are expected to have a **basic understanding of statistical testing methods** as they are first required to select their testing method before proceeding. Furthermore, the statistical testing and visualisation are done separately, hence users are not able to visualise and perform inferential statistics on one page.
 
-Meanwhile, the [MEPHAS](https://alain003.phs.osaka-u.ac.jp/mephas/#) Shiny application by Zhou, Y., Leung, Sw., Mizutani, S. et al. (2020) is an integrated web application for statistical analysis to support the medical and pharmaceutical analysis. To overcome the statistical knowledge hurdle, the MEPHAS application has an interactive user friendly flow chart that helps user find the right statistical method. The list of statistical test and visualisations covered are extensive, and the process flow is logical and easy to understand to an average user. Furthermore, MEPHAS has seamlessly integrated interactivity for both the visual plots and statistical outputs. However, different statistical test methods are located on web server, i.e parametric t test on [this erver](https://alain003.phs.osaka-u.ac.jp/mephas_web/2MFSttest/) and non-parametric t-test on [this serve](https://alain003.phs.osaka-u.ac.jp/mephas_web/3MFSnptest/). Hence, the **transition** from one testing method to another is relatively more **tedious with regards to user experience**.
+Meanwhile, the [MEPHAS](https://alain003.phs.osaka-u.ac.jp/mephas/#) Shiny application by Zhou, Y., Leung, Sw., Mizutani, S. et al. (2020) is an integrated web application for statistical analysis to support the medical and pharmaceutical analysis. To overcome the statistical knowledge hurdle, the MEPHAS application has an interactive user friendly flow chart that helps user find the right statistical method. The list of statistical test and visualisations covered are extensive, and the process flow is logical and easy to understand to an average user. Furthermore, MEPHAS has seamlessly integrated interactivity for both the visual plots and statistical outputs. However, different statistical test methods are located on web server, i.e parametric t test on [this server](https://alain003.phs.osaka-u.ac.jp/mephas_web/2MFSttest/) and non-parametric t-test on [this server](https://alain003.phs.osaka-u.ac.jp/mephas_web/3MFSnptest/). Hence, the **transition** from one testing method to another is relatively more **tedious with regards to user experience**.
 
 Taking the two applications into consideration, our application intends to enhance user experience by incorporating interactivity to the graph, automating statistical testing that caters to the average user that has minimal statistical background, and presenting statistical test and interactive graph in a single tab that would enhance visual experience.
 
@@ -78,7 +78,9 @@ The following packages were mainly used in exploring and developing our prototyp
 - [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html) to create plots with statistical tests included within plot.  
 
 ```{r, message = FALSE, class.source = 'fold-show'}
-packages = c('tidyverse', 'ggplot2', 'skimr', 'naniar', 'kableExtra','dplyr', 'ggstatsplot','plotly', 'readr','haven','funModeling','crosstalk','data.table', 'skimr', 'ggmosaic','ggExtra','ggpubr','sf','tmap','sp', 'leaflet')
+packages = c('tidyverse', 'ggplot2', 'skimr', 'naniar', 'kableExtra','dplyr', 'ggstatsplot','plotly',
+             'readr','haven','funModeling','crosstalk','data.table', 'skimr', 'ggmosaic','ggExtra',
+             'ggpubr','sf','tmap', 'leaflet')
 
 for(p in packages){
   if(!require(p, character.only = T)){
@@ -115,7 +117,10 @@ To avoid having too many variables that would overwhelm the user, we have droppe
 
 ```{r,  message = FALSE, class.source = 'fold-show'}
 listings2 <- listings %>%
-  select(-id, -listing_url, -scrape_id, -neighborhood_overview, -picture_url, -host_id, -host_url, -host_name, -host_location, -host_thumbnail_url, -host_picture_url, -first_review, -last_review, -last_scraped, -calendar_last_scraped, -has_availability, -host_has_profile_pic, -calendar_updated, -license, -bathrooms, -neighbourhood, -host_neighbourhood)
+  select(-id, -listing_url, -scrape_id, -neighborhood_overview, -picture_url, -host_id, -host_url, -host_name, 
+         -host_location, -host_thumbnail_url, -host_picture_url, -first_review, -last_review, -last_scraped, 
+         -calendar_last_scraped, -has_availability, -host_has_profile_pic, -calendar_updated, -license, -bathrooms, 
+         -neighbourhood, -host_neighbourhood)
 ```
 
 ## 3.4 Create new variables
@@ -208,7 +213,7 @@ As such, we have renamed _NA_ to _N/A_ as one level.
 
 ```{r,  message = FALSE, class.source = 'fold-show'}
 
-listings6$host_response_time[is.na(listings6$host_response_time)] <- "N/A"
+listings6[['host_response_time']][is.na(listings6[['host_response_time']])] <- "N/A"
 final_listing <- subset(listings6, !is.na(host_is_superhost))
 
 ```
@@ -233,7 +238,7 @@ skimDf <- final_listing %>%
 
 sum_data <- skim(final_listing) %>% summary()
 
-sum_n <-if ("numeric" %in% skimDf$skim_type){
+sum_n <-if ("numeric" %in% skimDf[['skim_type']]){
       skimDf %>%
         yank('numeric') %>%
         select('skim_variable','n_missing','complete_rate',
@@ -247,7 +252,7 @@ DT::datatable(sum_data)
 DT::datatable(sum_n)
 DT::datatable(sum_f)
 ```
-***
+
 
 ## 4.2 Plotting univariate charts
 
@@ -294,7 +299,7 @@ We have tried to wrap the `ggstatsplot` chart with `ggplotly()`, however by doin
 ggplotly(g_hist)
 ```
 
-***
+
 
 #### 4.2.1.2 With [`ggplot2`](https://ggplot2.tidyverse.org/reference/index.html)
 
@@ -318,13 +323,13 @@ hist <- ggplot(final_listing, aes(x = review_scores_rating)) +
                      fill=..count..), 
                     alpha=0.5) +
   stat_function(fun = dnorm, 
-                args = list(mean = mean(final_listing$review_scores_rating), 
-                            sd = sd(final_listing$review_scores_rating))) + #normal curve doesn't appear
-  geom_vline(aes(xintercept=mean(final_listing$review_scores_rating,na.rm=T)),
+                args = list(mean = mean(final_listing[['review_scores_rating']]), 
+                            sd = sd(final_listing[['review_scores_rating']]))) + #normal curve doesn't appear
+  geom_vline(aes(xintercept=mean(final_listing[['review_scores_rating']],na.rm=T)),
              color="#00A699", 
              linetype="dashed", 
              size=1)+ 
-  geom_vline(aes(xintercept=median(final_listing$review_scores_rating,na.rm=T)),
+  geom_vline(aes(xintercept=median(final_listing[['review_scores_rating']],na.rm=T)),
              color="#484848", 
              linetype="dashed", 
              size=1)
@@ -341,7 +346,7 @@ bar <- ggplot(final_listing, aes(x = room_type)) +
 
 ggplotly(hist)
 
-t.test(final_listing$review_scores_rating,mu = 100, alternative = 'two.sided',conf.level = 0.95)
+t.test(final_listing[['review_scores_rating']],mu = 100, alternative = 'two.sided',conf.level = 0.95)
 ```
 
 ### 4.2.2 Plotting outliers with boxplot
@@ -377,7 +382,6 @@ For bivariate analysis, we would like to be able to plot 3 main types of interac
 
 - 1 numerical and 1 categorical - box/violin plot
 
-*** 
 
 
 ### 4.3.1 Plotting numerical variables with scatterplot
@@ -394,7 +398,7 @@ p1 <- ggplot(final_listing,
 p2<-ggMarginal(p1, groupColour = TRUE, groupFill = TRUE)
 p2
 ```
-***
+
 
 #### 4.3.1.2 With [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html)
 
@@ -429,7 +433,6 @@ grouped_ggscatterstats( #changed this
 plot.grid.args = list(nrows =1, ncol = 2)) #to view in one row
 ```
 
-***
 
 #### 4.3.1.3 using [`ggplot2`](https://ggplot2.tidyverse.org/reference/index.html) and [`ggplotly()`](https://plotly.com/ggplot2/)
 
@@ -445,10 +448,9 @@ scatter <- ggplot(final_listing, aes(x = review_scores_rating, y= amenities_coun
   ggtitle('Scatterplot using ggplot2')
 
 ggplotly(scatter)
-cor.test(final_listing$review_scores_rating, final_listing$amenities_count, conf.level = 0.95)
+cor.test(final_listing[['review_scores_rating']], final_listing[['amenities_count']], conf.level = 0.95)
 ```
 
-***
 
 ### 4.3.2 Plotting categorical variables - Mosaic plot
 
@@ -465,7 +467,7 @@ ggbarstats(data = final_listing,
            ggtheme = ggplot2::theme_classic())
 ```
 
-***
+
 
 #### 4.3.2.2 Using [`ggmosaic`](https://haleyjeppson.github.io/ggmosaic/), [`ggplot2`](https://ggplot2.tidyverse.org/reference/index.html) and [`ggplotly()`](https://plotly.com/ggplot2/)
 
@@ -482,14 +484,14 @@ m <- ggplot(final_listing) +
         axis.text.x = element_text(angle = 90))
 
 ## chisq test
-chisq <- chisq.test(x = final_listing$host_is_superhost,y = final_listing$room_type)
+chisq <- chisq.test(x = final_listing[['host_is_superhost']],y = final_listing[['room_type']])
 
 #output
 ggplotly(m)
 chisq
 ```
  
-***
+
 
 ### 4.3.3 Plotting numerical and categorical variabes - Box and violin plot
 
@@ -510,7 +512,7 @@ ggbetweenstats(
 )
 ```
 
-***
+
 
 #### 4.3.3.2 Using [`ggplot2`](https://ggplot2.tidyverse.org/reference/index.html) and [`ggplotly()`](https://plotly.com/ggplot2/)
 
@@ -537,7 +539,7 @@ boxly
 t.test(price ~ host_is_superhost, final_listing, var.equal = FALSE)
 ```
 
-***
+
 
 ## 4.4 Mapping Airbnb
 
@@ -585,7 +587,7 @@ p_map <-tm_shape(mpsz) +
 p_map
 ```
 
-*** 
+
 
 #### 4.4.4.2 With `leaflet`
 
@@ -598,11 +600,11 @@ leaflet(data = final_listing) %>%
   addTiles() %>% 
   addCircleMarkers(lng = ~longitude,
                    lat = ~latitude,
-                   label = ~as.character(final_listing$host_is_superhost),
+                   label = ~as.character(final_listing[['host_is_superhost']]),
                    clusterOptions = markerClusterOptions()) 
 ```
 
-*** 
+
 
 ### 4.4.2 Chloropleth Map
 
@@ -645,7 +647,7 @@ tmap_mode('view')
 map
 ```
 
-***
+
 
 #### With `leaflet`
 
@@ -655,12 +657,15 @@ Plotting the chloropleth map using _geojson_ data extracted from [InsideAirbnb](
 # load geojson file
 hood <- geojsonio::geojson_read('data/neighbourhoods.geojson', what = 'sp')
 
+
 # assign palette based on numeric factors
 mypalette <- colorNumeric("viridis", NULL , reverse = TRUE)
 labels <- sprintf(
   "<strong>%s</strong><br/> Avg price: $%g",
-  listing_summary$neighbourhood_cleansed, round(listing_summary$avg_price,1)
+  listing_summary[['neighbourhood_cleansed']], round(listing_summary[['avg_price']],1)
 ) %>% lapply(htmltools::HTML)
+
+
 
 # create map
 l_m <- leaflet(hood) %>%
@@ -671,18 +676,18 @@ l_m <- leaflet(hood) %>%
               weight = 1,
               smoothFactor = 0.3,
               fillOpacity = 1,
-              fillColor = ~mypalette(log10(listing_summary$avg_price)), #log for better differentiation 
+              fillColor = ~mypalette(log10(listing_summary[['avg_price']])), #log for better differentiation 
               label = labels) %>%
-  addLegend("bottomright", pal = mypalette, values = ~listing_summary$avg_price,
+  addLegend("bottomright", pal = mypalette, values = ~listing_summary[['avg_price']],
     title = "Avg Price",
-    labFormat = labelFormat(prefix = "$"),
+    labFormat = labelFormat(prefix = "SGD"),
     opacity = 1
   )
 l_m
 
 ```
 
-***
+
 
 # 5. Testing Shiny interface
 
@@ -698,8 +703,8 @@ During our experiment, we noticed that `ggstatsplot` tends to take a little long
 
 **Expand to see code**
 
-```{r, eval =FALSE, message = FALSE}
 
+```
 bscols(widths = c(3,9),
   list(selectInput(inputId = 'x_cda',
                    label = 'Select x-variable',
@@ -747,7 +752,7 @@ bscols(widths = c(3,9),
 )
 ```
 
-***
+
 
 ## 5.2 R Shiny with `ggplot2`
 
@@ -758,8 +763,8 @@ Syncing `ggplot2` charts with Shiny was relatively straight forward, we did not 
 
 **Expand to see code**
 
-```{r, eval =FALSE, message = FALSE}
 
+```
 output$bbox <- renderPlotly({
   x_b_cat <- unlist(listing_prep[,input$x_b_cat])
   
@@ -829,7 +834,7 @@ bscols(widths = c(3,9),
        plotlyOutput('bbox'))
 ```
 
-***
+
 
 # 6. Assessment of prototype
 
