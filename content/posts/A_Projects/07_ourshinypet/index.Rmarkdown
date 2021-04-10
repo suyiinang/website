@@ -12,9 +12,10 @@ tags:
   - ggplot
 draft: no
 output:
-  html_document:
-    toc: yes
-    toc_float: yes
+  blogdown::html_page:
+    keep_md: yes
+always_allow_html: true
+
 ---
 
 
