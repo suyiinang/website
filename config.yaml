@@ -1,7 +1,7 @@
-baseURL: https://gordyadi.netlify.app/
+baseURL: 
 
 languageCode: en-us
-title: "Gordy Adi's blog"
+title: "Su Yiin's blog"
 theme: "toha"
 
 # Manage languages
@@ -41,7 +41,7 @@ params:
     favicon: 
 
   # GitHub repo URL of your site
-  gitRepo: https://github.com/gordyadi/blog
+  gitRepo: https://github.com/suyiinang/website
 
   # specify whether you want to write some blog posts or not
   enableBlogPost: true
