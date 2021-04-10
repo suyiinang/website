@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Su Yiin&#39;s blog</title>
+    <link>https://suyiinang.netlify.app/categories/</link>
+    <description>Recent content in Categories on Su Yiin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://suyiinang.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A_Projects</title>
+      <link>https://suyiinang.netlify.app/categories/a_projects/</link>
+      <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/categories/a_projects/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

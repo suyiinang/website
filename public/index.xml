@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Su Yiin&#39;s blog</title>
+    <link>https://suyiinang.netlify.app/</link>
+    <description>Recent content on Su Yiin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://suyiinang.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploring Airbnb Singapore</title>
+      <link>https://suyiinang.netlify.app/posts/a_projects/07_ourshinypet/</link>
+      <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/a_projects/07_ourshinypet/</guid>
+      <description>1. Introduction 1.1 Overview of application The increasing availability of data has resulted in increased demand for data driven decisions. Although there is an extensive range of commercial statistical tools, they are often subscription-based and demand good technical knowledge to mine and draw insights from.</description>
+    </item>
+    
+    <item>
+      <title>DataViz Makeover #3</title>
+      <link>https://suyiinang.netlify.app/posts/dataviz_makeover/03_makeover/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/dataviz_makeover/03_makeover/</guid>
+      <description>Political Violence and Protests in South East Asia This was written as part of the requirements for the Visual Analytics module for MITB.
+ For this DataViz Makeover, I have used data from The Armed Conflict Location &amp;amp; Event Data Project (ACLED), a centralized hub for data on all reported instances of political violence and protests around the world.
+1. The original visualisation  var divElement = document.getElementById(&#39;viz1615905508827&#39;); var vizElement = divElement.</description>
+    </item>
+    
+    <item>
+      <title>Likert Scale</title>
+      <link>https://suyiinang.netlify.app/posts/tableau_howto/03_likert/</link>
+      <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/tableau_howto/03_likert/</guid>
+      <description>Documenting my Tableau learning journey.
+ Likert Scale Survey on mental wellness in Singapore.
+ var divElement = document.getElementById(&#39;viz1615607707206&#39;); var vizElement = divElement.getElementsByTagName(&#39;object&#39;)[0]; if ( divElement.offsetWidth  800 ) { vizElement.style.width=&#39;100%&#39;;vizElement.style.height=(divElement.offsetWidth*0.75)+&#39;px&#39;;} else if ( divElement.offsetWidth  500 ) { vizElement.style.width=&#39;100%&#39;;vizElement.style.height=(divElement.offsetWidth*0.75)+&#39;px&#39;;} else { vizElement.style.width=&#39;100%&#39;;vizElement.style.height=&#39;1277px&#39;;} var scriptElement = document.createElement(&#39;script&#39;); scriptElement.src = &#39;https://public.tableau.com/javascripts/api/viz_v1.js&#39;; vizElement.parentNode.insertBefore(scriptElement, vizElement); Full visualisation available on Tableau Public.
+Good for Analysing survey data
+How to create - step by step I have used the Covid-19 tracker data for Singapore from YouGov.</description>
+    </item>
+    
+    <item>
+      <title>DataViz Makeover #2</title>
+      <link>https://suyiinang.netlify.app/posts/dataviz_makeover/02_makeover/</link>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/dataviz_makeover/02_makeover/</guid>
+      <description>Understanding the willingness of public for Covid-19 vaccination based on survey data. This was written as part of the requirements for the Visual Analytics module for MITB.
+ 1. The original visualisation For this DataViz Makeover, I have used data from Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub, which collects global insights on people&amp;rsquo;s behaviours in response to Covid-19.
+Figure 1
+Before making over the selected visualisation, it is important to have a clear understanding of the context of the visualisation and its key takeaways which are dependent on:</description>
+    </item>
+    
+    <item>
+      <title>Animated Population Pyramid</title>
+      <link>https://suyiinang.netlify.app/posts/tableau_howto/02_pop_pyramid/</link>
+      <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/tableau_howto/02_pop_pyramid/</guid>
+      <description>Documenting my Tableau learning journey.
+ Population Pyramid How Singapore&amp;rsquo;s population changes across the years. Full visualisation available on Tableau Public.
+Good for Analysing population by age and gender.
+How to create - step by step The data
+I have used the Singapore Residents By Age Group, Ethnic Group and Gender from data.gov.sg.
+Before loading into Tableau, I have extracted only the female and males data from 1981 to 2019 using Excel as the remaining data is irrelevant for this exercise.</description>
+    </item>
+    
+    <item>
+      <title>Cycle Plots</title>
+      <link>https://suyiinang.netlify.app/posts/tableau_howto/01_cycleplot/</link>
+      <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/tableau_howto/01_cycleplot/</guid>
+      <description>Documenting my Tableau learning journey.
+ Cycle plots Here we can see that visitors from the UK are typically lower in the months of May and June, and higher in March.
+ var divElement = document.getElementById(&#39;viz1612865326246&#39;); var vizElement = divElement.getElementsByTagName(&#39;object&#39;)[0]; if ( divElement.offsetWidth  800 ) { vizElement.style.width=&#39;100%&#39;;vizElement.style.height=(divElement.offsetWidth*0.75)+&#39;px&#39;;} else if ( divElement.offsetWidth  500 ) { vizElement.style.width=&#39;100%&#39;;vizElement.style.height=(divElement.offsetWidth*0.75)+&#39;px&#39;;} else { vizElement.style.width=&#39;100%&#39;;vizElement.style.height=&#39;727px&#39;;} var scriptElement = document.createElement(&#39;script&#39;); scriptElement.src = &#39;https://public.tableau.com/javascripts/api/viz_v1.js&#39;; vizElement.parentNode.insertBefore(scriptElement, vizElement); Good for Analysing seasonality / cyclical patterns</description>
+    </item>
+    
+    <item>
+      <title>Intro: Tableau how to section</title>
+      <link>https://suyiinang.netlify.app/posts/tableau_howto/00_introduction/</link>
+      <pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/tableau_howto/00_introduction/</guid>
+      <description>This Tableau How To section was created to document my learning journey with Tableau.
+Majority of these visualisations were created during the Visual Analytics class of MITB, and recreated in my free time for my learning purpose.
+I would like to thank Prof Kam of Singapore Management University for the inspiration.
+ Education vector created by stories - www.freepik.com</description>
+    </item>
+    
+    <item>
+      <title>DataViz Makeover #1</title>
+      <link>https://suyiinang.netlify.app/posts/dataviz_makeover/01_makeover/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/dataviz_makeover/01_makeover/</guid>
+      <description>Making over a chart from the Singapore Labour Force (2019) report. This was written as part of the requirements for the Visual Analytics module for MITB.
+ For my first DataViz makeover, I have used data from the Ministry of Manpower of Singapore, which analyses Singapore’s labour force to understand shifts in the labour market to facilitate better decision making.
+1) The original visualisation Figure 1: Chart 6 of Labour Force in Singapore 2019 report (page 22)</description>
+    </item>
+    
+    <item>
+      <title>Understanding the Stars</title>
+      <link>https://suyiinang.netlify.app/posts/a_projects/06_airbnb/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/a_projects/06_airbnb/</guid>
+      <description>Augmenting Numerical Data with Textual Analysis to Identify Key Determinants of Airbnb Review Scores By: Ang Su Yiin, Anne Nguyen Nhi Thai An, Toh E-Lynn
+These reports were written as part of the requirements for the Data Analytics Lab module for MITB.
+ For poster, please view : Poster
+1. Abstract Text analytics provides powerful tools for transforming large amounts of unstructured data into quantitative variables, allowing researchers to contribute unique insights to business decision-making.</description>
+    </item>
+    
+    <item>
+      <title>Post-COVID Recovery for SIA</title>
+      <link>https://suyiinang.netlify.app/posts/a_projects/05_sia/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/a_projects/05_sia/</guid>
+      <description>Optimizing Passenger-Cargo Fleet Allocation By: Ang Su Yiin, Gabriella Pauline Djojosaputro, Gordy Adiprasetyo, Kendra Luisa Baylon Gadong, Nguyen Nhi Thai An, Ulysses Chong Min Zhen
+These reports were written as part of the requirements for the Spreadsheet Modeling module for MITB.
+ For executive report, please view: Executive Report
+1.	Problem Statement With the halt of international travel due to COVID-19, the global aviation industry is one of the industries that was hit the worst.</description>
+    </item>
+    
+    <item>
+      <title>Predicting H1N1 Vaccination</title>
+      <link>https://suyiinang.netlify.app/posts/a_projects/04_predict/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/a_projects/04_predict/</guid>
+      <description>Predicting H1N1 vaccination based on flu survey. This was written as part of the requirements for the Data Analytics Lab module for MITB.
+ For executive report, please view: Executive Report - Predicting H1N1 vaccination
+1.	Introduction The H1N1 outbreak in April 2009 swept across the world and caused a global pandemic. CDC estimated that the H1N1 virus claimed the lives of 151,700 – 575,400 people worldwide during its first year of circulation.</description>
+    </item>
+    
+    <item>
+      <title>The Math of Happiness</title>
+      <link>https://suyiinang.netlify.app/posts/a_projects/03_asar/</link>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/a_projects/03_asar/</guid>
+      <description>The Math of Happiness: An analysis of factors that influence happiness. By: Ang Su Yiin, Anne Nguyen Nhi Thai An, E-Lynn Toh, Foo Kai Loon, Sean Samuel Prajs, Tay Kai Lin
+These reports were written as part of the requirements for the Applied Statistical Analysis with R module for MITB.
+ Shiny app available at The Math of Happiness
+ 1. Introduction The quest for happiness is an elusive pursuit for many.</description>
+    </item>
+    
+    <item>
+      <title>Market segmentation of Philippines’ market</title>
+      <link>https://suyiinang.netlify.app/posts/a_projects/02_segmentation/</link>
+      <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/a_projects/02_segmentation/</guid>
+      <description>Market segmentation of Philippines’ market based on expenditure patterns of households. These reports were written as part of the requirements for the Data Analytics Lab module for MITB.
+ For executive report, please view : Executive Report - Segmentation
+1. Objective This report aims to group the Philippines’ consumer market into target segments based on similar spending patterns on hypermarket items using clustering methods in JMP. With reference to the characteristics of each cluster, we aim to align the target segment for an international hypermarket chain.</description>
+    </item>
+    
+    <item>
+      <title>Hotel booking cancellations</title>
+      <link>https://suyiinang.netlify.app/posts/a_projects/01_hotel/</link>
+      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/a_projects/01_hotel/</guid>
+      <description>An analysis of guests’ booking and cancellation trends for two Portuguese hotels.
+These reports were written as part of the requirements for the Data Analytics Lab module for MITB.
+ For executive report, please view : Executive report - hotel booking
+1. Overview Changing Landscape of the Hotel Industry
+According to D-Edge, the rise of online travel agents (OTAs) has caused hotels in Europe to experience a shift in distribution channel mix – in particular, from the websites of hotels, to OTAs (particularly Booking.</description>
+    </item>
+    
+  </channel>
+</rss>

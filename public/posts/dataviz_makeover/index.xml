@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DataViz Makeover on Su Yiin&#39;s blog</title>
+    <link>https://suyiinang.netlify.app/posts/dataviz_makeover/</link>
+    <description>Recent content in DataViz Makeover on Su Yiin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://suyiinang.netlify.app/posts/dataviz_makeover/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DataViz Makeover #3</title>
+      <link>https://suyiinang.netlify.app/posts/dataviz_makeover/03_makeover/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/dataviz_makeover/03_makeover/</guid>
+      <description>Political Violence and Protests in South East Asia This was written as part of the requirements for the Visual Analytics module for MITB.
+ For this DataViz Makeover, I have used data from The Armed Conflict Location &amp;amp; Event Data Project (ACLED), a centralized hub for data on all reported instances of political violence and protests around the world.
+1. The original visualisation  var divElement = document.getElementById(&#39;viz1615905508827&#39;); var vizElement = divElement.</description>
+    </item>
+    
+    <item>
+      <title>DataViz Makeover #2</title>
+      <link>https://suyiinang.netlify.app/posts/dataviz_makeover/02_makeover/</link>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/dataviz_makeover/02_makeover/</guid>
+      <description>Understanding the willingness of public for Covid-19 vaccination based on survey data. This was written as part of the requirements for the Visual Analytics module for MITB.
+ 1. The original visualisation For this DataViz Makeover, I have used data from Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub, which collects global insights on people&amp;rsquo;s behaviours in response to Covid-19.
+Figure 1
+Before making over the selected visualisation, it is important to have a clear understanding of the context of the visualisation and its key takeaways which are dependent on:</description>
+    </item>
+    
+    <item>
+      <title>DataViz Makeover #1</title>
+      <link>https://suyiinang.netlify.app/posts/dataviz_makeover/01_makeover/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/dataviz_makeover/01_makeover/</guid>
+      <description>Making over a chart from the Singapore Labour Force (2019) report. This was written as part of the requirements for the Visual Analytics module for MITB.
+ For my first DataViz makeover, I have used data from the Ministry of Manpower of Singapore, which analyses Singapore’s labour force to understand shifts in the labour market to facilitate better decision making.
+1) The original visualisation Figure 1: Chart 6 of Labour Force in Singapore 2019 report (page 22)</description>
+    </item>
+    
+  </channel>
+</rss>
