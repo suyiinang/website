@@ -1,16 +1,16 @@
 # some information about you
-name: "Gordy Adiprasetyo"
-nickname: "Gordy"
+name: "Ang Su Yiin"
+nickname: "Su Yiin"
 # greeting message before your name. it will default to "Hi! I am" if not provided
 greeting: "Hi, I am"
 image: "images/author/profile.jpg"
 # give your some contact information. they will be used in the footer
 contactInfo:
-  email: "gordyadi@gmail.com"
+  email: "suyiinang@gmail.com"
 
 # some summary about what you do
 summary:
   - I am a Data Scientist
-  - I am a Business Analyst
-  - I am enthusiastic about technology
-  - I turn data into actionable insights
+  - I am a post graduate student 
+  - I love to transform data into powerful visuals
+  - I love to work on some fun projects

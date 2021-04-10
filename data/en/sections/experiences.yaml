@@ -11,31 +11,34 @@ section:
 # Your experiences
 experiences:
 - company:
-    name: Apple
-    url: "https://www.apple.com/jobs/sg/teams/operations-and-supply-chain.html"
+    name: PwC Deals Advisory
+    url: "https://www.pwc.com/sg/en/deals.html"
     location: Singapore
     # company overview
-    overview: The mission of Pacific Reseller Operations is to be the voice of Reseller Channel within Operations to ensure our products are in the right places at the right time, supporting Sales and our Partners to achieve Apple’s financial goals.
+    overview: PwC Deals Advisory provides advisory services relating to mergers, acquisitions and divestitures and capital markets transactions.
   positions:
-  - designation: Order Fulfilment Analyst, Pacific Reseller Operations
-    start: Feb 2021
-    end:
+  - designation: Manager - Financial Due Diligence
+    start: Aug 2016
+    end: Dec 2019
     # don't provide end date if you are currently working there. It will be replaced by "Present"
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
-    - Post-ship supply chain issue resolutions
-    - Translating large sets of operational data into actionable business process improvements 
+    - Project Management.
+    - Analyse financial and operational data to formula commercial insights.
+    - Review and report key issues to clients.
 
 - company:
-    name: FedEx Express Singapore
-    url: "https://www.fedex.com/en-sg/home.html"
+    name: PwC Assurance
+    url: "https://www.pwc.com/sg/en/audit.html"
     location: Singapore
-    overview: 
+    overview: PwC Assurance provides audit services for corporate reporting
   positions:
-  - designation: Operation Manager, Customs Clearance
-    start: June 2017
-    end: August 2020
+  - designation: Senior Associate - Assurance
+    start: Sep 2013
+    end: July 2016
     responsibilities:
-    - Lead a team of Clearance Brokers and Clearance Customer Service Representatives
-    - Spearheaded digital transformation projects of opertional processes
+    - Lead team.
+    - Objective testing and critical analysis.
+    - Review and report financial statements.
+

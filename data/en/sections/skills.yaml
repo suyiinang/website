@@ -10,30 +10,30 @@ section:
 
 # Your Skills.
 # Give a summary of you each skill in the summary section.
+
 skills:
+- name: R
+  logo: /images/sections/skills/r.png
+  summary: "Experienced with creating websites, visualisations and shiny app."
+  url: "https://cran.r-project.org/"
 
 - name: Python
   logo: /images/sections/skills/py.png
-  summary: "Proficient in algorithm design and applied machine learning projects."
+  summary: "Currenty upgrading. Know basic python programming - pandas, numpy, visualisations."
   url: "https://www.python.org/"
-  
-- name: R
-  logo: /images/sections/skills/r.png
-  summary: "Experienced with statistical analysis, creation of websites, and data visualisation using RShiny."
-  url: "https://cran.r-project.org/"
 
 - name: Tableau
   logo: /images/sections/skills/tab.png
   summary: "Experienced with creating interactive dashboards."
   url: "https://www.tableau.com"
 
-- name: SQL
+- name: MySQL
   logo: /images/sections/skills/mysql.png
-  summary: "Experienced in writing scripts for database queries "
+  summary: "Currently learning."
 
-- name: Microsoft Word, Excel, PowerPoint
+- name: MS Word, Excel, PowerPoint
   logo: 
-  summary: "Proficient in advanced usage of Microsoft Office applications"
+  summary: "Proficient."
 
 - name: SAS Enterprise Miner
   logo: 
@@ -42,4 +42,3 @@ skills:
 - name: SAS JMP
   logo: /images/sections/skills/jmp.png
   summary: "Experienced with performing statistical (exploratory and confirmatory), cluster and time series analysis."
-
