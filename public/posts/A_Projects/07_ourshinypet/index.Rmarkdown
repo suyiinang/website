@@ -10,9 +10,14 @@ tags:
   - R
   - Shiny
   - ggplot
+menu:
+  sidebar:
+    name: Explore Airbnb Shiny
+    identifier: Shiny
+    parent: Academic Projects
 draft: no
 output:
-  blogdown::html_page:
+  html_document:
     keep_md: yes
 always_allow_html: true
 ---
