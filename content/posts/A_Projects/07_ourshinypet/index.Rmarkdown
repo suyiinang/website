@@ -873,7 +873,7 @@ Although `tmap` fitted our requirements of being interactive and compatible with
 
 **v) Other matters**
 
-We also noticed that `ggstatsplot` automatically drops NAs, while `ggplot2` displays NA values if they are present in the dataset.
+We also noticed that `ggstatsplot` automatically drops NAs, while `ggplot2` displays NA values if they are present in the dataset. 
  
 ## 7. Conclusion 
 

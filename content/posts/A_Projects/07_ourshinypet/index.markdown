@@ -1,15 +1,10 @@
 ---
-title: Exploring Airbnb Singapore
+title: Shiny prototype test
 author: Su Yiin Ang
 date: '2021-04-10'
 slug: []
 categories:
   - A_Projects
-menu:
-  sidebar:
-    name: Explore Airbnb Shiny
-    identifier: Shiny
-    parent: Academic Projects
 tags:
   - airbnb
   - R
@@ -17,10 +12,9 @@ tags:
   - ggplot
 draft: no
 output:
-  html_document:
+  blogdown::html_page:
     keep_md: yes
 always_allow_html: true
-
 ---
 
 <script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
@@ -71,9 +65,15 @@ always_allow_html: true
 <script src="{{< blogdown/postref >}}index_files/pymjs/pym.v1.js"></script>
 <script src="{{< blogdown/postref >}}index_files/widgetframe-binding/widgetframe.js"></script>
 
+# Prototype testing for the Exploratory module for [OurShinyPET](https://ourshinypet.netlify.app/)
+
+This was written as part of the requirements for the Visual Analytics module for MITB.
+
+------------------------------------------------------------------------
+
 ## 1. Introduction
 
-### 1.1 Overview of application
+#### 1.1 Overview of application
 
 The increasing availability of data has resulted in increased demand for data driven decisions. Although there is an extensive range of commercial statistical tools, they are often subscription-based and demand good technical knowledge to mine and draw insights from. Therefore, it may not appeal to the average user.
 
@@ -85,7 +85,7 @@ We have selected Airbnb data as a base case given its extensive data (i.e locati
 
 Please visit our website at https://ourshinypet.netlify.app/ for more details.
 
-### 1.2 Objective of this report
+#### 1.2 Objective of this report
 
 This report covers the **Exploratory and Confirmatory Analysis module**.
 
@@ -115,7 +115,7 @@ Taking the two applications into consideration, our application intends to enhan
 
 Listings of Airbnbs in Singapore were extracted from [InsideAirbnb.com](http://insideairbnb.com/get-the-data.html)
 
-### 3.1 Load packages
+**3.1 Load packages**
 
 We will focus on utilising packages from the [`Tidyverse`](https://www.tidyverse.org/) family.
 
@@ -138,7 +138,7 @@ for(p in packages){
 }
 ```
 
-### 3.2 Load data
+**3.2 Load data**
 
 The data was loaded using `read_csv()` of the readr package, which reads delimited files into a `tibble`.
 
@@ -236,7 +236,7 @@ glimpse(listings)
     ## $ calculated_host_listings_count_shared_rooms  <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0~
     ## $ reviews_per_month                            <dbl> 0.01, 0.22, 0.17, 0.18, 0~
 
-### 3.3 Remove unnecessary variables
+**3.3 Remove unnecessary variables **
 
 To avoid having too many variables that would overwhelm the user, we have dropped variables that are not useful for analysis.
 
@@ -247,9 +247,9 @@ listings2 <- listings %>%
          -has_availability, -host_has_profile_pic, -calendar_updated, -license, -bathrooms, -neighbourhood, -host_neighbourhood)
 ```
 
-### 3.4 Create new variables
+**3.4 Create new variables**
 
-**i) Feature engineering - Convert unstructured variables to structured variables **
+**i) Feature engineering - Convert unstructured variables to structured variables**
 
 Textual variables such as *name*, *description*, *host\_about*, *bathroom\_text* , *bathrooms\_text*, *host\_verifications\_count* were converted into structured variables by counting the length of the text.
 
@@ -296,7 +296,7 @@ listings4 <- listings3 %>%
   select(-host_since)
 ```
 
-**iii) Derive property type **
+**iii) Derive property type**
 
 The *property\_type* variable comprises both room and property type (e.g. Private room in apartment). We extracted the property type from *property\_type* variable.
 
@@ -310,7 +310,7 @@ listings5 <- listings4 %>%
   ))
 ```
 
-### 3.5 Change data type
+**3.5 Change data type**
 
 -   Change price-related attribute from *character* format to *numeric*.  
 -   Convert character and logical variables to factor data type.
@@ -329,7 +329,7 @@ listings6 <- listings6 %>%
   mutate(across(where(is.logical), as.factor)) #convert logical to factor
 ```
 
-### 3.6 Consolidate similar levels
+**3.6 Consolidate similar levels**
 
 For the *host\_response\_time* variable, there are 6 levels of which 2 are *N/A* and *NA*.  
 As such, we have renamed *NA* to *N/A* as one level.
@@ -339,7 +339,7 @@ listings6$host_response_time[is.na(listings6$host_response_time)] <- "N/A"
 final_listing <- subset(listings6, !is.na(host_is_superhost))
 ```
 
-### 3.7 View final listing
+**3.7 View final listing**
 
 Review the final output after wrangling.
 
@@ -456,7 +456,7 @@ For univariate exploratory analysis, we would like to be able to plot :
 1.  Distribution - through **histogram** for numerical variables and **barplot** for categorical variables,  
 2.  Outlier of selected variable - through **boxplot**.
 
-#### 4.2.1 Plotting distribution with histogram and bar plots
+**4.2.1 Plotting distribution with histogram and bar plots**
 
 **4.2.1.1 With [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html)**
 
@@ -566,7 +566,7 @@ t.test(final_listing$review_scores_rating,mu = 100, alternative = 'two.sided',co
     ## mean of x 
     ##  91.46213
 
-#### 4.2.2 Plotting outliers with boxplot
+**4.2.2 Plotting outliers with boxplot**
 
 [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html) currently doesn’t not have any graph to plot a single variable boxplot for outlier observations. As such, I have used [`ggplotly()`](https://plotly.com/ggplot2/) and [`ggplot2`](https://ggplot2.tidyverse.org/reference/index.html) to create and interactive chart.
 
@@ -603,7 +603,7 @@ For bivariate analysis, we would like to be able to plot 3 main types of interac
 
 -   1 numerical and 1 categorical - box/violin plot
 
-#### 4.3.1 Plotting numerical variables with scatterplot
+**4.3.1 Plotting numerical variables with scatterplot**
 
 **4.3.1.1 With `ggMarginal()`**
 
@@ -692,7 +692,7 @@ cor.test(final_listing$review_scores_rating, final_listing$amenities_count, conf
     ##       cor 
     ## 0.1385895
 
-#### 4.3.2 Plotting categorical variables - Mosaic plot
+**4.3.2 Plotting categorical variables - Mosaic plot**
 
 **4.3.2.1 With [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html)**
 
@@ -744,7 +744,7 @@ chisq
     ## data:  final_listing$host_is_superhost and final_listing$room_type
     ## X-squared = 49.379, df = 3, p-value = 1.083e-10
 
-#### 4.3.3 Plotting numerical and categorical variabes - Box and violin plot
+**4.3.3 Plotting numerical and categorical variabes - Box and violin plot**
 
 **4.3.3.1 Using [`ggstatsplot`](https://indrajeetpatil.github.io/ggstatsplot/index.html)**
 
@@ -933,6 +933,8 @@ frameWidget(c_map)
 
 Plotting the chloropleth map using *geojson* data extracted from [InsideAirbnb](http://insideairbnb.com/get-the-data.html). We felt that `leaflet` was relatively straight forward and easy to customise compared to using the subzone file and `tmap`.
 
+However, we noted that the mapping of the neighbourhoods is not accurate. We are investigating this issue.
+
 ``` r
 # load geojson file
 hood <- geojsonio::geojson_read('data/neighbourhoods.geojson', what = 'sp')
@@ -968,7 +970,7 @@ frameWidget(l_m)
 
 ## 5. Testing Shiny interface
 
-Given that our main deliverable is a R Shiny application, we tested the comparability of both `ggstatsplot` and `ggplot2` with R Shiny, taking ease of scripting and transitioning into consideration.
+Given that our main deliverable is a R Shiny application, we tested the compatibility of both `ggstatsplot` and `ggplot2` with R Shiny, taking ease of scripting and transitioning into consideration.
 
 ### 5.1 R Shiny with `ggstatsplot`
 
@@ -1124,7 +1126,7 @@ Meanwhile, `ggplot` syncs very well with Shiny. During our testing, we noticed t
 
 **v) Map - `leaflet`**
 
-Although `tmap` fitted our requirements of being interactive and compatible with Shiny, however we found that `leaflet` was easier to script and customise. Nonetheless, this may just be our personal preference.
+Although `tmap` fitted our requirements of being interactive and compatible with Shiny, however we found that `leaflet` was easier to script and customise. Nonetheless, this may just be our personal preference. (this assumes that we are able to rectify the chloropleth map issue)
 
 **v) Other matters**
 
@@ -1148,8 +1150,10 @@ See sketch below for submodule design:
 
 ![](images/sketch.jpg)
 
-# Our application will be live on the 25th April! For more details, watch this space - https://ourshinypet.netlify.app/
-
 ## 9. References
 
-Zhou, Y., Leung, Sw., Mizutani, S. et al. (2020) MEPHAS: an interactive graphical user interface for medical and pharmaceutical statistical analysis with R and Shiny.\* BMC Bioinformatics 21, 183\*. <https://doi.org/10.1186/s12859-020-3494-x>
+Zhou, Y., Leung, Sw., Mizutani, S. et al. (2020) MEPHAS: an interactive graphical user interface for medical and pharmaceutical statistical analysis with R and Shiny. *BMC Bioinformatics 21, 183*. <https://doi.org/10.1186/s12859-020-3494-x>
+
+# Our application will be live on the 25th April! For more details, watch this space - https://ourshinypet.netlify.app/
+
+Design vector created by [stories](https://www.freepik.com/vectors/design) - www.freepik.com
