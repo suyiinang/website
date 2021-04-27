@@ -463,8 +463,8 @@ Given the above assessment, the skip-gram + XGBoost is deemed to be the best per
 __Insights and error analysis__
 
 <div class="figure" style="text-align: left">
-<img src="images/fig6.png" alt="Distrbition of sentiment - Reddit users are largely neutrals" width="100%" />
-<p class="caption">(\#fig:unnamed-chunk-19)Distrbition of sentiment - Reddit users are largely neutrals</p>
+<img src="images/fig6.png" alt="Distrbution of sentiment - Reddit users are largely neutrals" width="60%" />
+<p class="caption">(\#fig:unnamed-chunk-19)Distrbution of sentiment - Reddit users are largely neutrals</p>
 </div>
 
 Based on our distribution of the model results, Reddit users are largely neutral (77%) as most comments consist of users stating facts to counter a minority bias and do not provide any opinion in their comments.
@@ -475,6 +475,8 @@ Based on our distribution of the model results, Reddit users are largely neutral
 </div>
 
 The likert scale show the daily percentage of negative (red), positive (blue) and neutral (grey) from Dec-20 (bottom) to Jan-21 (top). We observed that comments became more neutral over time, with spikes of positive and negative sentiments in between. 
+
+Tableau Dashboard available on [Tableau Public](https://public.tableau.com/profile/suyiinang#!/vizhome/sentiment_analysis_16182051054700/Dashboard1?publish=yes)
 
 Further investigation revealed the complexity of sentiment analysis as the following post shown below should be considered positive but were wrongly labelled. These comments are largely contextual, hence very challenging for models to assign the correctly sentiment.
 

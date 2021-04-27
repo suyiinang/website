@@ -445,7 +445,7 @@ include_graphics("images/appendixK.png")
 
 __Insights and error analysis__
 
-```{r, fig.cap = "Distrbition of sentiment - Reddit users are largely neutrals", fig.align='left', echo = FALSE, out.width="100%"}
+```{r, fig.cap = "Distrbution of sentiment - Reddit users are largely neutrals", fig.align='left', echo = FALSE, out.width="60%"}
 include_graphics("images/fig6.png")
 ```
 
@@ -456,6 +456,8 @@ include_graphics("images/fig7.png")
 ```
 
 The likert scale show the daily percentage of negative (red), positive (blue) and neutral (grey) from Dec-20 (bottom) to Jan-21 (top). We observed that comments became more neutral over time, with spikes of positive and negative sentiments in between. 
+
+Tableau Dashboard available on [Tableau Public](https://public.tableau.com/profile/suyiinang#!/vizhome/sentiment_analysis_16182051054700/Dashboard1?publish=yes)
 
 Further investigation revealed the complexity of sentiment analysis as the following post shown below should be considered positive but were wrongly labelled. These comments are largely contextual, hence very challenging for models to assign the correctly sentiment.
 

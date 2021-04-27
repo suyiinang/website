@@ -2,3 +2,4 @@ resources/*
 .Rproj.user
 /public/, /resources/
 .DS_Store, Thumbs.db
+.RData
