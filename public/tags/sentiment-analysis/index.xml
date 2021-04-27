@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sentiment analysis on Su Yiin&#39;s blog</title>
+    <link>https://suyiinang.netlify.app/tags/sentiment-analysis/</link>
+    <description>Recent content in sentiment analysis on Su Yiin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://suyiinang.netlify.app/tags/sentiment-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Taking a Shot at COVID-19 Vaccine Hesitancy on Reddit</title>
+      <link>https://suyiinang.netlify.app/posts/a_projects/08_text-mining/</link>
+      <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/a_projects/08_text-mining/</guid>
+      <description>a Textual Analysis via Topic Modelling &amp;amp; Sentiment Analysis By Bernard Lim, Su Yiin Ang, Anne Nyugen Nhi Thai An, Ron Tan, Pengjie He, Poh Wai Wong.
+This report was written as part of the requirements for the Text Analytics and Applications module for MITB.
+ library(knitr) 1. Introduction As of April 2021, the Covid-19 pandemic has caused 135 million infections, 2.9 million deaths and repeated resurgence due to mutated variants.</description>
+    </item>
+    
+  </channel>
+</rss>

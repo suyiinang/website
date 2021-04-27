@@ -1,5 +1,5 @@
 ---
-title: Shiny prototype test
+title: Shiny prototype test for Exploratory 
 author: Su Yiin Ang
 date: '2021-04-10'
 slug: []
@@ -11,6 +11,12 @@ tags:
   - Shiny
   - ggplot
 draft: no
+menu:
+  sidebar:
+    name: R Shiny
+    identifier: exploratory
+    parent: Academic Projects
+    weight: 94
 output:
   blogdown::html_page:
     keep_md: yes
