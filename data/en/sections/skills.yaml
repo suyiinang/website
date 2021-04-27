@@ -14,7 +14,7 @@ section:
 skills:
 - name: R
   logo: /images/sections/skills/r.png
-  summary: "Experienced with creating websites, visualisations and shiny app."
+  summary: "Experienced with visualisations and shiny app."
   url: "https://cran.r-project.org/"
 
 - name: Python

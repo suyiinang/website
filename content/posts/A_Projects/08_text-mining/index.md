@@ -31,14 +31,11 @@ By Bernard Lim, Su Yiin Ang, Anne Nyugen Nhi Thai An, Ron Tan, Pengjie He, Poh W
 ---
 
 
-```r
-library(knitr)
-```
 ## 1. Introduction
 
 As of April 2021, the Covid-19 pandemic has caused 135 million infections, 2.9 million deaths and repeated resurgence due to mutated variants. WHO Director-General Dr. Tedros Adhanom opines that vaccinations, and not the availability of vaccines, would end the Covid-19 pandemic (Meagher, 2021). Although vaccines represent the best exit strategy, the high prevalence of vaccine hesitancy undermines this (Sallam, 2021).   
 
-Topic modelling is a technique to capture word and phrase patterns within a set of documents, clustering word groups that best describe the documents. Hence, by understanding the public sentiment and main concerns about vaccination, government officials and public health policy makers can design more effective communication, education and policy implementation strategies to reach out to the public to address vaccine hesitancy.   
+Topic modelling is a technique to capture word and phrase patterns within a set of documents, clustering word groups that best describe the documents. Hence, by understanding the public sentiment and main concerns about vaccination, **government officials and public health policy makers** can design more effective **communication, education and policy implementation** strategies to reach out to the public to address vaccine hesitancy.   
 
 Sentiment analysis is mainly used to analyze and understand public opinion from their comments and messages. In managing the supply of vaccines, a company needs to understand product demand. This is important to ensure the amount of supply and budgeted cost is sufficient to meet the market requirement. Manufacturers and government alike need to understand public opinion: whether the public have positive, neutral or negative views on COVID-19 vaccines. If a majority have a positive view, Governments will hasten procurement and the manufacturer can plan to increase their production. 
 
@@ -53,27 +50,19 @@ Vaccine Hesitancy has been defined as a set of beliefs, attitudes, behaviours or
 
 We have leveraged text mining techniques such as sentiment analysis and topic modeling to understand the reddit users’ sentiments towards the Covid-19 vaccines and sub-topics of interest within Covid-19 vaccine news using topic modelling.
 
-
-```r
-include_graphics('images/fig1.png')
-```
-
 <div class="figure" style="text-align: left">
-<img src="images/fig1.png" alt="Snapshot of the tabular dataset, and a Reddit post with illustrated elements" width="308" />
+<img src="images/fig1.png" alt="Snapshot of the tabular dataset, and a Reddit post with illustrated elements" width="100%" />
 <p class="caption">(\#fig:unnamed-chunk-2)Snapshot of the tabular dataset, and a Reddit post with illustrated elements</p>
 </div>
+
+
 
 ## 2.	Methodology
 
 The overall methodology is as illustrated in Figure 2. First, the corpus consisted of Reddit comments was obtained (see Section 1.1). This was followed by text pre-processing such as tokenisation, setting text to lower case, stop-word removal, retaining only English words, removing emoticons & numbers (See below). We then split the methodology into two parallel but distinct tasks: topic modelling and sentiment analysis. An in-depth analysis of the model types and features can be found in Section 3. 
 
-
-```r
-include_graphics('images/fig2.png')
-```
-
 <div class="figure" style="text-align: left">
-<img src="images/fig2.png" alt="Overall methodology" width="896" />
+<img src="images/fig2.png" alt="Overall methodology" width="100%" />
 <p class="caption">(\#fig:unnamed-chunk-3)Overall methodology</p>
 </div>
 
@@ -122,12 +111,10 @@ __3.1.2.	The influence of length of documents in generated topics.__
 
 We undertook heuristic pre-processing on the length of text to influence the optimum number of topics and the coherence score of said generated topics. As reported by Sbalchiero and Eder (2020), the optimum number of topics is reduced with the increase in the length of text.   
 
-
-```r
-include_graphics("images/fig3.png")
-```
-
-<img src="images/fig3.png" width="364" style="display: block; margin: auto auto auto 0;" />
+<div class="figure" style="text-align: left">
+<img src="images/fig3.png" alt="The structure of grouped comments" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-4)The structure of grouped comments</p>
+</div>
 
 Individual comments were grouped under the initial comment (purple box) of each post. In doing so, the length of the resulting document will be longer than any individual comment. Finally, the grouped comments were grouped under each post heading (blue box), which generates even longer documents. In grouping the comments, the population of documents decreased correspondingly.  
 
@@ -141,12 +128,10 @@ We observed that with n-gram inputs to the LDA model influenced the interpretabi
 
 Skip-grams method is a numerical representation of words that is widely used to predict the context word - it learns to predict the context word for a given target word, giving more weight to the context words that are nearby than the more distant ones, please see below for model architecture and example (Mikolov et al., 2013).  
 
-
-```r
-include_graphics("images/appendixA.png")
-```
-
-<img src="images/appendixA.png" width="160" style="display: block; margin: auto auto auto 0;" />
+<div class="figure" style="text-align: left">
+<img src="images/appendixA.png" alt="Skip-gram model architecture and example" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-5)Skip-gram model architecture and example</p>
+</div>
 
 However, the draw back to this model is that skip-gram cannot process combined word phases such as “New York” as a single word but identifies two words “New” and “York”.  Given that skip-gram is a supervised model, it is a closed vocabulary model and thus unable to handle out-of-vocabulary (OOV) words, new vocabulary words must be added back to the pre-trained word2vec model and the process must be rerun, which is time consuming (Muller, T. and Schütze, H. (2011).  
 
@@ -159,12 +144,10 @@ __3.2.1.	Skip-gram model__
 As described above, the main advantage of the word2vec skip-gram model is that it is able to retain the semantic meaning of different words within the corpus via similarity value between words.   
 
 
-
-```r
-include_graphics("images/fig4.png")
-```
-
-<img src="images/fig4.png" width="157" style="display: block; margin: auto auto auto 0;" />
+<div class="figure" style="text-align: left">
+<img src="images/fig4.png" alt="Using Gensim to find the most similar words" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-6)Using Gensim to find the most similar words</p>
+</div>
 
 
 To illustrate this further, we applied the Gensim function “most_similar” to return the closest words relating to ‘normal’. Based on the results shown in Section 6 Table 6, skip-gram model demonstrates that it is able to return words similar to ‘normal’ as they share some context. Additionally, skip-gram is capable of learning from small training data to accurately predict related words (Giatsoglou et al., 2017). Hence, with regards to sentiment analysis, the nuances of the English language can be reduced through the use of skip-gram due to its ability to retain semantic relations.
@@ -173,12 +156,10 @@ __3.2.2.	TF-IDF__
 
 TF-IDF weighs a word in a document and assigns importance of that word based on the frequency of the word within the document through the following formula show in figure x. With this, each post is converted to a row of the TF-IDF matrix and each word is stored in a column vector.
 
-
-```r
-include_graphics("images/tfidf.png")
-```
-
-<img src="images/tfidf.png" width="102" style="display: block; margin: auto auto auto 0;" />
+<div class="figure" style="text-align: left">
+<img src="images/tfidf.png" alt="TF-IDF formula" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-7)TF-IDF formula</p>
+</div>
 
 where TF is the term frequency within the document, nDoc is the number of documents in the corpus and nDocTerm is the number of documents that contains the term.
 
@@ -196,12 +177,10 @@ The major limitation of the lexicon is its lack of self-learning capability, the
 
 ### 4.1.	Pre-processing 
 
-
-```r
-include_graphics("images/fig5.png")
-```
-
-<img src="images/fig5.png" width="372" style="display: block; margin: auto auto auto 0;" />
+<div class="figure" style="text-align: left">
+<img src="images/fig5.png" alt="Generalised data pre-processing steps" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-8)Generalised data pre-processing steps</p>
+</div>
 
 The data was pre-processed in similar fashion for both topic modeling and sentiment analysis, except for steps 9-10, which were only applicable to sentiment analysis. Please see below for more details of each step.
 
@@ -222,19 +201,50 @@ The data was pre-processed in similar fashion for both topic modeling and sentim
 
 ### 4.2.	Topic Modeling  
 
-#### 4.2.1	Additional preprocessing
+**4.2.1	Additional preprocessing**
 
 **a) Aggregating comments to increase document length: Grouping of Text documents**  
 Three sets of text corpus were prepared by grouping the comments as explained in section 3.2 Solution details (refer to section ‘Length of documents’).
 
 For individual comments as one document, the original downloaded dataset was used.  Secondly, for individual comments grouped under the first comment in each post, the following codes were applied. The first comments and posts were traced using the ‘comment_parent_id’ and ‘comment_id’. Lastly, the above grouped comments were once again grouped under each post. Please see below for snapshot of python script.
 
+**Python script to group individual comments grouped under the first comment in each post**
+```{python.reticulate  = FALSE, eval = FALSE}
+def group_subtopic_df(filename):
+    id_list = []
+    for post_id in filename["post_id"].unique():
+        comment_id_list = []
+        for comment_id in filename[filename["comment_parent_id"]=="t3_"+post_id]["comment_id"].unique():
+            ori_id_sublist = []
+            new_id_sublist = filename[filename["comment_parent_id"].isin(["t1_"+comment_id])]["comment_id"].values.tolist()
 
-```r
-include_graphics("images/appendixC.png")
+            while len(new_id_sublist) > len(ori_id_sublist):
+                ori_id_sublist = new_id_sublist
+                for sub_id in new_id_sublist:
+                    if filename["comment_parent_id"].isin(["t1_"+sub_id]).any():
+                        sub_sub_id = filename[filename["comment_parent_id"].isin(["t1_"+sub_id])]["comment_id"].values.tolist()
+                        new_id_sublist += sub_sub_id
+            id_list.append([post_id, comment_id, new_id_sublist])
+            
+    content_list = [[filename[filename["post_id"].isin([id_list[i][0]])]["post_title"].values[0],
+                     filename[filename["comment_id"].isin([id_list[i][1]])]["comment_body"].values[0]+ \
+                     " ".join(filename[filename["comment_id"].isin(id_list[i][2])]["comment_body"].values.tolist())] \
+                     for i in range(len(id_list))]
+    
+    topic_id_df = pd.DataFrame(id_list, columns=["post_id", "comment_id", "sub_comment_id"])
+    topic_content_df = pd.DataFrame(content_list, columns=["post_body", "subtopic_comment"])
+    full_topic_df = topic_id_df.join(topic_content_df)
+    full_topic_df["sub_comment_len"] = full_topic_df["sub_comment_id"].apply(len)
+    return full_topic_df
+  
+  
+def group_subtopic_up_df(filename):
+    full_post = []
+    for post in filename["post_body"].unique():
+        post_ = [post] + filename[filename["post_body"].isin([post])]["subtopic_comment"].tolist()
+        full_post.append(" ".join(post_))
+    return pd.Series(full_post)
 ```
-
-<img src="images/appendixC.png" width="472" style="display: block; margin: auto auto auto 0;" />
 
 **b) Preparation of vectors**  
 
@@ -245,70 +255,114 @@ Subsequently, the documents were converted into dictionary first and then into v
 
 Please see below for snapshot of python script.
 
+**Preparation of vectors**
+```{python.reticulate  = FALSE, eval = FALSE}
+def text_corpus(raw_file, corpus_col=None):
+    if corpus_col==None:
+        text_corpus_ = raw_file.apply(remove_stop_words)
+    else:    
+        text_corpus_ = raw_file[corpus_col].apply(remove_stop_words)
+    return text_corpus_
 
-```r
-include_graphics("images/appendixD.png")
+def corpus_to_docs(vaccine_corpus):
+    return [i.split() for i in vaccine_corpus.values.tolist()]
+
+def corpus_to_skipgram_docs(vaccine_corpus, n, m):
+    doc = [i.split() for i in vaccine_corpus.values.tolist()]
+    return [[":".join(gram) for gram in list(skipgrams(L, n, m))]for L in doc]
+
+def docs_to_dict(vaccine_docs):
+    return gensim.corpora.Dictionary(vaccine_docs)
+
+def docs_to_vect(vaccine_docs, vaccine_dict):
+    return [vaccine_dict.doc2bow(doc) for doc in vaccine_docs]
 ```
-
-<img src="images/appendixD.png" width="302" style="display: block; margin: auto auto auto 0;" />
 
 
 **4.2.2	Modeling: Iterating to identify the optimum number of topics, k**
 
 To determine the optimum number of topics, k, coherence score was used as the evaluation method. The range of number of topics was selected from 2 to 20 with interval 2, thus, the number of topics selected for each run were 2, 4, 6, 8, 10, 12, 14, 16, 18 and 20. For LDA method, the random_state was set at 100 for consistent comparison across different models. Each run was subjected to 100 iterations and ‘c_v’ chosen for coherence parameter. Lastly, the number of words to be displayed in each topic was set at 15. Then, the output was visualised in a line chart with the coherence score plotted against the number of topics. These steps were repeated for both LDA and LDAMallet methods. Please see below for python script.
 
+**Selection of optimum number of topics, k**
+```{python.reticulate  = FALSE, eval = FALSE}
+def coherence_k_score(vaccine_vecs, vaccine_dict, vaccine_docs, range_, model_, random_state_ = None, no_iter_=1000, coherence_='c_v', os_path=None): 
+    model_list = []
+    coherence_values = []
+    model_topics = []
+    max_coherence_score = 0
+    max_score_topics = 0
+    for num_topic__ in range_:
+        if model_ == "LDAMallet":
+            model_here = LDAMallet_model(os_path, vaccine_vecs, vaccine_dict, num_topics_=num_topic__, no_iter_=no_iter_)
+        else:
+            model_here = LDA_model(vaccine_vecs, vaccine_dict, random_state_, num_topics_=num_topic__, no_iter_=no_iter_)
+            
+        coherence_model = CoherenceModel(model=model_here, texts=vaccine_docs, dictionary=vaccine_dict, coherence=coherence_)
+        model_topics.append(num_topic__)
+        model_list.append(model_)
+        coherence_values.append(coherence_model.get_coherence())
+        print(f"#Topics: {num_topic__}\tScore: {coherence_model.get_coherence():.4f}")
+        
+        if coherence_model.get_coherence() > max_coherence_score:
+            max_coherence_score = coherence_model.get_coherence()
+            max_score_topics = num_topic__
 
-```r
-include_graphics("images/appendixE.png")
+    x = range_
+    plt.plot(x, coherence_values)
+    plt.xlabel("Num Topics")
+    plt.ylabel("Coherence score")
+    plt.legend(("coherence_values"), loc='best')
+    plt.show()
+    
+    return max_coherence_score, max_score_topics
 ```
-
-<img src="images/appendixE.png" width="302" style="display: block; margin: auto auto auto 0;" />
 
 
 __4.2.3	Modeling: Standardising k topics for interpretation__  
 
 We applied n-gram sequences to the tokens in both LDA methods. To simplify comparability, if the optimum number of topics generated for LDA and LDAMallet was different, then topics were generated in both combinations and labeled. Please refer to below for snapshot of script.
 
+**Interpretation of generated topics**
+```{python.reticulate  = FALSE, eval = FALSE}
+def LDA_model(vaccine_vecs, vaccine_dict, random_state_=100, num_topics_=10, no_iter_=1000):
+    return gensim.models.ldamodel.LdaModel(corpus=vaccine_vecs, id2word=vaccine_dict, iterations=no_iter_, num_topics=num_topics_, random_state=random_state_)
 
-```r
-include_graphics("images/appendixF.png")
+def LDAMallet_model(os_path, vaccine_vecs, vaccine_dict, num_topics_=10, no_iter_=1000):
+    os.environ.update({'MALLET_HOME':os_path})
+    mallet_path = os_path+'bin/mallet'
+    return gensim.models.wrappers.LdaMallet(mallet_path, corpus=vaccine_vecs, iterations=no_iter_, num_topics=num_topics_, id2word=vaccine_dict)
+
+def show_topics(model, num_words_, num_topics_):
+    topics_ = model.show_topics(num_topics_, num_words_)
+    Topic_df = pd.DataFrame([re.findall(r"[A-Za-z:]+", topics_[i][1]) for i in range(num_topics_)]).T
+    Topic_df.columns = ["topic_"+str(n) for n in range(num_topics_)]
+    return Topic_df
 ```
-
-<img src="images/appendixF.png" width="680" style="display: block; margin: auto auto auto 0;" />
 
 
 **4.2.4	Visualization: Presentation of topics**  
 
 Lastly, the generated topics will be printed for further topic analysis and labelling. Also, the results will be tagged to the comments with keywords (figure below) to understand how the comment falls into that topic. 
 
+<div class="figure" style="text-align: left">
+<img src="images/appendixG.png" alt="Topics grouped to the comments - LDA" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-9)Topics grouped to the comments - LDA</p>
+</div>
 
-```r
-include_graphics("images/appendixG.png")
-```
-
-<img src="images/appendixG.png" width="566" style="display: block; margin: auto auto auto 0;" />
-
-
-```r
-include_graphics("images/appendixG1.png")
-```
-
-<img src="images/appendixG1.png" width="564" style="display: block; margin: auto auto auto 0;" />
+<div class="figure" style="text-align: left">
+<img src="images/appendixG1.png" alt="Topics grouped to the comments - LDA Mallet" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-10)Topics grouped to the comments - LDA Mallet</p>
+</div>
 
 LDAVis also being used to understand Intertopic Distance (see below).
 
-
-```r
-include_graphics("images/appendixH.png")
-```
-
-<img src="images/appendixH.png" width="588" style="display: block; margin: auto auto auto 0;" />
-
-```r
-include_graphics("images/appendixH1.png")
-```
-
-<img src="images/appendixH1.png" width="589" style="display: block; margin: auto auto auto 0;" />
+<div class="figure" style="text-align: left">
+<img src="images/appendixH.png" alt="Topic Modelling Intertopic Distance Map" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-11-1)Topic Modelling Intertopic Distance Map</p>
+</div><div class="figure" style="text-align: left">
+<img src="images/appendixH1.png" alt="Topic Modelling Intertopic Distance Map" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-11-2)Topic Modelling Intertopic Distance Map</p>
+</div>
 
 ## 4.3.	Sentiment analysis
 
@@ -320,12 +374,10 @@ __4.3.1.	Additional Data Preprocessing__
 
 Next, the labeled data which will be used for training the supervised machine learning (ML) models are separated from the unlabeled data. Please see below for data modeling process. 
 
-
-```r
-include_graphics("images/appendixJ.png")
-```
-
-<img src="images/appendixJ.png" width="992" style="display: block; margin: auto auto auto 0;" />
+<div class="figure" style="text-align: left">
+<img src="images/appendixJ.png" alt="Data modeling process" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-12)Data modeling process</p>
+</div>
 
 __4.3.2.	Partition data__
 
@@ -343,7 +395,6 @@ This is a multiclass (3 classes) classification task and the below are the list 
 |XGBClassifier |	base_score=0.5, booster='gbtree', colsample_bylevel=1,colsample_bynode=1, colsample_bytree=0.8, eval_metric='auc',gamma=0, gpu_id=-1, importance_type='gain',interaction_constraints='', learning_rate=0.05, max_delta_step=0,max_depth=5, min_child_weight=1, missing=nan,monotone_constraints='()', n_estimators=1000, n_jobs=-1,num_class=3, num_parallel_tree=1, objective='multi:softprob',random_state=169279, reg_alpha=0, reg_lambda=1,scale_pos_weight=None, seed=169279, subsample=0.8,tree_method='exact', validate_parameters=1, verbosity=None |
 |Multinomial Naïve Bayes|	alpha=1.3|
 |TensorFlow Dense Neural Network|	4 dense hidden layer, batch_size=64, epochs=50|
-*Table 1 Selected Classifiers*
 
 .GridSearchCV library was used in determining the above optimal parameters that provided the best results based on training data. The criteria set for the optimization was to maximize the predictions accuracy. The above models were chosen given the varying characteristics such as linearity, type of ensemble learning (I.e., bagging and boosting), tree-based classification and probabilistic classification.
 
@@ -354,37 +405,29 @@ This is a multiclass (3 classes) classification task and the below are the list 
 Based on the methods described above, we obtained the following results plotting the coherence scores with the number of topics
 
 
-
-```r
-include_graphics("images/table2.png")
-```
-
-<img src="images/table2.png" width="220" style="display: block; margin: auto auto auto 0;" />
+<div class="figure" style="text-align: left">
+<img src="images/table2.png" alt="LDA Coherence scoring" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-13)LDA Coherence scoring</p>
+</div>
  
-
-```r
-include_graphics("images/table3.png")
-```
-
-<img src="images/table3.png" width="242" style="display: block; margin: auto auto auto 0;" />
+<div class="figure" style="text-align: left">
+<img src="images/table3.png" alt="LDAMallet Coherence scoring" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-14)LDAMallet Coherence scoring</p>
+</div>
 
 From the above, we can see that the best results for both LDA and LDA Mallet comes from using a 3-gram. Under both models, using 4 topics yields the best overall results. We extract the topics below to understand how the topics are grouped. 
 
 __Topics__
  
+<div class="figure" style="text-align: left">
+<img src="images/table4.png" alt="3-gram" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-15)3-gram</p>
+</div>
 
-```r
-include_graphics("images/table4.png")
-```
-
-<img src="images/table4.png" width="351" style="display: block; margin: auto auto auto 0;" />
-
-
-```r
-include_graphics("images/table5.png")
-```
-
-<img src="images/table5.png" width="344" style="display: block; margin: auto auto auto 0;" />
+<div class="figure" style="text-align: left">
+<img src="images/table5.png" alt="LDAMallet 3-gram topics" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-16)LDAMallet 3-gram topics</p>
+</div>
 
 Doing a visual inspection of the results, we see that LDA produced a clearer distinction between the topics, with the 4 topic types being areas of interests for vaccine discussion in an online setting, which is in line with our dataset. We thus decide to go with LDA instead of LDAMallet in our topic modelling segment. 
 
@@ -396,12 +439,10 @@ During review of the results, we had a difficult time finding a clear-cut distin
 
 In assessing our model, we looked at 3 metrics:
 
-
-```r
-include_graphics("images/table6.png")
-```
-
-<img src="images/table6.png" width="301" style="display: block; margin: auto auto auto 0;" />
+<div class="figure" style="text-align: left">
+<img src="images/table6.png" alt="Sentiment analysis model scores" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-17)Sentiment analysis model scores</p>
+</div>
 
 __a)	Accuracy__  
 Based on the accuracy performance, the skip-gram + RFC model performed the best with accuracy of 58.2%. We observed that the TF-IDF models have similar accuracy scores as skip-gram models, while the lexicon model performed the worst with 23%.
@@ -414,38 +455,34 @@ Skip-gram +XGBoost performed the best with accuracy of 37.5%.
 
 Given the above assessment, the skip-gram + XGBoost is deemed to be the best performing model on basis that it has the highest precision and recall score, and accuracy only 0.47% less than the top accuracy model of 58.16%. Please see examples of correctly classified outputs in below.
 
-
-```r
-include_graphics("images/appendixK.png")
-```
-
-<img src="images/appendixK.png" width="400" style="display: block; margin: auto auto auto 0;" />
+<div class="figure" style="text-align: left">
+<img src="images/appendixK.png" alt="Snapshot of example output for sentiment analysis (correctly predicted)" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-18)Snapshot of example output for sentiment analysis (correctly predicted)</p>
+</div>
 
 __Insights and error analysis__
 
-
-```r
-include_graphics("images/fig6.png")
-```
-
-<img src="images/fig6.png" width="90" style="display: block; margin: auto auto auto 0;" />
+<div class="figure" style="text-align: left">
+<img src="images/fig6.png" alt="Distrbition of sentiment - Reddit users are largely neutrals" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-19)Distrbition of sentiment - Reddit users are largely neutrals</p>
+</div>
 
 Based on our distribution of the model results, Reddit users are largely neutral (77%) as most comments consist of users stating facts to counter a minority bias and do not provide any opinion in their comments.
 
-
-```r
-include_graphics("images/fig7.png")
-```
-
-<img src="images/fig7.png" width="214" style="display: block; margin: auto auto auto 0;" />
+<div class="figure" style="text-align: left">
+<img src="images/fig7.png" alt="Likert scale time series from oldest (bottom) to newest (top)" width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-20)Likert scale time series from oldest (bottom) to newest (top)</p>
+</div>
 
 The likert scale show the daily percentage of negative (red), positive (blue) and neutral (grey) from Dec-20 (bottom) to Jan-21 (top). We observed that comments became more neutral over time, with spikes of positive and negative sentiments in between. 
 
 Further investigation revealed the complexity of sentiment analysis as the following post shown below should be considered positive but were wrongly labelled. These comments are largely contextual, hence very challenging for models to assign the correctly sentiment.
 
->	“Scheduled to get my first round of the Moderna on Dec 22!”  -  Neutral
->	“INTO MY ASS, RIGHT UP IN THERE PLEASE” - Neutral
-> “"asymptomatic infection was reduced by 63 percent after the first shot. " – HUGE” - Negative
+>	“Scheduled to get my first round of the Moderna on Dec 22!”  -  Neutral  
+
+>	“INTO MY ASS, RIGHT UP IN THERE PLEASE” - Neutral  
+ 
+> “"asymptomatic infection was reduced by 63 percent after the first shot. " – HUGE” - Negative   
 
 Additionally, the nature of Reddit’s comments, such as short character length, images and emojis, makes it difficult for text mining, particularly sentiment analysis.
 
@@ -493,3 +530,7 @@ Sallam, M. (2021). COVID-19 Vaccine Hesitancy Worldwide: A Concise Systematic Re
 Tang J, Meng Z, Nguyen X, Mei Q, Zhang M (2014). Understanding the Limiting Factors of Topic Modeling via Posterior Contraction Analysis. Proceedings of the 31st International Conference on Machine Learning, Beijing, China, 2014. JMLR: W&CP volume 32 http://proceedings.mlr.press/v32/tang14.pdf 
 
 Yue, L., Chen, W., Li, X., Zuo, W., & Yin, M. (2019). A survey of sentiment analysis in social media. Knowledge and Information Systems, 60(2), 617-663. 
+
+
+---
+Background vector created by rawpixel.com - www.freepik.com
