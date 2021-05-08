@@ -8,13 +8,14 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://suyiinang.netlify.app/tags/ggplot/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Shiny prototype test for Exploratory</title>
+      <title>Shiny prototype test for Exploratory Analysis</title>
       <link>https://suyiinang.netlify.app/posts/a_projects/07_ourshinypet/</link>
       <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://suyiinang.netlify.app/posts/a_projects/07_ourshinypet/</guid>
-      <description>Prototype testing for the Exploratory module for OurShinyPET This was written as part of the requirements for the Visual Analytics module for MITB.
- 1. Introduction 1.1 Overview of application The increasing availability of data has resulted in increased demand for data driven decisions.</description>
+      <description>Categories : R Shiny, Exploratory Analysis, Confirmatory Analysis, ggplot, airbnb
+This was written as part of the requirements for the Visual Analytics module for MITB. Update: This application is now live, visit our
+ Website Application Poster Paper   1.</description>
     </item>
     
   </channel>

@@ -11,13 +11,16 @@ menu:
 math: true
 ---
 
-An analysis of guests’ booking and cancellation trends for two Portuguese hotels.
+Categories: `exploratory`, `confirmatory`, `hotel booking`, `SAS JMP`
 
-*These reports were written as part of the requirements for the Data Analytics Lab module for [MITB](https://scis.smu.edu.sg/master-it-business).*
+*This was written as part of the requirement for the Data Analytics Lab module for [MITB](https://scis.smu.edu.sg/master-it-business).*
+
 
 ---
 
-For executive report, please view : [Executive report - hotel booking](https://drive.google.com/file/d/1PF6ZHf-r5Fm_WzqlCgfGxuBDRdVKsV4A/view?usp=sharing)
+# An analysis of guests’ booking and cancellation trends for two Portuguese hotels.
+
+For executive report, please view : [Executive report - hotel booking](https://suyiinang.netlify.app/files/blog/exploratory.pdf){target="_blank"}
 
 ## 1. Overview
 **Changing Landscape of the Hotel Industry**  

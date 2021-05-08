@@ -10,18 +10,18 @@ menu:
     weight: 98
 ---
 
-The Math of Happiness: An analysis of factors that influence happiness. 
----------------------------------------------------------------------
+Categories: `R Shiny`, `regression`
+
+# The Math of Happiness: An analysis of factors that influence happiness. 
 
 By: Ang Su Yiin, Anne Nguyen Nhi Thai An, E-Lynn Toh, Foo Kai Loon, Sean Samuel Prajs, Tay Kai Lin  
 
-*These reports were written as part of the requirements for the Applied Statistical Analysis with R module for [MITB](https://scis.smu.edu.sg/master-it-business).*
+*This was written as part of the requirement for the Applied Statistical Analysis with R module for [MITB](https://scis.smu.edu.sg/master-it-business).*
 
 ---
 
-Shiny app available at [The Math of Happiness](https://suyiinang.shinyapps.io/MathofHappiness/)
 
----
+Shiny app available at [The Math of Happiness](https://suyiinang.shinyapps.io/MathofHappiness/){target="_blank"}
 
 ## 1. Introduction
 The quest for happiness is an elusive pursuit for many. Between 2005 and 2015, the[ World Health Organization (WHO) reported a global 18.4% rise in depression](https://www.familyaware.org/who-2017-depression-report/), the most common mental health disorder. In Singapore, [a study by Singapore Mental Health Study (SMHS)](https://www.imh.com.sg/uploadedFiles/Newsroom/News_Releases/SMHS%202016_Media%20Release_FINAL_web%20upload.pdf) in 2016 revealed a consistent trend, where 1 in 7 of Singapore residents have experienced a form of mental disorder in their lifetime, an increase from 12% in 2010 . In 2020, the emergence of Covid-19 has caused a steep increase in unhappiness, where [a study by JAMA Network](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2770146) found that the prevalence of depression symptoms in US adults were 3 times higher during Covid-19 compared with before Covid-19 . Going forward, JAMA’s study foresees a rise in mental health issues to follow post Covid-19.

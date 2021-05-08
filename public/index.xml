@@ -13,19 +13,21 @@
       <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://suyiinang.netlify.app/posts/a_projects/08_text-mining/</guid>
-      <description>a Textual Analysis via Topic Modelling &amp;amp; Sentiment Analysis By Bernard Lim, Su Yiin Ang, Anne Nyugen Nhi Thai An, Ron Tan, Pengjie He, Poh Wai Wong.
-This report was written as part of the requirements for the Text Analytics and Applications module for MITB.
- 1. Introduction As of April 2021, the Covid-19 pandemic has caused 135 million infections, 2.9 million deaths and repeated resurgence due to mutated variants. WHO Director-General Dr.</description>
+      <description>Categories: text-mining, reddit, vaccine-hesitancy, sentiment-analysis, topic-modelling
+a Textual Analysis via Topic Modelling &amp;amp; Sentiment Analysis By Bernard Lim, Su Yiin Ang, Anne Nyugen Nhi Thai An, Ron Tan, Pengjie He, Poh Wai Wong.
+This was written as part of the requirements for the Text Analytics and Applications module for MITB.
+ 1. Introduction As of April 2021, the Covid-19 pandemic has caused 135 million infections, 2.9 million deaths and repeated resurgence due to mutated variants.</description>
     </item>
     
     <item>
-      <title>Shiny prototype test for Exploratory</title>
+      <title>Shiny prototype test for Exploratory Analysis</title>
       <link>https://suyiinang.netlify.app/posts/a_projects/07_ourshinypet/</link>
       <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://suyiinang.netlify.app/posts/a_projects/07_ourshinypet/</guid>
-      <description>Prototype testing for the Exploratory module for OurShinyPET This was written as part of the requirements for the Visual Analytics module for MITB.
- 1. Introduction 1.1 Overview of application The increasing availability of data has resulted in increased demand for data driven decisions.</description>
+      <description>Categories : R Shiny, Exploratory Analysis, Confirmatory Analysis, ggplot, airbnb
+This was written as part of the requirements for the Visual Analytics module for MITB. Update: This application is now live, visit our
+ Website Application Poster Paper   1.</description>
     </item>
     
     <item>
@@ -118,9 +120,10 @@ I would like to thank Prof Kam of Singapore Management University for the inspir
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://suyiinang.netlify.app/posts/a_projects/06_airbnb/</guid>
-      <description>Augmenting Numerical Data with Textual Analysis to Identify Key Determinants of Airbnb Review Scores By: Ang Su Yiin, Anne Nguyen Nhi Thai An, Toh E-Lynn
-These reports were written as part of the requirements for the Data Analytics Lab module for MITB.
- For poster, please view : Poster
+      <description>Categories: SAS JMP, SAS Enterprise Miner, Airbnb, text-analysis, exploratory-analysis, confirmatory-analysis
+Augmenting Numerical Data with Textual Analysis to Identify Key Determinants of Airbnb Review Scores By: Ang Su Yiin, Anne Nguyen Nhi Thai An, Toh E-Lynn
+This report was written as part of the requirement for the Data Analytics Lab module for MITB.
+ For poster, please view : Poster{target=&amp;quot;_blank&amp;quot;}
 1. Abstract Text analytics provides powerful tools for transforming large amounts of unstructured data into quantitative variables, allowing researchers to contribute unique insights to business decision-making.</description>
     </item>
     
@@ -130,9 +133,10 @@ These reports were written as part of the requirements for the Data Analytics La
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://suyiinang.netlify.app/posts/a_projects/05_sia/</guid>
-      <description>Optimizing Passenger-Cargo Fleet Allocation By: Ang Su Yiin, Gabriella Pauline Djojosaputro, Gordy Adiprasetyo, Kendra Luisa Baylon Gadong, Nguyen Nhi Thai An, Ulysses Chong Min Zhen
-These reports were written as part of the requirements for the Spreadsheet Modeling module for MITB.
- For executive report, please view: Executive Report
+      <description>Categories: excel, modelling, SIA, spreadsheet
+Optimizing Passenger-Cargo Fleet Allocation By: Ang Su Yiin, Gabriella Pauline Djojosaputro, Gordy Adiprasetyo, Kendra Luisa Baylon Gadong, Nguyen Nhi Thai An, Ulysses Chong Min Zhen
+This was written as part of the requirement for the Spreadsheet Modeling module for MITB.
+ For executive report, please view: Executive Report{target=&amp;quot;_blank&amp;quot;}
 1.	Problem Statement With the halt of international travel due to COVID-19, the global aviation industry is one of the industries that was hit the worst.</description>
     </item>
     
@@ -142,8 +146,9 @@ These reports were written as part of the requirements for the Spreadsheet Model
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://suyiinang.netlify.app/posts/a_projects/04_predict/</guid>
-      <description>Predicting H1N1 vaccination based on flu survey. This was written as part of the requirements for the Data Analytics Lab module for MITB.
- For executive report, please view: Executive Report - Predicting H1N1 vaccination
+      <description>Categories: predictive, regression, decision tree, SAS Enterprise Miner
+This was written as part of the requirement for the Data Analytics Lab module for MITB.
+ Predicting H1N1 vaccination based on flu survey. For executive report, please view: Executive Report - Predicting H1N1 vaccination{target=&amp;quot;_blank&amp;quot;}
 1.	Introduction The H1N1 outbreak in April 2009 swept across the world and caused a global pandemic. CDC estimated that the H1N1 virus claimed the lives of 151,700 – 575,400 people worldwide during its first year of circulation.</description>
     </item>
     
@@ -153,10 +158,11 @@ These reports were written as part of the requirements for the Spreadsheet Model
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://suyiinang.netlify.app/posts/a_projects/03_asar/</guid>
-      <description>The Math of Happiness: An analysis of factors that influence happiness. By: Ang Su Yiin, Anne Nguyen Nhi Thai An, E-Lynn Toh, Foo Kai Loon, Sean Samuel Prajs, Tay Kai Lin
-These reports were written as part of the requirements for the Applied Statistical Analysis with R module for MITB.
- Shiny app available at The Math of Happiness
- 1. Introduction The quest for happiness is an elusive pursuit for many.</description>
+      <description>Categories: R Shiny, regression
+The Math of Happiness: An analysis of factors that influence happiness. By: Ang Su Yiin, Anne Nguyen Nhi Thai An, E-Lynn Toh, Foo Kai Loon, Sean Samuel Prajs, Tay Kai Lin
+This was written as part of the requirement for the Applied Statistical Analysis with R module for MITB.
+ Shiny app available at The Math of Happiness{target=&amp;quot;_blank&amp;quot;}
+1. Introduction The quest for happiness is an elusive pursuit for many.</description>
     </item>
     
     <item>
@@ -165,9 +171,10 @@ These reports were written as part of the requirements for the Applied Statistic
       <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://suyiinang.netlify.app/posts/a_projects/02_segmentation/</guid>
-      <description>Market segmentation of Philippines’ market based on expenditure patterns of households. These reports were written as part of the requirements for the Data Analytics Lab module for MITB.
- For executive report, please view : Executive Report - Segmentation
-1. Objective This report aims to group the Philippines’ consumer market into target segments based on similar spending patterns on hypermarket items using clustering methods in JMP. With reference to the characteristics of each cluster, we aim to align the target segment for an international hypermarket chain.</description>
+      <description>Categories: market segmentation, k-means, latent class, clustering, SAS JMP
+This was written as part of the requirement for the Data Analytics Lab module for MITB.
+ Market segmentation of Philippines’ market based on expenditure patterns of households. For executive report, please view : Executive Report - Segmentation{target=&amp;quot;_blank&amp;quot;}
+1. Objective This report aims to group the Philippines’ consumer market into target segments based on similar spending patterns on hypermarket items using clustering methods in JMP.</description>
     </item>
     
     <item>
@@ -176,9 +183,9 @@ These reports were written as part of the requirements for the Applied Statistic
       <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://suyiinang.netlify.app/posts/a_projects/01_hotel/</guid>
-      <description>An analysis of guests’ booking and cancellation trends for two Portuguese hotels.
-These reports were written as part of the requirements for the Data Analytics Lab module for MITB.
- For executive report, please view : Executive report - hotel booking
+      <description>Categories: exploratory, confirmatory, hotel booking, SAS JMP
+This was written as part of the requirement for the Data Analytics Lab module for MITB.
+ An analysis of guests’ booking and cancellation trends for two Portuguese hotels. For executive report, please view : Executive report - hotel booking{target=&amp;quot;_blank&amp;quot;}
 1. Overview Changing Landscape of the Hotel Industry
 According to D-Edge, the rise of online travel agents (OTAs) has caused hotels in Europe to experience a shift in distribution channel mix – in particular, from the websites of hotels, to OTAs (particularly Booking.</description>
     </item>

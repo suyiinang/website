@@ -22,11 +22,13 @@ output:
 always_allow_html: true
 ---
 
+Categories: `text-mining`, `reddit`, `vaccine-hesitancy`, `sentiment-analysis`, `topic-modelling`
+
 # a Textual Analysis via Topic Modelling & Sentiment Analysis
 
 By Bernard Lim, Su Yiin Ang, Anne Nyugen Nhi Thai An, Ron Tan, Pengjie He, Poh Wai Wong.
 
-*This report was written as part of the requirements for the Text Analytics and Applications module for [MITB](https://scis.smu.edu.sg/master-it-business).*
+*This was written as part of the requirements for the Text Analytics and Applications module for [MITB](https://scis.smu.edu.sg/master-it-business).*
 
 ---
 

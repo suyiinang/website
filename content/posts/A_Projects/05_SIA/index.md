@@ -11,15 +11,17 @@ menu:
 math: true
 ---
 
+Categories: `excel`, `modelling`, `SIA`, `spreadsheet`
+
 # Optimizing Passenger-Cargo Fleet Allocation
 
 By: Ang Su Yiin, Gabriella Pauline Djojosaputro, Gordy Adiprasetyo, Kendra Luisa Baylon Gadong, Nguyen Nhi Thai An, Ulysses Chong Min Zhen  
 
-*These reports were written as part of the requirements for the Spreadsheet Modeling module for [MITB](https://scis.smu.edu.sg/master-it-business).*
+*This was written as part of the requirement for the Spreadsheet Modeling module for [MITB](https://scis.smu.edu.sg/master-it-business).*
 
 ---
 
-For executive report, please view: [Executive Report](https://drive.google.com/file/d/17p2WRqtOOMQZ02qUpxHlfI5-GlJbnYPo/view?usp=sharing)
+For executive report, please view: [Executive Report](https://suyiinang.netlify.app/files/blog/spreadsheet.pdf){target="_blank"}
 
 ## 1.	Problem Statement  
 With the halt of international travel due to COVID-19, the global aviation industry is one of the industries that was hit the worst. Border controls and travel restrictions were put in place, and the demand for air travel continued to be severely impacted. In Singapore, the airline operations are at standstill given all flights are international. Since passenger aircrafts sit idly due to the pandemic, [airlines started operating those aircrafts to cargo-carrying ones as an alternative revenue stream](https://www.straitstimes.com/singapore/transport/coronavirus-sias-scoot-modifies-aircraft-to-carry-out-cargo-deliveries). Passenger airlines said in a [survey](https://asianaviation.com/covid-19-airlines-look-to-keep-some-planes-flying-by-pivoting-from-passengers-to-cargo/) that 43% of them will keep their passenger-cargo ratio, 37% said airlines will place a greater emphasis on cargo, and 19% said airlines will make a permanent shift to cargo.  

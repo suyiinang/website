@@ -11,13 +11,16 @@ menu:
 math: true
 ---
 
-# Predicting H1N1 vaccination based on flu survey.
+Categories: `predictive`, `regression`, `decision tree`, `SAS Enterprise Miner`
 
-*This was written as part of the requirements for the Data Analytics Lab module for [MITB](https://scis.smu.edu.sg/master-it-business).*
+*This was written as part of the requirement for the Data Analytics Lab module for [MITB](https://scis.smu.edu.sg/master-it-business).*
+
 
 ---
 
-For executive report, please view: [Executive Report - Predicting H1N1 vaccination](https://drive.google.com/file/d/1Gw1I4vGezWTbzbLreE9eg5JNGADqHbHz/view?usp=sharing)
+# Predicting H1N1 vaccination based on flu survey.
+
+For executive report, please view: [Executive Report - Predicting H1N1 vaccination](https://suyiinang.netlify.app/files/blog/predictive.pdf){target="_blank"}
 
 
 ## 1.	Introduction  

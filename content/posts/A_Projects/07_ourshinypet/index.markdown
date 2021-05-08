@@ -1,5 +1,5 @@
 ---
-title: Shiny prototype test for Exploratory 
+title: Shiny prototype test for Exploratory Analysis
 author: Su Yiin Ang
 date: '2021-04-10'
 slug: []
@@ -13,8 +13,8 @@ tags:
 draft: no
 menu:
   sidebar:
-    name: R Shiny
-    identifier: exploratory
+    name: R Shiny - Exploratory
+    identifier: exploratory, rshiny, airbnb
     parent: Academic Projects
     weight: 94
 output:
@@ -62,9 +62,17 @@ always_allow_html: true
 <script src="{{< blogdown/postref >}}index_files/pymjs/pym.v1.js"></script>
 <script src="{{< blogdown/postref >}}index_files/widgetframe-binding/widgetframe.js"></script>
 
-# Prototype testing for the Exploratory module for [OurShinyPET](https://ourshinypet.netlify.app/)
+Categories : `R Shiny`, `Exploratory Analysis`, `Confirmatory Analysis`, `ggplot`, `airbnb`
 
-This was written as part of the requirements for the Visual Analytics module for MITB.
+## This was written as part of the requirements for the Visual Analytics module for MITB.
+
+# Update:
+
+This application is now live, visit our
+- <a href="https://ourshinypet.netlify.app/" target="_blank">Website</a>
+- <a href="https://kgalbindo.shinyapps.io/shinyPET/" target="_blank">Application</a>
+- <a href="https://ourshinypet.netlify.app/files/ShinyPET_poster.pdf/" target="_blank">Poster</a>
+- <a href="https://ourshinypet.netlify.app/files/ShinyPET_paper.pdf/" target="_blank">Paper</a>
 
 ------------------------------------------------------------------------
 
@@ -1139,6 +1147,6 @@ See sketch below for submodule design:
 
 Zhou, Y., Leung, Sw., Mizutani, S. et al. (2020) MEPHAS: an interactive graphical user interface for medical and pharmaceutical statistical analysis with R and Shiny. *BMC Bioinformatics 21, 183*. <https://doi.org/10.1186/s12859-020-3494-x>
 
-# Our application will be live on the 25th April! For more details, watch this space - https://ourshinypet.netlify.app/
+------------------------------------------------------------------------
 
 Design vector created by [stories](https://www.freepik.com/vectors/design) - www.freepik.com
