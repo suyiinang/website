@@ -7,7 +7,7 @@ categories:
 tags:
   - search
   - tableau
-draft: yes
+draft: no
 menu:
   sidebar:
     name: Search box

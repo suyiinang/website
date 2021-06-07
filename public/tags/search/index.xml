@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>search on Su Yiin&#39;s blog</title>
+    <link>https://suyiinang.netlify.app/tags/search/</link>
+    <description>Recent content in search on Su Yiin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://suyiinang.netlify.app/tags/search/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Search box</title>
+      <link>https://suyiinang.netlify.app/posts/tableau_howto/04_search/</link>
+      <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/tableau_howto/04_search/</guid>
+      <description>Documenting my Tableau learning journey.
+ Search box  var divElement = document.getElementById(&#39;viz1623077669575&#39;); var vizElement = divElement.getElementsByTagName(&#39;object&#39;)[0]; vizElement.style.width=&#39;100%&#39;;vizElement.style.height=(divElement.offsetWidth*0.75)+&#39;px&#39;; var scriptElement = document.createElement(&#39;script&#39;); scriptElement.src = &#39;https://public.tableau.com/javascripts/api/viz_v1.js&#39;; vizElement.parentNode.insertBefore(scriptElement, vizElement); Full visualisation available on Tableau Public.
+Other use cases - Tableau Public
+Good for Looking up text.
+How to create - step by step To illustrate this search function, I have used the EU superstore dataset (Tableau&amp;rsquo;s sample dataset).
+1) Set up table to anaylse Here is a relatively simple table that shows profit and quantity by customer name.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,28 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://suyiinang.netlify.app/categories/</loc>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/posts/</loc>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/tags/search/</loc>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/posts/tableau_howto/04_search/</loc>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/</loc>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/tags/tableau/</loc>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/posts/tableau_howto/</loc>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/categories/tableau_howto/</loc>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/tags/</loc>
+    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://suyiinang.netlify.app/categories/a_projects/</loc>
     <lastmod>2021-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://suyiinang.netlify.app/posts/a_projects/</loc>
     <lastmod>2021-04-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://suyiinang.netlify.app/categories/</loc>
-    <lastmod>2021-04-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://suyiinang.netlify.app/posts/</loc>
-    <lastmod>2021-04-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://suyiinang.netlify.app/tags/reddit/</loc>
     <lastmod>2021-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://suyiinang.netlify.app/tags/sentiment-analysis/</loc>
-    <lastmod>2021-04-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://suyiinang.netlify.app/</loc>
-    <lastmod>2021-04-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://suyiinang.netlify.app/tags/</loc>
     <lastmod>2021-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://suyiinang.netlify.app/posts/a_projects/08_text-mining/</loc>
@@ -57,9 +72,6 @@
     <lastmod>2021-03-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://suyiinang.netlify.app/posts/tableau_howto/03_likert/</loc>
-    <lastmod>2021-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://suyiinang.netlify.app/posts/tableau_howto/</loc>
     <lastmod>2021-03-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://suyiinang.netlify.app/posts/dataviz_makeover/02_makeover/</loc>
