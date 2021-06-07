@@ -17,7 +17,6 @@ math: true
 
 ---
 
-## Search box
 
 Look up Profit and Quantity of Specific customer.
 
