@@ -21,7 +21,7 @@ By: Ang Su Yiin, Gabriella Pauline Djojosaputro, Gordy Adiprasetyo, Kendra Luisa
 
 ---
 
-For executive report, please view: [Executive Report](https://suyiinang.netlify.app/files/blog/spreadsheet.pdf){:target="_blank"}
+For executive report, please view:  <a href="https://suyiinang.netlify.app/files/blog/spreadsheet.pdf" target="_blank">Executive Report</a>
 
 ## 1.	Problem Statement  
 With the halt of international travel due to COVID-19, the global aviation industry is one of the industries that was hit the worst. Border controls and travel restrictions were put in place, and the demand for air travel continued to be severely impacted. In Singapore, the airline operations are at standstill given all flights are international. Since passenger aircrafts sit idly due to the pandemic, [airlines started operating those aircrafts to cargo-carrying ones as an alternative revenue stream](https://www.straitstimes.com/singapore/transport/coronavirus-sias-scoot-modifies-aircraft-to-carry-out-cargo-deliveries). Passenger airlines said in a [survey](https://asianaviation.com/covid-19-airlines-look-to-keep-some-planes-flying-by-pivoting-from-passengers-to-cargo/) that 43% of them will keep their passenger-cargo ratio, 37% said airlines will place a greater emphasis on cargo, and 19% said airlines will make a permanent shift to cargo.  

@@ -20,7 +20,7 @@ Categories: `predictive`, `regression`, `decision tree`, `SAS Enterprise Miner`
 
 # Predicting H1N1 vaccination based on flu survey.
 
-For executive report, please view: [Executive Report - Predicting H1N1 vaccination](https://suyiinang.netlify.app/files/blog/predictive.pdf){:target="_blank"}
+For executive report, please view: <a href="https://suyiinang.netlify.app/files/blog/predictive.pdf" target="_blank">Executive Report</a>
 
 
 ## 1.	Introduction  
