@@ -20,7 +20,7 @@ Categories: `exploratory`, `confirmatory`, `hotel booking`, `SAS JMP`
 
 # An analysis of guests’ booking and cancellation trends for two Portuguese hotels.
 
-For executive report, please view : [Executive report - hotel booking](https://suyiinang.netlify.app/files/blog/exploratory.pdf){target="_blank"}
+For executive report, please view : [Executive report - hotel booking](https://suyiinang.netlify.app/files/blog/exploratory.pdf){:target="_blank"}
 
 ## 1. Overview
 **Changing Landscape of the Hotel Industry**  
