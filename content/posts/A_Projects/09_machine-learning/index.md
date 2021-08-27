@@ -179,7 +179,7 @@ Figure 3 Example features of ‘ratio_nullHyperlinks' showing only single value 
 
 Numeric features were checked for multi-collinearity. Where pair-wise correlation exceeds 0.7 (Table 4), selected features were dropped to maximize the remaining number of features: 'nb_eq', 'length_url', 'avg_words_raw', 'longest_word_host', 'longest_word_path', 'nb_semicolumn', 'shortest_word_host'. 
 
-![](images/Picture3.png)
+![](images/Picture3.png)  
 Table 4: Pair-wise correlation of top correlated features
 
 ### 6.2 Processing
