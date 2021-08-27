@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>phishing on Su Yiin&#39;s blog</title>
+    <link>https://suyiinang.netlify.app/tags/phishing/</link>
+    <description>Recent content in phishing on Su Yiin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://suyiinang.netlify.app/tags/phishing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Catching Phishes with Machine Learning</title>
+      <link>https://suyiinang.netlify.app/posts/a_projects/09_machine-learning/</link>
+      <pubDate>Fri, 06 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://suyiinang.netlify.app/posts/a_projects/09_machine-learning/</guid>
+      <description>Categories: machine-learning, phishing
+Catching Phishes with Machine Learning By Su Yiin Ang, Anne Nyugen Nhi Thai An, Gordy Adiprasetyo, Kendra Luisa Balong Gadong.
+This was written as part of the requirements for the Applied Machine Learning module for MITB.
+ 1. Introduction Phishing websites are websites that are constructed to look identical to the real website with intention to trick recipients into divulging confidential data such as usernames and passwords. In 2020, the number of phishing sites doubled across the year as shown in Figure 1.</description>
+    </item>
+    
+  </channel>
+</rss>

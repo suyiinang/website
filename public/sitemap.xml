@@ -2,34 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://suyiinang.netlify.app/posts/</loc>
-    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+    <loc>https://suyiinang.netlify.app/categories/a_projects/</loc>
+    <lastmod>2021-08-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://suyiinang.netlify.app/posts/tableau_howto/04_search/</loc>
-    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+    <loc>https://suyiinang.netlify.app/posts/a_projects/</loc>
+    <lastmod>2021-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/posts/a_projects/09_machine-learning/</loc>
+    <lastmod>2021-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/categories/</loc>
+    <lastmod>2021-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/tags/logistic-regression/</loc>
+    <lastmod>2021-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/tags/machine-learning/</loc>
+    <lastmod>2021-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/tags/neural-network/</loc>
+    <lastmod>2021-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/tags/phishing/</loc>
+    <lastmod>2021-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/posts/</loc>
+    <lastmod>2021-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/tags/random-forest/</loc>
+    <lastmod>2021-08-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://suyiinang.netlify.app/</loc>
+    <lastmod>2021-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/tags/</loc>
+    <lastmod>2021-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/tags/xgboost/</loc>
+    <lastmod>2021-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://suyiinang.netlify.app/posts/tableau_howto/04_search/</loc>
     <lastmod>2021-06-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://suyiinang.netlify.app/posts/tableau_howto/</loc>
     <lastmod>2021-06-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://suyiinang.netlify.app/categories/a_projects/</loc>
-    <lastmod>2021-04-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://suyiinang.netlify.app/posts/a_projects/</loc>
-    <lastmod>2021-04-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://suyiinang.netlify.app/categories/</loc>
-    <lastmod>2021-04-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://suyiinang.netlify.app/tags/reddit/</loc>
     <lastmod>2021-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://suyiinang.netlify.app/tags/sentiment-analysis/</loc>
-    <lastmod>2021-04-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://suyiinang.netlify.app/tags/</loc>
     <lastmod>2021-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://suyiinang.netlify.app/posts/a_projects/08_text-mining/</loc>
