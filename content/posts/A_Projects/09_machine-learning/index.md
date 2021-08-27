@@ -1,7 +1,7 @@
 ---
-title: "Catching Phishes with Machine Learning""
-author: 'Su Yiin Ang'
+title: "Catching Phishes with Machine Learning"
 date: 2021-08-06
+description:  Catching Phishes with Machine Learning
 menu:
   sidebar:
     name: Machine learning
