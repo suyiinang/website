@@ -27,7 +27,7 @@ By Su Yiin Ang, Anne Nyugen Nhi Thai An, Gordy Adiprasetyo, Kendra Luisa Balong 
 
 Phishing websites are websites that are constructed to look identical to the real website with intention to trick recipients into divulging confidential data such as usernames and passwords. In 2020, the number of phishing sites doubled across the year as shown in Figure 1. Additionally, the [FBI reported](https://www.ic3.gov/Media/PDF/AnnualReport/2020_IC3Report.pdf) that phishing attacks in 2020 had resulted in a financial loss of over USD54mil, with such attacks rising exponentially over the past 5 years.
 
-![](images/Picture1.png)
+![](images/Picture1.png)  
 Figure 1 Phishing activity trend in 2020. (Source: APWG Phishing Activity Trends Report)
 
 ## 2. Project Objective
@@ -36,7 +36,7 @@ As internet usage and phishing websites grow, the need for automatic phishing de
 
 The primary performance measure for the models is identified to be recall score. From the perspective of a user browsing websites, false negatives are extremely costly as users might enter confidential and crucial financial information without knowing. On the other hand, false positives are not particularly costly as users can override browser’s warning to proceed if they are certain that the website is legitimate. 
 
-![](images/Picture2.png)
+![](images/Picture2.png)  
 Figure 2 Project Pipeline of Phishing Detection Machine Learning Model
 
 ## 3. Compiling Legitimate & Phishing Websites
@@ -173,7 +173,7 @@ EDA was conducted to check for erroneous data and remove features to reduce comp
 This revealed 5,438 observations with all missing content feature data. Since the business case focuses on detecting live phishing websites (websites that are not live would also not be able to phish any data and thus do not pose any harm), these websites that were inaccessible are non-representative. These observations were thus removed from the dataset. 
 Visual inspection of histogram, bar charts & correlation matrix were used for univariate and bivariate analysis. Discrete numeric or categorical features were dropped when the feature has a high proportion of missing values (for example, querying the site returned a response code that is not 200, or empty content), the feature’s positive label has very low frequency, or the feature has only one single label. These include ‘ratio_nullHyperlinks', 'ratio_intRedirection', 'ratio_intErrors', 'submit_email', 'sfh', 'iframe', 'popup_window', 'onmouseover', 'right_clic', 'brand_in_subdomain', 'brand_in_path', 'suspecious_tld', 'statistical_report', 'whois_registered_domain', 'domain_registration_length', 'google_index', 'page_rank', and 'domain_age'.
 
-![](images/Picture9.png)
+![](images/Picture9.png)  
 Figure 3 Example features of ‘ratio_nullHyperlinks' showing only single value for label, and 'brand_in_subdomain’ showing very low frequency positive label
 
 
@@ -187,11 +187,11 @@ Table 4: Pair-wise correlation of top correlated features
 The EDA below also showed that most numeric features are extremely skewed, thus requiring standardization. StandardScaler was thus fitted on the train dataset to preserve the numeric features’ mean and standard deviation values for subsequent standardization on the test dataset. Among categorical features, ‘geolocation’ was also heavily skewed and thus re-binned to 9 distinct labels. 
 Lastly, categorical features were one-hot encoded as required for model building. As a result, the processed data obtained has 85,138 observations and 68 features in total (including one-hot encoded columns). 
 
-![](images/Picture4.png)
+![](images/Picture4.png)  
 Figure 4: Feature ‘nb_slash’ before (left) and after (right) standardization
 
 
-![](images/Picture5.png)
+![](images/Picture5.png)  
 Figure 5: Feature ‘geolocation’ before (left) and after (right) re-binning
 
 ## 7. Train-Test Split & Sampling Strategy
@@ -216,7 +216,7 @@ While specific details differ for each model building process, all models were t
 
 The main performance measure is recall score, with accuracy used as a secondary measure for an overall sanity check, for the test dataset. 
 
-![](images/Picture6.png)
+![](images/Picture6.png)  
  Figure 6: Test performance across all models and sampling strategies
 
 
@@ -231,7 +231,7 @@ We also note that feature collection, engineering as well as model tuning greatl
 Selecting the best model from the model evaluation, this project then chooses the Random Forest with a 1:1 Legitimate:Phishing Ratio Down-sampled by maximizing Recall at 97.2%. Further analysis on the features is done by outputting the feature importance scores shown below. From a total of 68 features, the top 7 features are selected based on the original feature importance graph in Appendix 1.
 
 
-![](images/Picture7.png)
+![](images/Picture7.png)  
  Figure 7: Test performance across all models and sampling strategies
 
 
@@ -253,7 +253,7 @@ Once the model is improved and trained with more recent and relevant data on leg
 ## 12. Appendix
 
 
-![](images/Picture8.png)
+![](images/Picture8.png)  
  Appendix 1: Test performance across all models and sampling strategies
 
 
