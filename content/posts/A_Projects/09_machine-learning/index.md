@@ -21,7 +21,7 @@ By Su Yiin Ang, Anne Nyugen Nhi Thai An, Gordy Adiprasetyo, Kendra Luisa Balong 
 
 ---
 
-
+For presentation deck, please view : <a href="https://suyiinang.netlify.app/files/blog/AML.pdf" target="_blank">Presentation deck</a>
 
 ## 1. Introduction
 
