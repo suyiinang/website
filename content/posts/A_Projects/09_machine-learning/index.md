@@ -134,8 +134,8 @@ Table 2: Content-Based & Geolocation Features and Descriptions
 |	69	|	ratio_intMedia	|	ratio of internal media file links	|
 |	70	|	ratio_extMedia	|	ratio of external media file links	|
 |	71	|	sfh	|	presence of forms with empty string or 'about:blank'	|
-|	72	|	iframe	|	presence of <iframe> tag	|
-|	73	|	popup_window	|	presence of pop-up window with text fields	|
+|	72	|	iframe	|	presence of < iframe > tag	|
+|	73	|	popup_window	|	presence of pop up window with text fields	|
 |	74	|	safe_anchor	|	presence of ‘#’, ‘javascript’, or ‘mailto’ tags	|
 |	75	|	onmouseover	|	presence of 'onmouseover' attribute to detect disabling right-click	|
 |	76	|	right_clic	|	presence of 'event.button==2' to 'onmouseover' attribute to detect disabling right-click	|
