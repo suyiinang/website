@@ -17,9 +17,25 @@ experiences:
     # company overview
     overview: The Estée Lauder Companies Inc. is one of the world's leading manufacturers and marketers of quality skin care, makeup, fragrance and hair care products.
   positions:
-  - designation: Global Transformation Solutions Intern 
+  - designation: Assistant Forecast Manager, Regional Supply Chain 
+    start: Jan 2022
+    end: 
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    # end: Dec 2020
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - Drive analytics insights and data-driven recommendations to demand planners, integrated business planning (IBP) team and cross functional (XFN) partners, driving higher forecast accuracy and retail sales.
+    - Drive improvement of ELC statistical forecast model in collaboration with Global Center of Excellence (COE) team.
+- company:
+    name: The Estée Lauder Companies
+    url: "https://www.elcompanies.com"
+    location: Singapore
+    # company overview
+    overview: The Estée Lauder Companies Inc. is one of the world's leading manufacturers and marketers of quality skin care, makeup, fragrance and hair care products.
+  positions:
+  - designation: Project Consultant, Global Transformation Solutions 
     start: May 2021
-    end: Nov 2021
+    end: Dec 2021
     # don't provide end date if you are currently working there. It will be replaced by "Present"
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
