@@ -19,21 +19,26 @@ skills:
 
 - name: Python
   logo: /images/sections/skills/py.png
-  summary: "Currently learning scikit-learn & Tensorflow. Proficient in pandas, numpy & visualisations."
+  summary: "Proficient in pandas, numpy & visualisations."
   url: "https://www.python.org/"
 
 - name: Tableau
   logo: /images/sections/skills/tab.png
-  summary: "Experienced with creating interactive dashboards."
-  url: "https://www.tableau.com"
+  summary: "Experienced with creating interactive dashboards - click icon to view portfolio"
+  url: "https://public.tableau.com/app/profile/suyiinang#!/"
+
+- name: PowerBI
+  logo: /images/sections/skills/pbi.png
+  summary: "Experienced with creating interactive dashboards"
+  url: 
 
 - name: MySQL
   logo: /images/sections/skills/mysql.png
   summary: "Proficient in joins, queries, subqueries, triggers, procedures."
 
-- name: MS Word, Excel, PowerPoint
+- name: MS Excel, PowerPoint, Word
   logo: 
-  summary: "Proficient."
+  summary: "Advance user in Excel - Pivots, Formulas, Charts, etc."
 
 - name: SAS Enterprise Miner
   logo: 
