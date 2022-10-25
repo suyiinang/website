@@ -185,7 +185,7 @@ Two observations – 737 and 709 days were excluded.
 
 ## 4. Insights
 
-### 4.1 Cancellation rates differ by hotel  
+# 4.1 Cancellation rates differ by hotel  
 City 41.7% and Resort 27.8%
 ![](images/fig18.png)
 
@@ -208,7 +208,7 @@ Thus, we will analyse cancellation rate for the two hotels separately, with a vi
 Interestingly, although City hotel had a higher average cancellation rate, the rate has been relatively consistent across the 25 months. In contrast, Resort hotel’s cancellation rate has been steadily increasing.
 
 # Seasonality
-### 4.2 Cancellation fluctuated across the months.
+# 4.2 Cancellation fluctuated across the months.
 
 For City hotel, we observed some seasonality during the years; bookings peaked around Sep/Oct and May/June. Similarly, cancellation rates fluctuated during the year (figure 21).   
   
@@ -232,7 +232,7 @@ While cancellation rates tend to fluctuate across the year, peak cancellation mo
 *Figure 23*   
 
 # Customer demographics
-### 4.3 Couples cancels the most
+# 4.3 Couples cancels the most
 Couples accounted for ~70% of bookings, but form the biggest group to cancel for City Hotel.
 
 
@@ -281,7 +281,7 @@ Since both hotels has similar cancellation trends by nationality, hypothesis was
     
 With the p-value 0.001 < critical value 0.05, there is no statistical evidence to support the claim that cancellation rates are independent of nationality.  
 
-### 4.5 Portuguese couples and solo travellers - extremely high cancellation rate 64-70%
+# 4.5 Portuguese couples and solo travellers - extremely high cancellation rate 64-70%
 
 
 ![](images/fig31.png)
@@ -294,7 +294,7 @@ Portuguese couples and solo travellers, who accounted for 37.7% of total booking
 *Figure 31*
 
 # Distribution channel
-### 4.6 Cancellation rate was the highest for TA/TO and lowest for direct.
+# 4.6 Cancellation rate was the highest for TA/TO and lowest for direct.
 
 
 ![](images/fig33.png)
@@ -320,7 +320,7 @@ To validate our hypothesis, we performed the Chi-Square test as both variables a
 With the p-value 0.001 < critical value 0.05, we can conclude that cancellation rates are not independent of the distribution channel.
 
 # Guests’ booking patterns
-### 4.7 Cancellation rate increased with bookings for short term stay (0-18 nights), but decreased with longer stays ( > 18 nights)  
+# 4.7 Cancellation rate increased with bookings for short term stay (0-18 nights), but decreased with longer stays ( > 18 nights)  
   
 ![](images/fig36.png)
 *Figure 35*  
@@ -337,7 +337,7 @@ Further investigation revealed that there is
 i)	a weak-moderate positive linear relationship for short-term stay (r = 0.435).  
 ii)	a moderate negative linear relationship for long-term stay (r = -0.608).  
   
-### 4.8 Cancelled bookings have longer lead time on average.
+# 4.8 Cancelled bookings have longer lead time on average.
 
 
 ![](images/fig38.png)
@@ -380,7 +380,7 @@ Since both hotels have similar trends, we tested our hypothesis on a consolidate
 
 Test result (figure 40) with p-value 0.0001 < our critical value 0.05. Hence, there is statistical evidence to reject the null hypothesis. Thus, we can conclude that the average lead time for cancelled and not cancelled bookings is different.  
 
-### 4.9 Bookings with reassigned rooms had fewer cancellations
+# 4.9 Bookings with reassigned rooms had fewer cancellations
   
 ![](images/fig42.png)
 *Figure 41*
@@ -395,7 +395,7 @@ Reasons for reassignment, or when assigments were made, were not provided. For t
   
 Figure 42 indicates that bookings with reassigned rooms had a much lower cancellation rate of ~5% compared to bookings with same rooms of 33% - 45%.  
 
-### 4.10 Recurring guests cancelled less
+# 4.10 Recurring guests cancelled less
 
 
 ![](images/fig44.png)
