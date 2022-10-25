@@ -19,7 +19,7 @@ Categories: `market segmentation`, `k-means`, `latent class`, `clustering`, `SAS
 
 # Market segmentation of Philippines’ market based on expenditure patterns of households.
 
-For executive report, please view : <a href="https://suyiinang.netlify.app/files/blog/segmentation.pdf" target="_blank">[Executive Report - Segmentation</a>
+For executive report, please view : <a href="https://suyiinang.netlify.app/files/blog/segmentation.pdf" target="_blank">Executive Report - Segmentation</a>
 
 ## 1. Objective  
 This report aims to group the Philippines’ consumer market into target segments based on similar spending patterns on hypermarket items using clustering methods in JMP. With reference to the characteristics of each cluster, we aim to align the target segment for an international hypermarket chain.  
@@ -346,6 +346,6 @@ Deeper analysis reveals that spending patterns varies according to:
 -	Middle: Wide spending range on furnishing, clothes and beverages; Moderate spending range on bread  
 -	Rich: Wide spending range on furnishing, clothes and beverages; Low spending range on bread  
 
-Please refer to the executive slide deck for recommendations and other considerations.
+Please refer to the executive slide deck for recommendations and other considerations -  <a href="https://suyiinang.netlify.app/files/blog/segmentation.pdf" target="_blank">Executive Report - Segmentation</a>
 
 

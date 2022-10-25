@@ -440,6 +440,8 @@ Guests who were reassigned to different rooms from their reserved rooms had a ca
   
 **So, they come back!**  
 Repeat guests cancel less than new guests.  
+
+Please refer to the executive slide deck for recommendations and other considerations - <a href="https://suyiinang.netlify.app/files/blog/exploratory.pdf" target="_blank">Executive report - hotel booking</a>
  
 ---
 
