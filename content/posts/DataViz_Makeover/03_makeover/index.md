@@ -177,7 +177,7 @@ On the landing page of Tableau, under Connect > To a file > More. And select the
 ![](images/fig2.png)  
 
 ### 5.2 Data visualisation steps
-### 1) Map
+#####  1) Map
 1) Plot map
 Drag [Longitude] to Columns and [Latitude] to Rows. 
 
@@ -222,7 +222,7 @@ iii) Add Year to filter - map will only display events / fatalities for that yea
 9) Change bubble size - so that bubble size doesn't change when filtering by countries as it may skew the sizes to be larger/smaller depending on the total fatalities of the country/select filter.
 ![](images/fig46.png)  
 
-### 2) Time series toggle
+#####  2) Time series toggle
 1) Create parameters
 ![](images/t1.png)  
 
@@ -248,7 +248,7 @@ For more details on importing shapes, refer to [Tableau blog](https://www.tablea
 
 Action for toggling will be added later when creating the time series chart.
 
-### 3) Time series chart
+#####  3) Time series chart
 1) Create parameters
 
 i) Date level selector. Value should be in lowercase.
@@ -310,7 +310,7 @@ i) Create calculated field
 ii) Drag [Events or fatalities text] to tooltip and edit tooltip accordingly:
 ![](images/fig25.png)  
 
-### 4) Events legend
+#####  4) Events legend
 1) Drag [Event type] to rows and [Event or fatalities] to Columns
 ![](images/fig26.png)  
 
@@ -331,7 +331,7 @@ i) Remove x-axis header
 ii) Remove gridlines.
 ![](images/fig32.png)  
 
-### 5) Countries legend
+##### 5) Countries legend
 1) Drag [Event/Fatalities] to Columns and [Country] to Rows.
 ![](images/c1.png)  
 
@@ -354,7 +354,7 @@ ii) Remove chart borders
 iii) Format lines and shadings
 ![](images/c7.png)  
 
-### 6) Actors
+#####  6) Actors
 1) Drag [Actor1] to Filters pane. Select fields accordingly to create slider to filter top n actors.
 ![](images/fig33.png)  
 
@@ -379,7 +379,7 @@ iii) Format lines and shadings
 7) Format worksheet - remove gridlines, change worksheet background to grey-black, change font to white
 ![](images/fig41.png)  
 
-### 7) Snapshots - fatalities
+##### 7) Snapshots - fatalities
 1) Drag [Fatalities] to Text.
 ![](images/fig42.png)  
 
@@ -387,14 +387,14 @@ iii) Format lines and shadings
 ![](images/fig43.png)  
 
 
-### 8) Snapshots - events
+##### 8) Snapshots - events
 1) Drag [No of records] to Text.
 ![](images/fig44.png)  
 
 2) Click on text > set alignment to left > change text to the following:
 ![](images/fig45.png)  
 
-### 9) Notes legend for time series
+#####  9) Notes legend for time series
 1) Create calculated field
 ![](images/e3.png)  
 
@@ -407,7 +407,7 @@ iii) Format lines and shadings
 5) Format
 ![](images/e4.png)  
 
-### 10) Country by event type
+#####  10) Country by event type
 1) Duplicate 'Country' tab and drag [Event type] to colour
 ![](images/gif7.gif)  
 
@@ -421,7 +421,7 @@ iii) Format lines and shadings
 ![](images/fig48.png)  
 
 
-### 11) Dashboard
+#####  11) Dashboard
 1) Go to "Map" tab.
 i) Apply filter to year.
 ![](images/d1.png)  
