@@ -8,6 +8,7 @@ menu:
     identifier: statistics
     parent: Academic Projects
     weight: 98
+math: true
 ---
 
 Categories: `R Shiny`, `regression`
