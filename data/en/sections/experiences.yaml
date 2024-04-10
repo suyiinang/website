@@ -17,15 +17,22 @@ experiences:
     # company overview
     overview: The Estée Lauder Companies Inc. is one of the world's leading manufacturers and marketers of quality skin care, makeup, fragrance and hair care products.
   positions:
-  - designation: Assistant Forecast Manager, Regional Supply Chain 
+  - designation: Assistant Manager, Data Analytics, Regional Supply Chain 
     start: Jan 2022
     end: 
     # don't provide end date if you are currently working there. It will be replaced by "Present"
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
-    - Drive analytics insights and data-driven recommendations to demand planners, integrated business planning (IBP) team and cross functional (XFN) partners, driving higher forecast accuracy and retail sales.
-    - Drive improvement of ELC statistical forecast model in collaboration with Global Center of Excellence (COE) team.
+    - Connect with key stakeholders to understand business needs and develop analytics solutions like automation, PowerBI dashboards, and perform ad hoc analysis to drive business decisions.
+    
+    - Stretch assignment to Customer Supply Chain CSC (new function established in Mar-23) (stretch ongoing, started Aug-23):
+        -	Developed and launched CSC Scorecard dashboard, which measures core customer metrics and provide data visibility to regional and APAC markets. Current data owner for all CSC dashboards.
+        -	Supported Ecommerce team through the visualization of Sephora inventory data, leading to timely sales activation and excess stock reduction of USD20k in Sep-23.
+
+    - Stretch assignment to Customer Insights team (stretch ongoing, started Jan-2024):
+        -	Utilized Customer Relationship Management (CRM), campaign performance, external market data (Beaute), and other relevant data to understand customers’ preferences, perform competitor analysis which helps marketing team formulate recruitment and retention strategies.
+
 - company:
     name: The Estée Lauder Companies
     url: "https://www.elcompanies.com"
@@ -40,6 +47,7 @@ experiences:
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
+    Global role that functions like an external management consultant to support business partners streamline and automate business processes through digital transformation solutions using technology (RPA, Python scripts).
     - Business process automation using Python.
     - Build Tableau dashboards to provide business insights.
 
