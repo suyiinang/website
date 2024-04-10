@@ -2,7 +2,6 @@ baseURL:  https://suyiinang.netlify.app/
 
 languageCode: en-us
 title: "Su Yiin's blog"
-theme: "toha"
 
 # Manage languages
 # For any more details, you can check the official documentation: https://gohugo.io/content-management/multilingual/
